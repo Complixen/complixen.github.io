@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Complixen">
+  <defs>
+    <linearGradient id="cx-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="cx-glow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <!-- rounded square base -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0a0a0c"/>
+  <!-- subtle inner gradient sheen -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#cx-glow)"/>
+  <!-- thin border highlight -->
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <!-- bold X mark (Xen monogram) -->
+  <path d="M18 18 L46 46 M46 18 L18 46"
+        stroke="url(#cx-grad)" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- small accent dot at center -->
+  <circle cx="32" cy="32" r="2.6" fill="#0a0a0c"/>
+  <circle cx="32" cy="32" r="1.4" fill="url(#cx-grad)"/>
+</svg>

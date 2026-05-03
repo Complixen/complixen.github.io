@@ -1,476 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complixen - Secure. Comply. Thrive. | Advanced Cybersecurity Services</title>
+    <title>Complixen — Secure. Comply. Thrive.</title>
     <meta name="description" content="Advanced Cybersecurity & Compliance Services for Modern Enterprises. 24/7 monitoring, certified professionals, custom compliance roadmaps.">
+    <meta name="theme-color" content="#0a0a0c">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/home.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%2300d4ff'/><path d='M12 20L18 26L28 14' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.svg">
+    <link rel="mask-icon" href="favicon.svg" color="#00d4ff">
+    <script>
+        // Set theme before paint to avoid flash
+        (function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+    </script>
 </head>
 <body>
-    
+
     <!-- Header -->
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav__brand">
-                
-                <a href="/" class="nav__logo">
-                <img src="images/logo.png" alt="Complixen Logo" >
+                <a href="/" class="nav__logo" aria-label="Complixen home">
+                    <img src="images/logo.png" alt="Complixen">
                 </a>
-
             </div>
-            
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="/" class="nav__link nav__link--active">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="services" class="nav__link">Services</a>
-                        
-                    </li>
-                    </li>
-                    <li class="nav__item">
-                        <a href="industries" class="nav__link">Industries</a>
-                    </li>
-                    
-                    <li class="nav__item">
-                        <a href="about" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact" class="nav__link">Contact</a>
-                    </li>
+                    <li class="nav__item"><a href="/" class="nav__link nav__link--active">Home</a></li>
+                    <li class="nav__item"><a href="services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="industries" class="nav__link">Industries</a></li>
+                    <li class="nav__item"><a href="about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="contact" class="nav__link">Contact</a></li>
                 </ul>
-                <div class="nav__close" id="nav-close">
-                    <i class="nav__close-icon"></i>
-                </div>
+                <button class="nav__close" id="nav-close" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
             </div>
-            
+
             <div class="nav__actions">
-                <a href="contact" class="btn btn--primary">Book a free Consultation</a>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="nav__toggle-icon"></i>
-                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" type="button">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <a href="contact" class="btn btn--accent">Book a consultation</a>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section class="hero">
-            <div class="hero__container container">
+            <div class="hero__bg" aria-hidden="true"></div>
+            <div class="container hero__inner">
                 <div class="hero__content scroll-reveal">
-                    <h1 class="hero__title">
-                        <span class="hero__title-main">Secure. Comply. Thrive.</span>
-                        <span class="hero__title-sub">Advanced Cybersecurity & Compliance Services for the Digital Age</span>
+                    <span class="eyebrow">// Cybersecurity &amp; Compliance</span>
+                    <h1 class="hero__title text-balance">
+                        Secure. Comply.
+                        <span class="hero__title-accent">Thrive.</span>
                     </h1>
+                    <p class="hero__lede text-balance">
+                        Advanced cybersecurity and compliance services for modern enterprises — built by certified specialists, monitored around the clock.
+                    </p>
                     <div class="hero__actions">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbspTalk to an Expert
+                        <a href="contact" class="btn btn--accent btn--lg">
+                            Talk to an expert
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                         </a>
-                        <a href="services" class="btn btn--secondary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                            &nbspExplore Services
-                        </a>
+                        <a href="services" class="btn btn--ghost btn--lg">Explore services</a>
+                    </div>
+                    <ul class="hero__stats" aria-label="At a glance">
+                        <li><strong>24/7</strong><span>SOC monitoring</span></li>
+                        <li><strong>50+</strong><span>Compliance frameworks</span></li>
+                        <li><strong>&lt;15min</strong><span>Incident response SLA</span></li>
+                    </ul>
+                </div>
+                <div class="hero__visual scroll-reveal-right" aria-hidden="true">
+                    <div class="orb">
+                        <svg class="orb__rings" viewBox="0 0 400 400">
+                            <defs>
+                                <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.9"/>
+                                    <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.2"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="200" cy="200" r="80" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="200" cy="200" r="130" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.4" stroke-dasharray="4 8"/>
+                            <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.25"/>
+                        </svg>
+                        <svg class="orb__shield" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M32 6 L54 14 V32 C54 44 44 54 32 58 C20 54 10 44 10 32 V14 Z"/>
+                            <path d="M22 32 l8 8 l14 -16"/>
+                        </svg>
+                        <span class="orb__dot orb__dot--1"></span>
+                        <span class="orb__dot orb__dot--2"></span>
+                        <span class="orb__dot orb__dot--3"></span>
                     </div>
                 </div>
-                <div class="hero__visual scroll-reveal-right">
-                    <div class="hero__animation">
-                        <div class="cyber-grid">
-                            <div class="grid-line grid-line--horizontal" style="--delay: 0s"></div>
-                            <div class="grid-line grid-line--horizontal" style="--delay: 0.5s"></div>
-                            <div class="grid-line grid-line--horizontal" style="--delay: 1s"></div>
-                            <div class="grid-line grid-line--vertical" style="--delay: 0.25s"></div>
-                            <div class="grid-line grid-line--vertical" style="--delay: 0.75s"></div>
-                            <div class="grid-line grid-line--vertical" style="--delay: 1.25s"></div>
-                        </div>
-                        <div class="security-nodes">
-                            <div class="security-node security-node--primary" style="--delay: 0s">
-                                <div class="node-pulse"></div>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <div class="security-node security-node--secondary" style="--delay: 0.5s">
-                                <div class="node-pulse"></div>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                    <circle cx="12" cy="16" r="1"/>
-                                    <path d="m7 11V7a5 5 0 0 1 10 0v4"/>
-                                </svg>
-                            </div>
-                            <div class="security-node security-node--tertiary" style="--delay: 1s">
-                                <div class="node-pulse"></div>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="data-streams">
-                            <div class="data-stream" style="--delay: 0s"></div>
-                            <div class="data-stream" style="--delay: 1s"></div>
-                            <div class="data-stream" style="--delay: 2s"></div>
-                        </div>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Trust strip -->
+        <section class="trust">
+            <div class="container">
+                <p class="trust__label">Trusted by security and compliance teams across</p>
+                <div class="trust__row">
+                    <span>Financial Services</span>
+                    <span>Healthcare</span>
+                    <span>Government</span>
+                    <span>Technology</span>
+                    <span>E-Commerce</span>
+                    <span>Education</span>
                 </div>
             </div>
         </section>
 
         <!-- Core Offerings -->
         <section class="offerings section">
-  <div class="container">
-    <div class="section__header scroll-reveal">
-      <h2 class="section__title">Explore Our Comprehensive Services</h2>
-      <p class="section__subtitle">
-        In an increasingly complex threat landscape, CompliXen provides expert cybersecurity and compliance services, tailored specifically to your business needs.
-      </p>
-    </div>
-    <div class="offerings__grid">
-      
-      <!-- Incident Response -->
-      <div class="offering-card scroll-reveal" style="--delay: 0s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-        </div>
-        <h3 class="offering-card__title">Incident Response Services</h3>
-        <p class="offering-card__description">
-          Swiftly detect, respond, and recover from cyber incidents to minimize disruption and downtime.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Managed SOC & MSSP -->
-      <div class="offering-card scroll-reveal" style="--delay: 0.1s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-            <circle cx="12" cy="16" r="1"/>
-            <path d="m7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-        </div>
-        <h3 class="offering-card__title">Managed SOC & MSSP</h3>
-        <p class="offering-card__description">
-          Proactive 24/7 monitoring and incident response, managed by cybersecurity experts, ensuring your organization remains secure round-the-clock.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Penetration Testing -->
-      <div class="offering-card scroll-reveal" style="--delay: 0.2s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="m9 12 2 2 4-4"/>
-          </svg>
-        </div>
-        <h3 class="offering-card__title">Penetration Testing</h3>
-        <p class="offering-card__description">
-          Identify vulnerabilities before attackers do, using realistic simulations to strengthen your security defenses proactively.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Cloud Security -->
-      <div class="offering-card scroll-reveal" style="--delay: 0.3s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-          </svg>
-        </div>
-        <h3 class="offering-card__title">Cloud Security Services</h3>
-        <p class="offering-card__description">
-          Secure your cloud infrastructure, safeguard sensitive data, and ensure compliance across all cloud environments.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Application Security -->
-      <div class="offering-card scroll-reveal" style="--delay: 0.4s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-        </div>
-        <h3 class="offering-card__title">Application Security</h3>
-        <p class="offering-card__description">
-          Integrate security seamlessly into your application lifecycle to deliver secure, reliable, and compliant software solutions.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Security GRC -->
-      <div class="offering-card scroll-reveal" style="--delay: 0.5s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14,2 14,8 20,8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-        </div>
-        <h3 class="offering-card__title">Security Governance, Risk & Compliance</h3>
-        <p class="offering-card__description">
-          Comprehensive GRC frameworks designed to manage risks, maintain compliance, and strengthen governance practices organization-wide.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Cybersecurity Staff Augmentation -->
-      <div class="offering-card scroll-reveal" style="--delay: 0.6s">
-        <div class="offering-card__icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-        </div>
-        <h3 class="offering-card__title">Cybersecurity Staff Augmentation</h3>
-        <p class="offering-card__description">
-          Instantly expand your cybersecurity capabilities with highly skilled professionals, tailored precisely to your organization's unique needs.
-        </p>
-        <a href="services" class="offering-card__link">
-          Explore Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7"/>
-            <path d="M7 7h10v10"/>
-          </svg>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-        <!-- Why Choose Us -->
-        <section class="why-choose section section--dark">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Why Organizations Choose CompliXen</h2>
-                    <p class="section__subtitle">Trusted by Fortune 500 companies worldwide for our innovative approach to cybersecurity excellence</p>
+                    <span class="eyebrow eyebrow--muted">// Services</span>
+                    <h2 class="section__title">Comprehensive coverage, tailored to your stack</h2>
+                    <p class="section__subtitle">In an increasingly complex threat landscape, CompliXen delivers expert cybersecurity and compliance services tailored to your business.</p>
                 </div>
-                <div class="features__grid">
-                    <div class="feature-card scroll-reveal" style="--delay: 0s">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Continuous Protection</h3>
-                        <p class="feature-card__description">Constant threat monitoring and proactive strategies to ensure ongoing security and compliance.</p>
+                <div class="offerings__grid">
+
+                    <a href="incident-response" class="card scroll-reveal" style="--delay: 0s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                        <h3 class="card__title">Incident Response</h3>
+                        <p class="card__desc">Detect, respond, and recover from cyber incidents fast — minimizing disruption and downtime.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                    <a href="managed-soc" class="card scroll-reveal" style="--delay: 0.05s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="12" cy="16" r="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                        <h3 class="card__title">Managed SOC &amp; MSSP</h3>
+                        <p class="card__desc">24/7 monitoring and response, run by certified analysts so your team can sleep at night.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                    <a href="penetration-testing" class="card scroll-reveal" style="--delay: 0.1s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                        <h3 class="card__title">Penetration Testing</h3>
+                        <p class="card__desc">Find what attackers would — realistic, scoped engagements that drive measurable risk reduction.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                    <a href="cloud-security" class="card scroll-reveal" style="--delay: 0.15s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+                        <h3 class="card__title">Cloud Security</h3>
+                        <p class="card__desc">Secure infrastructure across AWS, Azure, and GCP with continuous posture management and compliance.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                    <a href="application-security" class="card scroll-reveal" style="--delay: 0.2s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                        <h3 class="card__title">Application Security</h3>
+                        <p class="card__desc">Shift-left controls, SAST/DAST, and code review woven into your SDLC — not bolted on after.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                    <a href="security-grc" class="card scroll-reveal" style="--delay: 0.25s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h8"/></svg></div>
+                        <h3 class="card__title">Governance, Risk &amp; Compliance</h3>
+                        <p class="card__desc">We get you audit-ready for ISO 27001, SOC 2, PCI-DSS, GDPR, and HIPAA — building the controls, policies, and evidence. Certificates are issued by your accredited body; the heavy lifting is on us.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                    <a href="staff-augmentation" class="card scroll-reveal" style="--delay: 0.3s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                        <h3 class="card__title">Staff Augmentation</h3>
+                        <p class="card__desc">Plug skilled cybersecurity professionals into your team — by the engagement or long-term.</p>
+                        <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose -->
+        <section class="why section section--muted">
+            <div class="container">
+                <div class="section__header scroll-reveal">
+                    <span class="eyebrow eyebrow--muted">// Why CompliXen</span>
+                    <h2 class="section__title">Built for teams that can't afford a bad day</h2>
+                    <p class="section__subtitle">Trusted by organizations worldwide for our pragmatic, outcome-driven approach to cybersecurity.</p>
+                </div>
+                <div class="why__grid">
+                    <div class="why__item scroll-reveal" style="--delay: 0s">
+                        <div class="why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                        <h3>Continuous protection</h3>
+                        <p>Always-on threat monitoring with proactive containment — not just alerts.</p>
                     </div>
-                    
-                    <div class="feature-card scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-                                <path d="m9 14 2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Proven Expertise</h3>
-                        <p class="feature-card__description">Certified cybersecurity experts delivering industry leading services.</p>
+                    <div class="why__item scroll-reveal" style="--delay: 0.05s">
+                        <div class="why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
+                        <h3>Proven expertise</h3>
+                        <p>Certified specialists with deep experience across regulated and high-stakes environments.</p>
                     </div>
-                    
-                    <div class="feature-card scroll-reveal" style="--delay: 0.2s">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                <polyline points="7.5,4.21 12,6.81 16.5,4.21"/>
-                                <polyline points="7.5,19.79 7.5,14.6 3,12"/>
-                                <polyline points="21,12 16.5,14.6 16.5,19.79"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Trusted Advisor</h3>
-                        <p class="feature-card__description">Reliable partnership built on transparency, effectiveness, and measurable security outcomes.</p>
+                    <div class="why__item scroll-reveal" style="--delay: 0.1s">
+                        <div class="why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+                        <h3>Trusted advisor</h3>
+                        <p>Transparent reporting and honest tradeoffs — no fear-based selling, no inflated risk scores.</p>
                     </div>
-                    
-                    <div class="feature-card scroll-reveal" style="--delay: 0.3s">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="m2 17 10 5 10-5"/>
-                                <path d="m2 12 10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">Customized Approach</h3>
-                        <p class="feature-card__description">Tailored strategies designed around your specific security and compliance requirements.</p>
+                    <div class="why__item scroll-reveal" style="--delay: 0.15s">
+                        <div class="why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                        <h3>Customized approach</h3>
+                        <p>Tailored to your stack, threat model, and compliance footprint — not a generic playbook.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Industries Served -->
+        <!-- Industries -->
         <section class="industries section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Industries We Secure</h2>
-                    <p class="section__subtitle">Specialized cybersecurity solutions tailored for critical industry verticals</p>
+                    <span class="eyebrow eyebrow--muted">// Industries</span>
+                    <h2 class="section__title">Specialized for the sectors we serve</h2>
+                    <p class="section__subtitle">Cybersecurity solutions calibrated to the regulations, risks, and realities of each industry.</p>
                 </div>
-                <div class="industries__slider">
-                    <div class="industry-card scroll-reveal" style="--delay: 0s">
-                        <div class="industry-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="1" x2="12" y2="3"/>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                                <line x1="12" y1="21" x2="12" y2="23"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">Financial Services</h3>
-                        <p class="industry-card__description">Advanced threat protection for banks, fintech, and payment processors with realtime fraud detection and regulatory compliance.</p>
+                <div class="industries__grid">
+                    <div class="industry scroll-reveal" style="--delay: 0s">
+                        <div class="industry__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                        <h3>Financial Services</h3>
+                        <p>Threat protection for banks, fintech, and payment processors — fraud detection and regulatory compliance built in.</p>
                     </div>
-                    
-                    <div class="industry-card scroll-reveal" style="--delay: 0.1s">
-                        <div class="industry-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">Healthcare</h3>
-                        <p class="industry-card__description">HIPAA compliant security solutions protecting patient data with advanced encryption and access controls for medical devices.</p>
+                    <div class="industry scroll-reveal" style="--delay: 0.05s">
+                        <div class="industry__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/></svg></div>
+                        <h3>Healthcare</h3>
+                        <p>HIPAA-aligned security for patient data, medical devices, and clinical systems.</p>
                     </div>
-                    
-                    <div class="industry-card scroll-reveal" style="--delay: 0.2s">
-                        <div class="industry-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9,22 9,12 15,12 15,22"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">Government</h3>
-                        <p class="industry-card__description">Strengthening defenses for public sector organizations with secure systems, networks, and infrastructure.</p>
+                    <div class="industry scroll-reveal" style="--delay: 0.1s">
+                        <div class="industry__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                        <h3>Government</h3>
+                        <p>Hardened systems and networks for public sector organizations and critical infrastructure.</p>
                     </div>
-                    
-                    <div class="industry-card scroll-reveal" style="--delay: 0.3s">
-                        <div class="industry-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">Technology</h3>
-                        <p class="industry-card__description">DevSecOps integration, API security, and cloud native application protection for tech companies and startups.</p>
+                    <div class="industry scroll-reveal" style="--delay: 0.15s">
+                        <div class="industry__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                        <h3>Technology</h3>
+                        <p>DevSecOps integration, API security, and cloud-native protection for tech companies and startups.</p>
                     </div>
-                    
-                    <div class="industry-card scroll-reveal" style="--delay: 0.4s">
-                        <div class="industry-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                                <line x1="3" y1="6" x2="21" y2="6"/>
-                                <path d="M16 10a4 4 0 0 1-8 0"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">E-Commerce</h3>
-                        <p class="industry-card__description">Protecting online businesses from cyber threats by securing customer information, transactions, and digital platforms</p>
+                    <div class="industry scroll-reveal" style="--delay: 0.2s">
+                        <div class="industry__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+                        <h3>E-Commerce</h3>
+                        <p>Securing customer data, payment flows, and digital storefronts against modern threats.</p>
                     </div>
-                    
-                    <div class="industry-card scroll-reveal" style="--delay: 0.5s">
-                        <div class="industry-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">Education</h3>
-                        <p class="industry-card__description">Ensuring a safe digital environment for academic institutions by protecting data, networks, and online learning systems.</p>
+                    <div class="industry scroll-reveal" style="--delay: 0.25s">
+                        <div class="industry__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                        <h3>Education</h3>
+                        <p>Safe digital environments for academic institutions — protecting student data and learning platforms.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-       
-
-        
-
-        <!-- Newsletter -->
-        <section class="newsletter section section--dark">
+        <!-- CTA / Newsletter -->
+        <section class="cta section">
             <div class="container">
-                <div class="newsletter__content scroll-reveal">
-                    <div class="newsletter__text">
-                        <h2 class="newsletter__title">Stay Ahead of Cyber Threats</h2>
-                        <p class="newsletter__description">
-                            Get exclusive insights on emerging threats, compliance updates, and cutting edge security technologies. 
-                            Join many security professionals who trust our intelligence.
-                        </p>
+                <div class="cta__card scroll-reveal">
+                    <div class="cta__text">
+                        <span class="eyebrow">// Stay sharp</span>
+                        <h2 class="cta__title">Stay ahead of cyber threats.</h2>
+                        <p class="cta__desc">Quiet, signal-only updates on emerging threats, compliance changes, and security tooling. No noise.</p>
                     </div>
-                    <form class="newsletter__form" id="newsletter-form">
-                        <div class="newsletter__input-group">
-                            <input 
-                                type="email" 
-                                class="newsletter__input" 
-                                placeholder="Enter your email address"
-                                required
-                                aria-label="Email address"
-                            >
-                            <button type="submit" class="newsletter__button">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="22" y1="2" x2="11" y2="13"/>
-                                    <polygon points="22,2 15,22 11,13 2,9"/>
-                                </svg>
-                                Subscribe
-                            </button>
-                        </div>
-                        <p class="newsletter__privacy">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                <circle cx="12" cy="16" r="1"/>
-                                <path d="m7 11V7a5 5 0 0 1 10 0v4"/>
-                            </svg>
-                            Your privacy is protected. Unsubscribe anytime.
-                        </p>
+                    <form class="cta__form" id="newsletter-form">
+                        <label class="sr-only" for="news-email">Email</label>
+                        <input id="news-email" type="email" class="cta__input" placeholder="you@company.com" required>
+                        <button type="submit" class="btn btn--accent">
+                            Subscribe
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </button>
+                        <p class="cta__fineprint">Unsubscribe anytime. We don't share your email.</p>
                     </form>
                 </div>
             </div>
@@ -479,99 +287,74 @@
 
     <!-- Footer -->
     <footer class="footer">
-    <div class="container">
-        <div class="footer__content">
-            <div class="footer__brand">
-                <a href="/" class="footer__logo">
-                    <img src="images/logo.png" alt="Complixen Logo">
-                </a>
-                <p class="footer__description">
-                    Advanced cybersecurity and compliance solutions for the digital age. 
-                    Protecting your most valuable assets with next level security architecture.
-                </p>
-            </div>
-            
-            <div class="footer__links" style="display:flex; gap:20px;">
-                <!-- Services -->
-                <div class="footer__column" style="flex:1;">
-                    <h3 class="footer__column-title">Services</h3>
-                    <ul class="footer__list">
-                        <li><a href="penetration-testing" class="footer__link">Penetration Testing</a></li>
-                        <li><a href="cloud-security" class="footer__link">Cloud Security</a></li>
-                        <li><a href="application-security" class="footer__link">Application Security</a></li>
-                        <li><a href="managed-soc" class="footer__link">Managed SOC</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Company -->
-                <div class="footer__column" style="flex:1;">
-                    <h3 class="footer__column-title">Company</h3>
-                    <ul class="footer__list">
-                        <li><a href="about" class="footer__link">About Us</a></li>
-                        <li><a href="case-studies" class="footer__link">Case Studies</a></li>
-                        <li><a href="industries" class="footer__link">Industries</a></li>
-                        <li><a href="contact" class="footer__link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact -->
-                <div class="footer__column" style="flex:1;">
-                    <h3 class="footer__column-title">Contact</h3>
-                    <ul class="footer__list">
-                        <li class="footer__contact-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            <a href="mailto:info@complixen.com" class="footer__link">info@complixen.com</a>
-                        </li>
-                        <li class="footer__contact-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            <a href="tel:+1-555-SECURE" class="footer__link">+1 (555) SECURE-1</a>
-                        </li>
-                    </ul>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="images/logo.png" alt="Complixen">
+                    </a>
+                    <p class="footer__description">
+                        Advanced cybersecurity and compliance solutions for the digital age. Protecting your most valuable assets with modern security architecture.
+                    </p>
                     <div class="footer__social">
-                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect x="2" y="9" width="4" height="12"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__social-link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__social-link" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                            </svg>
-                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 1 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+                        <a href="#" class="footer__social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Services</h3>
+                        <ul class="footer__list">
+                            <li><a href="penetration-testing" class="footer__link">Penetration Testing</a></li>
+                            <li><a href="cloud-security" class="footer__link">Cloud Security</a></li>
+                            <li><a href="application-security" class="footer__link">Application Security</a></li>
+                            <li><a href="managed-soc" class="footer__link">Managed SOC</a></li>
+                            <li><a href="incident-response" class="footer__link">Incident Response</a></li>
+                            <li><a href="security-grc" class="footer__link">Governance &amp; Compliance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Company</h3>
+                        <ul class="footer__list">
+                            <li><a href="about" class="footer__link">About</a></li>
+                            <li><a href="industries" class="footer__link">Industries</a></li>
+                            <li><a href="services" class="footer__link">Services</a></li>
+                            <li><a href="contact" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Contact</h3>
+                        <ul class="footer__list">
+                            <li class="footer__contact-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+                                <a href="mailto:info@complixen.com" class="footer__link">info@complixen.com</a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <a href="tel:+15557328731" class="footer__link">+1 (555) SECURE-1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <p>&copy; 2024–25 Complixen. All rights reserved.</p>
+                    <div class="footer__legal-links">
+                        <a href="privacy-policy" class="footer__legal-link">Privacy</a>
+                        <a href="privacy-policy" class="footer__legal-link">Terms</a>
+                        <a href="privacy-policy" class="footer__legal-link">Cookies</a>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="footer__bottom">
-            <div class="footer__legal">
-                <p>&copy; 2024-25 Complixen. All rights reserved.</p>
-                <div class="footer__legal-links">
-                    <a href="privacy-policy" class="footer__legal-link">Privacy Policy</a>
-                    <a href="terms-of-service" class="footer__legal-link">Terms of Service</a>
-                    <a href="cookie-policy" class="footer__legal-link">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/home.js"></script>
-    
 
 </body>
 </html>
