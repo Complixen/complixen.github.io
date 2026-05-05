@@ -302,6 +302,89 @@ p {
   border-radius: var(--r-md);
 }
 
+/* RedSight PTaaS login button */
+.btn--login {
+  position: relative;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  padding: 0 0.875rem 0 1rem;
+  overflow: hidden;
+  font-weight: 500;
+  isolation: isolate;
+}
+.btn--login::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0.55);
+  transform-origin: center;
+  transition: transform var(--t-med), width var(--t-med);
+  z-index: 0;
+}
+.btn--login::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--accent) 14%, transparent) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--t-med);
+  z-index: -1;
+}
+.btn--login:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+.btn--login:hover::before {
+  transform: scaleY(1);
+  width: 3px;
+}
+.btn--login:hover::after {
+  opacity: 1;
+}
+.btn--login__dot {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.btn--login__dot::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.55;
+  animation: btn-login-pulse 2.2s ease-out infinite;
+}
+@keyframes btn-login-pulse {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  70%  { transform: scale(2.4); opacity: 0;    }
+  100% { transform: scale(2.4); opacity: 0;    }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn--login__dot::before { animation: none; }
+}
+.btn--login__arrow {
+  width: 14px;
+  height: 14px;
+  opacity: 0.55;
+  transition: transform var(--t-fast), opacity var(--t-fast);
+}
+.btn--login:hover .btn--login__arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
 .btn--icon {
   width: 44px;
   height: 44px;
@@ -732,9 +815,15 @@ p {
   .nav__toggle {
     display: inline-flex;
   }
-  /* Hide desktop CTA on mobile to save space */
+  /* Hide desktop CTA on mobile to save space, keep login accessible */
   .nav__actions .btn {
     display: none;
+  }
+  .nav__actions .btn--login {
+    display: inline-flex;
+    height: 40px;
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
   }
   .footer__links {
     grid-template-columns: repeat(2, 1fr);
