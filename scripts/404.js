@@ -85,17 +85,17 @@ function initSearchFunctionality() {
   const searchSuggestions = [
     { term: "services", url: "services.html", title: "Our Services" },
     { term: "cybersecurity", url: "services.html#cybersecurity", title: "Cybersecurity Services" },
-    { term: "compliance", url: "services.html#compliance", title: "Compliance Services" },
+    { term: "compliance", url: "security-grc.html#frameworks", title: "Compliance Services" },
     { term: "about", url: "about.html", title: "About Us" },
     { term: "contact", url: "contact.html", title: "Contact Us" },
-    { term: "blog", url: "blog.html", title: "Blog" },
-    { term: "careers", url: "careers.html", title: "Careers" },
-    { term: "case studies", url: "case-studies.html", title: "Case Studies" },
-    { term: "penetration testing", url: "services.html#cybersecurity", title: "Penetration Testing" },
-    { term: "soc", url: "services.html#cybersecurity", title: "SOC-as-a-Service" },
-    { term: "gdpr", url: "services.html#compliance", title: "GDPR Compliance" },
-    { term: "iso 27001", url: "services.html#compliance", title: "ISO 27001" },
-    { term: "hipaa", url: "services.html#compliance", title: "HIPAA Compliance" },
+    { term: "devsight", url: "devsight.html", title: "Complixen DevSight Platform" },
+    { term: "platform", url: "devsight.html", title: "Complixen DevSight Platform" },
+    { term: "vciso", url: "vciso.html", title: "Virtual CISO (vCISO)" },
+    { term: "penetration testing", url: "penetration-testing.html", title: "Penetration Testing" },
+    { term: "gdpr", url: "security-grc.html", title: "GDPR Compliance" },
+    { term: "iso 27001", url: "security-grc.html#frameworks", title: "ISO 27001" },
+    { term: "soc 2", url: "security-grc.html#frameworks", title: "SOC 2" },
+    { term: "hipaa", url: "security-grc.html#frameworks", title: "HIPAA Compliance" },
   ]
 
   function performSearch() {
