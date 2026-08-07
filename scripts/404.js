@@ -84,14 +84,14 @@ function initSearchFunctionality() {
   // Simple search suggestions
   const searchSuggestions = [
     { term: "services", url: "services.html", title: "Our Services" },
-    { term: "cybersecurity", url: "services.html#cybersecurity", title: "Cybersecurity Services" },
+    { term: "ptaas", url: "ptaas.html", title: "Penetration Testing as a Service" },
     { term: "compliance", url: "security-grc.html#frameworks", title: "Compliance Services" },
     { term: "about", url: "about.html", title: "About Us" },
     { term: "contact", url: "contact.html", title: "Contact Us" },
-    { term: "devsight", url: "devsight.html", title: "Complixen DevSight Platform" },
-    { term: "platform", url: "devsight.html", title: "Complixen DevSight Platform" },
+    { term: "devsecops", url: "devsecops.html", title: "Complixen DevSecOps Platform" },
+    { term: "platform", url: "devsecops.html", title: "Complixen DevSecOps Platform" },
     { term: "vciso", url: "vciso.html", title: "Virtual CISO (vCISO)" },
-    { term: "penetration testing", url: "penetration-testing.html", title: "Penetration Testing" },
+    { term: "penetration testing", url: "ptaas.html", title: "Penetration Testing as a Service" },
     { term: "gdpr", url: "security-grc.html", title: "GDPR Compliance" },
     { term: "iso 27001", url: "security-grc.html#frameworks", title: "ISO 27001" },
     { term: "soc 2", url: "security-grc.html#frameworks", title: "SOC 2" },

@@ -31,7 +31,19 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="services" class="nav__link nav__link--active">Services</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="services" class="nav__link nav__link--active">Services
+                            <svg class="nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="nav__dropdown">
+                            <li><a href="devsecops" class="nav__dropdown-link">DevSecOps Platform</a></li>
+                            <li><a href="ptaas" class="nav__dropdown-link">PTaaS</a></li>
+                            <li><a href="vciso" class="nav__dropdown-link">vCISO</a></li>
+                            <li><a href="security-grc" class="nav__dropdown-link">Governance &amp; Compliance</a></li>
+                            <li><a href="incident-response" class="nav__dropdown-link">Incident Response</a></li>
+                            <li><a href="staff-augmentation" class="nav__dropdown-link">Staff Augmentation</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__item"><a href="industries" class="nav__link">Industries</a></li>
                     <li class="nav__item"><a href="about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="contact" class="nav__link">Contact</a></li>
@@ -78,11 +90,11 @@
                     </h1>
 
                     <p class="service-hero__subtitle scroll-reveal">
-                        Audit-ready, on time — without building a full-time GRC team.
+                        Audit-ready, on time, without building a full-time GRC team.
                     </p>
 
                     <p class="service-hero__description scroll-reveal">
-                        We help organizations achieve and maintain compliance with ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA, and other frameworks. Our consultants design your GRC program, write the policies, run internal audits, and prepare your evidence — so when the accredited certification body audits you, you pass. <strong>We don't issue certifications ourselves; we get you ready for the people who do.</strong>
+                        We help organizations achieve and maintain compliance with ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA, and other frameworks. Our consultants design your GRC program, write the policies, run internal audits, and prepare your evidence, so when the accredited certification body audits you, you pass. <strong>We don't issue certifications ourselves; we get you ready for the people who do.</strong>
                     </p>
                     
                     <div class="service-hero__actions scroll-reveal">
@@ -128,7 +140,7 @@
                     <span class="eyebrow eyebrow--muted">// Our role</span>
                     <h2 class="section__title">A note on certification</h2>
                     <p class="section__subtitle">
-                        Complixen is a security advisory and implementation partner — not a certification body. Certificates for ISO 27001, SOC 2, PCI-DSS, HIPAA, and similar standards are issued by an accredited registrar or auditor. <strong>Our job is to make passing that audit a formality:</strong> we design the program, build the controls, run internal audits, and prepare every piece of evidence the external auditor will ask for.
+                        Complixen is a security advisory and implementation partner, not a certification body. Certificates for ISO 27001, SOC 2, PCI-DSS, HIPAA, and similar standards are issued by an accredited registrar or auditor. <strong>Our job is to make passing that audit a formality:</strong> we design the program, build the controls, run internal audits, and prepare every piece of evidence the external auditor will ask for.
                     </p>
                 </div>
             </div>
@@ -141,7 +153,7 @@
                     <span class="eyebrow eyebrow--muted">// Frameworks</span>
                     <h2 class="section__title">Certifications We Help You Achieve</h2>
                     <p class="section__subtitle">
-                        We're your readiness partner for the three frameworks our clients need most — we build the program and prepare every piece of evidence, and your accredited auditor issues the certificate
+                        We're your readiness partner for the three frameworks our clients need most. We build the program and prepare the evidence, and your accredited auditor issues the certificate
                     </p>
                 </div>
 
@@ -170,7 +182,7 @@
                         </div>
                         <h3 class="offering-item__title">SOC 2</h3>
                         <p class="offering-item__description">
-                            Type I and Type II readiness for SaaS and service businesses. Trust Services Criteria mapped to controls you already run — evidence collected as you work, not in a panic.
+                            Type I and Type II readiness for SaaS and service businesses. Trust Services Criteria mapped to controls you already run, with evidence collected as you work, not in a panic.
                         </p>
                     </div>
 
@@ -214,7 +226,7 @@
                         </div>
                         <h3 class="offering-item__title">GRC Framework Design</h3>
                         <p class="offering-item__description">
-                            We design a governance framework tailored to your business — mapped to the standards you need to meet (ISO 27001, SOC 2, NIST, COBIT). Streamlined processes, clear ownership, and accountability structures that auditors and executives both understand.
+                            We design a governance framework tailored to your business, mapped to the standards you need to meet (ISO 27001, SOC 2, NIST, COBIT). Streamlined processes, clear ownership, and accountability structures that auditors and executives both understand.
                         </p>
                     </div>
 
@@ -242,7 +254,7 @@
                         </div>
                         <h3 class="offering-item__title">Policy & Procedure Development</h3>
                         <p class="offering-item__description">
-                            We write the policies and procedures your auditor will ask for — aligned to ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA, and similar frameworks — and embed them into how your team actually works. Living documents, not shelf-ware.
+                            We write the policies and procedures your auditor will ask for, aligned to ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA, and similar frameworks, and embed them into how your team actually works. Living documents, not shelf-ware.
                         </p>
                     </div>
 
@@ -327,7 +339,7 @@
                         </div>
                         <h3 class="benefit-card__title">Simplified compliance</h3>
                         <p class="benefit-card__description">
-                            One partner across multiple frameworks — we map controls once and reuse them, so SOC 2 evidence isn't a separate project from ISO 27001.
+                            One partner across multiple frameworks. We map controls once and reuse them, so SOC 2 evidence isn't a separate project from ISO 27001.
                         </p>
                     </div>
 
@@ -339,7 +351,7 @@
                         </div>
                         <h3 class="benefit-card__title">Proactive risk management</h3>
                         <p class="benefit-card__description">
-                            Forward-looking risk assessments tied to actual treatment plans — not a register that gets dusted off once a year.
+                            Forward-looking risk assessments tied to actual treatment plans, not a register that gets dusted off once a year.
                         </p>
                     </div>
 
@@ -365,7 +377,7 @@
                         </div>
                         <h3 class="benefit-card__title">Multi-framework expertise</h3>
                         <p class="benefit-card__description">
-                            Hands-on experience across ISO 27001, SOC 2, PCI-DSS, HIPAA, GDPR, and regional standards — we know which controls overlap and which don't.
+                            Hands-on experience across ISO 27001, SOC 2, PCI-DSS, HIPAA, GDPR, and regional standards. We know which controls overlap and which don't.
                         </p>
                     </div>
 
@@ -377,7 +389,7 @@
                         </div>
                         <h3 class="benefit-card__title">Continuous compliance</h3>
                         <p class="benefit-card__description">
-                            Surveillance audits, control monitoring, and policy refreshes — so recertification next year is easier than this year, not harder.
+                            Surveillance audits, control monitoring, and policy refreshes, so recertification next year is easier than this year, not harder.
                         </p>
                     </div>
                 </div>
@@ -436,9 +448,8 @@
                     <div class="footer__column">
                         <h3 class="footer__column-title">Services</h3>
                         <ul class="footer__list">
-                            <li><a href="devsight" class="footer__link">DevSight Platform</a></li>
-                            <li><a href="penetration-testing" class="footer__link">Penetration Testing</a></li>
-                            <li><a href="application-security" class="footer__link">Application Security</a></li>
+                            <li><a href="devsecops" class="footer__link">DevSecOps Platform</a></li>
+                            <li><a href="ptaas" class="footer__link">PTaaS</a></li>
                             <li><a href="vciso" class="footer__link">vCISO</a></li>
                             <li><a href="incident-response" class="footer__link">Incident Response</a></li>
                             <li><a href="security-grc" class="footer__link">Governance &amp; Compliance</a></li>

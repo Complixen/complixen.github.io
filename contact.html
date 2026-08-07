@@ -32,7 +32,19 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="services" class="nav__link">Services</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="services" class="nav__link">Services
+                            <svg class="nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="nav__dropdown">
+                            <li><a href="devsecops" class="nav__dropdown-link">DevSecOps Platform</a></li>
+                            <li><a href="ptaas" class="nav__dropdown-link">PTaaS</a></li>
+                            <li><a href="vciso" class="nav__dropdown-link">vCISO</a></li>
+                            <li><a href="security-grc" class="nav__dropdown-link">Governance &amp; Compliance</a></li>
+                            <li><a href="incident-response" class="nav__dropdown-link">Incident Response</a></li>
+                            <li><a href="staff-augmentation" class="nav__dropdown-link">Staff Augmentation</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__item"><a href="industries" class="nav__link">Industries</a></li>
                     <li class="nav__item"><a href="about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="contact" class="nav__link nav__link--active">Contact</a></li>
@@ -195,9 +207,8 @@
                     <div class="footer__column">
                         <h3 class="footer__column-title">Services</h3>
                         <ul class="footer__list">
-                            <li><a href="devsight" class="footer__link">DevSight Platform</a></li>
-                            <li><a href="penetration-testing" class="footer__link">Penetration Testing</a></li>
-                            <li><a href="application-security" class="footer__link">Application Security</a></li>
+                            <li><a href="devsecops" class="footer__link">DevSecOps Platform</a></li>
+                            <li><a href="ptaas" class="footer__link">PTaaS</a></li>
                             <li><a href="vciso" class="footer__link">vCISO</a></li>
                             <li><a href="incident-response" class="footer__link">Incident Response</a></li>
                             <li><a href="security-grc" class="footer__link">Governance &amp; Compliance</a></li>

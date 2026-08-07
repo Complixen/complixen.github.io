@@ -123,104 +123,257 @@
   margin-top: var(--space-8);
 }
 
-/* ---------- Hero pipeline terminal ---------- */
-.devsight-term {
-  width: min(420px, 100%);
+/* ---------- Hero benchmark card (DevSecOps) ---------- */
+.benchmark {
+  width: min(360px, 100%);
   margin: 0 auto;
-  background: var(--bg-elev);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--r-lg);
+  padding: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
   box-shadow: var(--shadow-lg);
-  overflow: hidden;
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-}
-
-.devsight-term__bar {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-4);
-  background: var(--surface-2);
-  border-bottom: 1px solid var(--border);
-}
-.devsight-term__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.devsight-term__dot--r { background: var(--danger); }
-.devsight-term__dot--y { background: var(--warning); }
-.devsight-term__dot--g { background: var(--success); }
-.devsight-term__title {
-  margin-left: var(--space-2);
-  color: var(--text-subtle);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-}
-
-.devsight-term__body {
-  padding: var(--space-4) var(--space-6);
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  align-items: center;
+  gap: var(--space-6);
 }
 
-.devsight-term__line {
+.benchmark__head {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.benchmark__title {
+  font-weight: 600;
+  font-size: 0.9375rem;
   color: var(--text);
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(4px);
-  animation: devsight-line 320ms var(--ease) forwards;
-  animation-delay: calc(var(--step, 0) * 340ms);
 }
-@keyframes devsight-line {
-  to { opacity: 1; transform: translateY(0); }
+.benchmark__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--success);
+  padding: 0.2rem 0.625rem;
+  border: 1px solid color-mix(in oklab, var(--success) 40%, transparent);
+  border-radius: var(--r-pill);
 }
-
-.devsight-term__line em {
-  font-style: normal;
-  color: var(--text-subtle);
-  margin-left: auto;
-  padding-left: var(--space-4);
-}
-.devsight-term__prompt { color: var(--accent); }
-.devsight-term__check { color: var(--success); }
-.devsight-term__line--ok { color: var(--text-muted); }
-.devsight-term__line--scan { color: var(--accent); }
-.devsight-term__line--sub {
-  color: var(--text-muted);
-  padding-left: 1.25rem;
-}
-.devsight-term__score { color: var(--success) !important; }
-
-.devsight-term__pulse {
-  width: 8px;
-  height: 8px;
+.benchmark__tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--accent);
-  align-self: center;
-  animation: devsight-pulse 1.4s ease-in-out infinite;
-  animation-delay: calc(3 * 340ms);
-}
-@keyframes devsight-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
-  50% { box-shadow: 0 0 0 6px transparent; }
+  background: var(--success);
 }
 
-.devsight-term__cursor {
-  display: inline-block;
-  width: 8px;
-  height: 1em;
-  background: var(--accent);
-  align-self: center;
-  animation: devsight-blink 1.1s steps(1) infinite;
+.benchmark__score {
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
-@keyframes devsight-blink {
-  50% { opacity: 0; }
+.benchmark__score svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.benchmark__ring-track,
+.benchmark__ring-fill {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+.benchmark__ring-track {
+  stroke: var(--border-strong);
+}
+.benchmark__ring-fill {
+  stroke: var(--accent);
+  stroke-dasharray: 326.7;
+  stroke-dashoffset: 20;
+  animation: benchmark-ring 2s var(--ease) both;
+}
+@keyframes benchmark-ring {
+  from { stroke-dashoffset: 326.7; }
+  to { stroke-dashoffset: 20; }
+}
+.benchmark__grade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.benchmark__grade strong {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1;
+}
+.benchmark__grade span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+  margin-top: var(--space-1);
+}
+
+.benchmark__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+}
+.benchmark__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  row-gap: 0.375rem;
+  align-items: center;
+}
+.benchmark__row-label {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+.benchmark__row em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text);
+}
+.benchmark__bar {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: var(--border);
+  overflow: hidden;
+}
+.benchmark__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: var(--fill, 60%);
+  border-radius: inherit;
+  background: var(--accent);
+  transform-origin: left;
+  animation: benchmark-bar 1.4s var(--ease) both;
+}
+@keyframes benchmark-bar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.benchmark__foot {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+
+/* ---------- Hero engagement card (PTaaS) ---------- */
+.ptaas-visual {
+  width: min(400px, 100%);
+  margin: 0 auto;
+  padding: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.ptaas-visual__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.ptaas-visual__title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+.ptaas-visual__status {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.ptaas-visual__progress {
+  position: relative;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: var(--border);
+  overflow: hidden;
+}
+.ptaas-visual__progress span {
+  position: absolute;
+  inset: 0;
+  width: var(--fill, 50%);
+  border-radius: inherit;
+  background: var(--accent);
+  transform-origin: left;
+  animation: benchmark-bar 1.4s var(--ease) both;
+}
+.ptaas-visual__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.ptaas-visual__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+}
+.ptaas-visual__sev {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--r-pill);
+}
+.ptaas-visual__sev--high {
+  color: var(--danger);
+  background: color-mix(in oklab, var(--danger) 14%, transparent);
+}
+.ptaas-visual__sev--med {
+  color: var(--warning);
+  background: color-mix(in oklab, var(--warning) 14%, transparent);
+}
+.ptaas-visual__sev--low {
+  color: var(--text-muted);
+  background: color-mix(in oklab, var(--text) 8%, transparent);
+}
+.ptaas-visual__name {
+  font-size: 0.8125rem;
+  color: var(--text);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ptaas-visual__state {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+.ptaas-visual__state--done {
+  color: var(--success);
+}
+.ptaas-visual__foot {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-subtle);
 }
 
 /* ---------- Integrations strip ---------- */
@@ -261,25 +414,17 @@
 
 /* ---------- Responsive & a11y ---------- */
 @media (max-width: 640px) {
-  .pricing-card {
-    padding: var(--space-6);
-  }
-  .devsight-term__body {
+  .pricing-card,
+  .benchmark,
+  .ptaas-visual {
     padding: var(--space-4);
-  }
-  .devsight-term {
-    font-size: 0.75rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .devsight-term__line {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-  .devsight-term__pulse,
-  .devsight-term__cursor {
+  .benchmark__ring-fill,
+  .benchmark__bar::after,
+  .ptaas-visual__progress span {
     animation: none;
   }
   .pricing-card,
