@@ -32,7 +32,6 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="devsight" class="nav__link nav__link--active">Platform</a></li>
                     <li class="nav__item"><a href="services" class="nav__link">Services</a></li>
                     <li class="nav__item"><a href="industries" class="nav__link">Industries</a></li>
                     <li class="nav__item"><a href="about" class="nav__link">About</a></li>
@@ -82,7 +81,7 @@
                     </p>
 
                     <p class="service-hero__description scroll-reveal">
-                        DevSight quietly watches every release, every dependency, every deployment — and turns risk into a to-do list your team already knows how to work. No new workflows. No security team required.
+                        DevSight lives inside your CI/CD — reviewing every pull request, watching every dependency, probing every deployment — and turns risk into tickets your team actually works. No new workflows. No security team required.
                     </p>
 
                     <div class="service-hero__actions scroll-reveal">
@@ -103,35 +102,44 @@
                 </div>
 
                 <div class="service-hero__visual">
-                    <div class="devsight-visual" aria-hidden="true">
-                        <div class="devsight-visual__ring">
-                            <svg viewBox="0 0 120 120">
-                                <circle class="devsight-visual__ring-track" cx="60" cy="60" r="52"/>
-                                <circle class="devsight-visual__ring-fill" cx="60" cy="60" r="52"/>
-                            </svg>
-                            <div class="devsight-visual__score">
-                                <span class="devsight-visual__score-value">A+</span>
-                                <span class="devsight-visual__score-label">Security score</span>
-                            </div>
+                    <div class="devsight-term" aria-hidden="true">
+                        <div class="devsight-term__bar">
+                            <span class="devsight-term__dot devsight-term__dot--r"></span>
+                            <span class="devsight-term__dot devsight-term__dot--y"></span>
+                            <span class="devsight-term__dot devsight-term__dot--g"></span>
+                            <span class="devsight-term__title">ci-cd · pipeline #482</span>
                         </div>
-                        <div class="devsight-visual__rows">
-                            <div class="devsight-visual__row">
-                                <span class="devsight-visual__pip devsight-visual__pip--low"></span>
-                                <span class="devsight-visual__row-label">release-42 · reviewed</span>
-                                <span class="devsight-visual__bar" style="--fill: 92%"></span>
-                            </div>
-                            <div class="devsight-visual__row">
-                                <span class="devsight-visual__pip devsight-visual__pip--med"></span>
-                                <span class="devsight-visual__row-label">dependencies · watched</span>
-                                <span class="devsight-visual__bar" style="--fill: 76%"></span>
-                            </div>
-                            <div class="devsight-visual__row">
-                                <span class="devsight-visual__pip devsight-visual__pip--high"></span>
-                                <span class="devsight-visual__row-label">1 risk → ticketed</span>
-                                <span class="devsight-visual__bar" style="--fill: 58%"></span>
-                            </div>
+                        <div class="devsight-term__body">
+                            <p class="devsight-term__line" style="--step: 0"><span class="devsight-term__prompt">$</span> git push origin main</p>
+                            <p class="devsight-term__line devsight-term__line--ok" style="--step: 1"><span class="devsight-term__check">✓</span> build <em>12s</em></p>
+                            <p class="devsight-term__line devsight-term__line--ok" style="--step: 2"><span class="devsight-term__check">✓</span> tests <em>48s</em></p>
+                            <p class="devsight-term__line devsight-term__line--scan" style="--step: 3"><span class="devsight-term__pulse"></span> devsight · security gate</p>
+                            <p class="devsight-term__line devsight-term__line--sub" style="--step: 4">├─ code review <em>✓ passed</em></p>
+                            <p class="devsight-term__line devsight-term__line--sub" style="--step: 5">├─ dependencies <em>✓ 142 watched</em></p>
+                            <p class="devsight-term__line devsight-term__line--sub" style="--step: 6">├─ 1 finding <em>→ ticketed to Jira</em></p>
+                            <p class="devsight-term__line devsight-term__line--sub" style="--step: 7">└─ risk score <em class="devsight-term__score">A+ · 98/100</em></p>
+                            <p class="devsight-term__line devsight-term__line--ok" style="--step: 8"><span class="devsight-term__check">✓</span> deploy → production</p>
+                            <p class="devsight-term__line" style="--step: 9"><span class="devsight-term__prompt">$</span>&nbsp;<span class="devsight-term__cursor"></span></p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations strip -->
+        <section class="integrations" aria-label="Works with your stack">
+            <div class="container">
+                <p class="integrations__label scroll-reveal">Drops straight into the pipeline you already have</p>
+                <div class="integrations__row scroll-reveal">
+                    <span class="integrations__chip">GitHub</span>
+                    <span class="integrations__chip">GitLab</span>
+                    <span class="integrations__chip">Bitbucket</span>
+                    <span class="integrations__chip">GitHub Actions</span>
+                    <span class="integrations__chip">Jenkins</span>
+                    <span class="integrations__chip">CircleCI</span>
+                    <span class="integrations__chip">Azure DevOps</span>
+                    <span class="integrations__chip">Jira</span>
+                    <span class="integrations__chip">Slack</span>
                 </div>
             </div>
         </section>
@@ -200,7 +208,7 @@
                         </div>
                         <h3 class="offering-item__title">Fixes land where work already happens</h3>
                         <p class="offering-item__description">
-                            Findings arrive as ready-to-work tickets on the board your team already uses — routed to the right owner, with the fix half-written. No copy-paste triage, ever.
+                            Findings arrive as ready-to-work Jira tickets — routed to the right owner, with severity, evidence, and the fix half-written. No copy-paste triage, ever.
                         </p>
                     </div>
 
@@ -264,7 +272,7 @@
                         <div class="step-content">
                             <h3 class="step-title">Connect</h3>
                             <p class="step-description">
-                                Point DevSight at your code and your team's tools. Nothing to install, nothing to babysit — you're live in minutes.
+                                Connect your GitHub or GitLab repos and your CI/CD in minutes. Nothing to install, nothing to babysit — the first scan runs on your next push.
                             </p>
                         </div>
                     </div>
