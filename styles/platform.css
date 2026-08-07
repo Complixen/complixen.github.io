@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Complixen DevSight — platform page additions
+   Pricing section + hero dashboard visual. Uses only modern tokens
+   from main.css (:root / [data-theme="light"]).
+   ========================================================================== */
+
+/* ---------- Pricing ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  align-items: stretch;
+  margin-top: var(--space-12);
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-8);
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+}
+.pricing-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-card--featured {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), var(--shadow-md);
+}
+.pricing-card--featured:hover {
+  border-color: var(--accent);
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--bg-elev);
+  border: 1px solid var(--accent);
+  border-radius: var(--r-pill);
+  padding: 0.25rem 0.875rem;
+}
+
+.pricing-card__tier {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
+
+.pricing-card__credits {
+  font-family: var(--font-mono);
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+.pricing-card__credits span {
+  font-size: 0.9375rem;
+  color: var(--text-subtle);
+}
+
+.pricing-card__desc {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-6);
+}
+
+.pricing-card__features {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+.pricing-card__features li {
+  position: relative;
+  padding-left: 1.75rem;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.pricing-card__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--accent-soft);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2334d399' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.625rem;
+}
+
+.pricing-card__cta {
+  margin-top: auto;
+}
+.pricing-card__cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.pricing__note {
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: 0.9375rem;
+  margin-top: var(--space-8);
+}
+
+/* ---------- Hero dashboard visual ---------- */
+.devsight-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  width: min(340px, 100%);
+  margin: 0 auto;
+  padding: var(--space-8);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.devsight-visual__ring {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+.devsight-visual__ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.devsight-visual__ring-track,
+.devsight-visual__ring-fill {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+.devsight-visual__ring-track {
+  stroke: var(--border-strong);
+}
+.devsight-visual__ring-fill {
+  stroke: var(--accent);
+  stroke-dasharray: 326.7;
+  stroke-dashoffset: 49;
+  animation: devsight-ring 2.4s var(--ease) both;
+}
+@keyframes devsight-ring {
+  from { stroke-dashoffset: 326.7; }
+  to { stroke-dashoffset: 49; }
+}
+
+.devsight-visual__score {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.devsight-visual__score-value {
+  font-family: var(--font-mono);
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1;
+}
+.devsight-visual__score-label {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+  margin-top: var(--space-1);
+}
+
+.devsight-visual__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+}
+.devsight-visual__row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: var(--space-2);
+  row-gap: var(--space-1);
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+}
+.devsight-visual__pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.devsight-visual__pip--low { background: var(--success); }
+.devsight-visual__pip--med { background: var(--warning); }
+.devsight-visual__pip--high { background: var(--danger); }
+
+.devsight-visual__row-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.devsight-visual__bar {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 4px;
+  border-radius: var(--r-pill);
+  background: var(--border);
+  overflow: hidden;
+}
+.devsight-visual__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: var(--fill, 60%);
+  border-radius: inherit;
+  background: var(--accent);
+  transform-origin: left;
+  animation: devsight-bar 1.6s var(--ease) both;
+}
+@keyframes devsight-bar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ---------- Responsive & a11y ---------- */
+@media (max-width: 640px) {
+  .pricing-card {
+    padding: var(--space-6);
+  }
+  .devsight-visual {
+    padding: var(--space-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .devsight-visual__ring-fill,
+  .devsight-visual__bar::after {
+    animation: none;
+  }
+  .pricing-card,
+  .pricing-card:hover {
+    transform: none;
+  }
+}
