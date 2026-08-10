@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/service-detail.css">
-    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="stylesheet" href="styles/pages.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.svg">
@@ -71,79 +70,60 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero -->
-        <section class="service-hero">
-            <div class="container">
-                <div class="service-hero__content">
-                    <div class="service-hero__breadcrumb scroll-reveal">
-                        <a href="/">Home</a>
-                        <span>/</span>
-                        <a href="services">Services</a>
-                        <span>/</span>
-                        <span>Security Compliance</span>
+        <section class="lhero">
+            <div class="lhero__bg" aria-hidden="true"></div>
+            <div class="container lhero__inner">
+                <div class="lhero__content scroll-reveal">
+                    <p class="lhero__crumb"><a href="/">Home</a> <span>/</span> <a href="services">Services</a> <span>/</span> <span>Security Compliance</span></p>
+                    <h1 class="lhero__title text-balance">Security Compliance. <span class="lhero__accent">Engineered to Unblock Enterprise Deals.</span></h1>
+                    <p class="lhero__lede text-balance">Achieve SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials without slowing down your engineering team. We manage the complexity, build the controls, and get you audit-ready at startup speed so you can sign your biggest contracts.</p>
+                    <div class="lhero__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                     </div>
-
-                    <h1 class="service-hero__title scroll-reveal">
-                        Security Compliance. Engineered to Unblock Enterprise Deals.
-                    </h1>
-
-                    <p class="service-hero__description scroll-reveal">
-                        Achieve SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials without slowing down your engineering team. We manage the complexity, build the controls, and get you audit-ready at startup speed so you can sign your biggest contracts.
-                    </p>
-
-                    <div class="service-hero__actions scroll-reveal">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Book a Strategy Call
-                        </a>
-                    </div>
-
-                    <p class="micro scroll-reveal">No automated templates. Just expert guidance to get you certified.</p>
+                    <p class="micro">No automated templates. Just expert guidance to get you certified.</p>
                 </div>
-
-                <div class="service-hero__visual">
-                    <div class="grc-animation">
-                        <div class="grc-triangle">
-                            <div class="grc-node governance" style="--delay: 0s;">G</div>
-                            <div class="grc-node risk" style="--delay: 0.5s;">R</div>
-                            <div class="grc-node compliance" style="--delay: 1s;">C</div>
-                        </div>
-                        <div class="grc-connections">
-                            <div class="grc-line" style="--delay: 0s;"></div>
-                            <div class="grc-line" style="--delay: 0.3s;"></div>
-                            <div class="grc-line" style="--delay: 0.6s;"></div>
-                        </div>
-                        <div class="grc-center">
-                            <div class="grc-logo">GRC</div>
-                        </div>
+                <div class="lhero__visual scroll-reveal-right" aria-hidden="true">
+                    <div class="orb">
+                        <svg class="orb__rings" viewBox="0 0 400 400">
+                            <defs>
+                                <linearGradient id="ringGradP" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.9"/>
+                                    <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.2"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="200" cy="200" r="80" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="200" cy="200" r="130" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.4" stroke-dasharray="4 8"/>
+                            <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.25"/>
+                        </svg>
+                        <svg class="orb__center" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+                        <span class="orb__dot orb__dot--1"></span>
+                        <span class="orb__dot orb__dot--2"></span>
+                        <span class="orb__dot orb__dot--3"></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Problem -->
-        <section class="section section--light">
+        <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// The Problem</span>
+                    <span class="eyebrow eyebrow--muted">The Problem</span>
                     <h2 class="section__title">Enterprise buyers demand compliance. Startups can't afford the distraction.</h2>
                     <p class="section__subtitle">If you want to move upmarket, certifications like SOC 2 and ISO 27001 are non-negotiable. But traditional compliance paths create three massive roadblocks for growing companies:</p>
                 </div>
-                <div class="problem-grid">
-                    <div class="problem-item scroll-reveal" style="--delay: 0.0s">
-                        <span class="problem-item__num">/ 01</span>
+                <div class="feature-grid feature-grid--three">
+                    <div class="feature scroll-reveal" style="--delay: 0.0s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
                         <h3>The Revenue Blocker</h3>
                         <p>Enterprise procurement teams will not sign a contract until you can prove your compliance posture, stalling your most lucrative deals.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
-                        <span class="problem-item__num">/ 02</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.05s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
                         <h3>The Engineering Drain</h3>
-                        <p>Founders and CTOs waste hundreds of hours deciphering legal jargon and writing policies instead of building features.</p>
+                        <p>Founders and CTOs waste countless hours deciphering legal jargon and writing policies instead of building features.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.2s">
-                        <span class="problem-item__num">/ 03</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.1s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
                         <h3>The Template Trap</h3>
                         <p>Traditional consultants hand you a folder of generic policy templates and walk away, leaving you to figure out how to actually implement the technical controls.</p>
                     </div>
@@ -152,60 +132,50 @@
             </div>
         </section>
 
-        <!-- Features -->
         <section id="frameworks" class="section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// The Solution</span>
+                    <span class="eyebrow eyebrow--muted">The Solution</span>
                     <h2 class="section__title">End-to-end compliance readiness, built for modern workflows</h2>
                     <p class="section__subtitle">From the first gap analysis to the day your certificate arrives.</p>
                 </div>
-                <div class="frows">
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 01</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>Build Once, Comply Many</h3>
-                            <p class="frow__tech">Multi-framework mapping</p>
-                        </div>
-                        <p class="frow__body">Whether you need SOC 2, ISO 27001, HIPAA, GDPR, or Cyber Essentials, we map the overlapping requirements. We implement unified controls so you don't waste time doing duplicate work for different audits.</p>
-                    </article>
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 02</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>The Audit Accelerator</h3>
-                            <p class="frow__tech">Hands-on program building</p>
-                        </div>
-                        <p class="frow__body">We don't just tell you what to do. We write the policies, design the processes, and help you implement the technical controls tailored specifically to your startup's actual environment and architecture.</p>
-                    </article>
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 03</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>Zero-Friction Controls</h3>
-                            <p class="frow__tech">Developer-friendly implementation</p>
-                        </div>
-                        <p class="frow__body">Compliance shouldn't ruin your agile culture. We design security controls that integrate naturally into your existing developer workflows, like GitHub, Jira, and AWS, instead of forcing corporate red tape on your team.</p>
-                    </article>
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 04</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>Your Expert Guide</h3>
-                            <p class="frow__tech">Active audit defense</p>
-                        </div>
-                        <p class="frow__body">We don't abandon you when the auditor shows up. We stand by your side during the actual audit, answering technical questions and providing the necessary evidence to ensure a smooth, successful certification.</p>
-                    </article>
+                <div class="feature-grid">
+                    <div class="feature scroll-reveal" style="--delay: 0.0s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>Build Once, Comply Many</h3>
+                        <span class="feature__tag">Multi-framework mapping</span>
+                        <p>Whether you need SOC 2, ISO 27001, HIPAA, GDPR, or Cyber Essentials, we map the overlapping requirements. We implement unified controls so you don't waste time doing duplicate work for different audits.</p>
+                    </div>
+                    <div class="feature scroll-reveal" style="--delay: 0.05s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>The Audit Accelerator</h3>
+                        <span class="feature__tag">Hands-on program building</span>
+                        <p>We don't just tell you what to do. We write the policies, design the processes, and help you implement the technical controls tailored specifically to your startup's actual environment and architecture.</p>
+                    </div>
+                    <div class="feature scroll-reveal" style="--delay: 0.1s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>Zero-Friction Controls</h3>
+                        <span class="feature__tag">Developer-friendly implementation</span>
+                        <p>Compliance shouldn't ruin your agile culture. We design security controls that integrate naturally into your existing developer workflows, like GitHub, Jira, and AWS, instead of forcing corporate red tape on your team.</p>
+                    </div>
+                    <div class="feature scroll-reveal" style="--delay: 0.15s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>Your Expert Guide</h3>
+                        <span class="feature__tag">Active audit defense</span>
+                        <p>We don't abandon you when the auditor shows up. We stand by your side during the actual audit, answering technical questions and providing the necessary evidence to ensure a smooth, successful certification.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Us -->
-        <section class="section section--light">
+        <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// Why Us</span>
+                    <span class="eyebrow eyebrow--muted">Why Complixen</span>
                     <h2 class="section__title">Stop paying for generic templates and empty advice</h2>
                 </div>
                 <div class="compare scroll-reveal">
@@ -238,48 +208,17 @@
             </div>
         </section>
 
-        <!-- Custom Quote -->
         <section class="section">
             <div class="container">
-                <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// Custom Quote</span>
-                    <h2 class="section__title">Compliance roadmaps scoped to your exact architecture</h2>
-                    <p class="section__subtitle">We believe every startup deserves a streamlined path to certification, but we don't believe in rigid pricing tiers. Let's discuss your current infrastructure, target frameworks, and timeline. From there, we will build a tailored quotation that aligns perfectly with your runway and scope of work.</p>
-                </div>
-                <div class="text-center scroll-reveal" style="text-align: center;">
-                    <a href="contact" class="btn btn--primary btn--large">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        &nbsp;Request a Custom Quote
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta section">
-            <div class="container">
-                <div class="cta__content scroll-reveal">
-                    <h2 class="cta__title">Ready to get certified and close bigger deals?</h2>
-                    <p class="cta__description">
-                        Jump on a quick call with our founding team. We'll skip the sales pitch, assess your current security posture, and map out exactly what it takes to get your startup audit-ready.
-                    </p>
-                    <div class="cta__actions">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Schedule a Strategy Call
-                        </a>
-                        <a href="contact" class="btn btn--secondary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                            &nbsp;Request a Custom Quote
-                        </a>
+                <div class="panel scroll-reveal">
+                    <div class="panel__text">
+                        <span class="eyebrow">Ready to get certified and close bigger deals?</span>
+                        <h2 class="panel__title">Compliance roadmaps scoped to your exact architecture</h2>
+                        <p class="panel__desc">We believe every startup deserves a streamlined path to certification, but we don't believe in rigid pricing tiers. Let's discuss your current infrastructure, target frameworks, and timeline. From there, we will build a tailored quotation that aligns perfectly with your runway and scope of work.</p>
+                    </div>
+                    <div class="panel__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Strategy Call</a>
+                        <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
                     </div>
                 </div>
             </div>
@@ -348,6 +287,5 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/service-animations.js"></script>
 </body>
 </html>

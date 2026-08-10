@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/service-detail.css">
-    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="stylesheet" href="styles/pages.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.svg">
@@ -71,159 +70,118 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero -->
-        <section class="service-hero">
-            <div class="container">
-                <div class="service-hero__content">
-                    <div class="service-hero__breadcrumb scroll-reveal">
-                        <a href="/">Home</a>
-                        <span>/</span>
-                        <a href="services">Services</a>
-                        <span>/</span>
-                        <span>Fractional vCISO</span>
+        <section class="lhero">
+            <div class="lhero__bg" aria-hidden="true"></div>
+            <div class="container lhero__inner">
+                <div class="lhero__content scroll-reveal">
+                    <p class="lhero__crumb"><a href="/">Home</a> <span>/</span> <a href="services">Services</a> <span>/</span> <span>Fractional vCISO</span></p>
+                    <h1 class="lhero__title text-balance">Strategic Security Leadership. <span class="lhero__accent">Engineered to Close Enterprise Deals.</span></h1>
+                    <p class="lhero__lede text-balance">Get the expertise of a seasoned Chief Information Security Officer without the burden of a full-time executive hire. We guide your security strategy, handle vendor questionnaires, and partner with your engineers to ensure vulnerabilities actually get fixed, so you can focus on scaling and closing deals.</p>
+                    <div class="lhero__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Book a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                     </div>
-
-                    <h1 class="service-hero__title scroll-reveal">
-                        Strategic Security Leadership. Engineered to Close Enterprise Deals.
-                    </h1>
-
-                    <p class="service-hero__description scroll-reveal">
-                        Get the expertise of a seasoned Chief Information Security Officer without the burden of a full-time executive hire. We guide your security strategy, handle vendor questionnaires, and partner with your engineers to ensure vulnerabilities actually get fixed, so you can focus on scaling and closing deals.
-                    </p>
-
-                    <div class="service-hero__actions scroll-reveal">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Book a Consultation
-                        </a>
-                    </div>
-
-                    <p class="micro scroll-reveal">No slide decks. Just a real conversation about your security roadmap.</p>
+                    <p class="micro">No slide decks. Just a real conversation about your security roadmap.</p>
                 </div>
-
-                <div class="service-hero__visual">
-                    <div class="staff-animation">
-                        <div class="team-circle">
-                            <div class="team-member" style="--delay: 0s; --angle: 0deg;">
-                                <div class="member-avatar">ST</div>
-                                <div class="member-title">Strategy</div>
-                            </div>
-                            <div class="team-member" style="--delay: 0.3s; --angle: 72deg;">
-                                <div class="member-avatar">RM</div>
-                                <div class="member-title">Risk Management</div>
-                            </div>
-                            <div class="team-member" style="--delay: 0.6s; --angle: 144deg;">
-                                <div class="member-avatar">CO</div>
-                                <div class="member-title">Compliance</div>
-                            </div>
-                            <div class="team-member" style="--delay: 0.9s; --angle: 216deg;">
-                                <div class="member-avatar">BR</div>
-                                <div class="member-title">Board Reporting</div>
-                            </div>
-                            <div class="team-member" style="--delay: 1.2s; --angle: 288deg;">
-                                <div class="member-avatar">VR</div>
-                                <div class="member-title">Vendor Risk</div>
-                            </div>
-                        </div>
-                        <div class="center-logo">
-                            <div class="augmentation-icon" style="font-size: 1.125rem; letter-spacing: 0.04em;">CISO</div>
-                        </div>
+                <div class="lhero__visual scroll-reveal-right" aria-hidden="true">
+                    <div class="orb">
+                        <svg class="orb__rings" viewBox="0 0 400 400">
+                            <defs>
+                                <linearGradient id="ringGradP" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.9"/>
+                                    <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.2"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="200" cy="200" r="80" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="200" cy="200" r="130" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.4" stroke-dasharray="4 8"/>
+                            <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.25"/>
+                        </svg>
+                        <svg class="orb__center" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span class="orb__dot orb__dot--1"></span>
+                        <span class="orb__dot orb__dot--2"></span>
+                        <span class="orb__dot orb__dot--3"></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Problem -->
-        <section class="section section--light">
+        <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// The Problem</span>
+                    <span class="eyebrow eyebrow--muted">The Problem</span>
                     <h2 class="section__title">The enterprise world demands top-tier security. Startups can't always afford the headcount.</h2>
                     <p class="section__subtitle">If you run a startup or SMB, closing enterprise deals means proving your security posture. But traditional hiring models and consultants create three massive roadblocks:</p>
                 </div>
-                <div class="problem-grid">
-                    <div class="problem-item scroll-reveal" style="--delay: 0.0s">
-                        <span class="problem-item__num">/ 01</span>
+                <div class="feature-grid feature-grid--three">
+                    <div class="feature scroll-reveal" style="--delay: 0.0s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
                         <h3>The Cost</h3>
                         <p>A full-time, experienced CISO demands a massive enterprise-level salary and equity package.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
-                        <span class="problem-item__num">/ 02</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.05s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
                         <h3>The Revenue Bottleneck</h3>
-                        <p>Enterprise buyers demand rigorous security proof. When your lean team gets bogged down in 200-question security assessments, your sales cycle stalls and you risk losing massive deals.</p>
+                        <p>Enterprise buyers demand rigorous security proof. When your lean team gets bogged down in long security assessments, your sales cycle stalls and you risk losing massive deals.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.2s">
-                        <span class="problem-item__num">/ 03</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.1s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
                         <h3>The PDF Problem</h3>
-                        <p>Traditional consultants drop a 100-page report of vulnerabilities on your desk and walk away, leaving your already-stretched developers guessing on how to fix them.</p>
+                        <p>Traditional consultants drop a long report of vulnerabilities on your desk and walk away, leaving your already-stretched developers guessing on how to fix them.</p>
                     </div>
                 </div>
                 <p class="statement scroll-reveal">You don't need another list of problems. <em>You need an executive partner who ensures they get solved.</em></p>
             </div>
         </section>
 
-        <!-- Features -->
         <section class="section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// The Solution</span>
+                    <span class="eyebrow eyebrow--muted">The Solution</span>
                     <h2 class="section__title">Everything you need to scale securely and close deals faster</h2>
                     <p class="section__subtitle">Executive leadership that stays until the work is done.</p>
                 </div>
-                <div class="frows">
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 01</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>We Ensure the Fix</h3>
-                            <p class="frow__tech">Guided vulnerability remediation</p>
-                        </div>
-                        <p class="frow__body">We don't just run a scan and disappear. We work alongside your engineering team, providing exact guidance and validating the remediation to ensure every security issue is actually resolved without slowing down your sprints.</p>
-                    </article>
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 02</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>Your Security Blueprint</h3>
-                            <p class="frow__tech">Strategic security roadmap</p>
-                        </div>
-                        <p class="frow__body">We don't just give you a checklist. We align your security posture directly with your business goals, ensuring your platform is secure by design as you scale.</p>
-                    </article>
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 03</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>The Enterprise Deal Closer</h3>
-                            <p class="frow__tech">Vendor security assessments</p>
-                        </div>
-                        <p class="frow__body">We don't just give you advice; we do the heavy lifting. We step in to manage the entire vendor assessment process and directly answer the complex security questionnaires your enterprise buyers demand so your sales team can close deals faster.</p>
-                    </article>
-                    <article class="frow scroll-reveal">
-                        <span class="frow__num">/ 04</span>
-                        <div class="frow__name">
-                            <span class="frow__label">What we call it</span>
-                            <h3>Translation for Investors</h3>
-                            <p class="frow__tech">Board and executive reporting</p>
-                        </div>
-                        <p class="frow__body">We translate deep technical security metrics into clear business risks and ROI. When it's time for your board meeting or a new funding round, we help you prove your platform is rock solid.</p>
-                    </article>
+                <div class="feature-grid">
+                    <div class="feature scroll-reveal" style="--delay: 0.0s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>We Ensure the Fix</h3>
+                        <span class="feature__tag">Guided vulnerability remediation</span>
+                        <p>We don't just run a scan and disappear. We work alongside your engineering team, providing exact guidance and validating the remediation to ensure every security issue is actually resolved without slowing down your sprints.</p>
+                    </div>
+                    <div class="feature scroll-reveal" style="--delay: 0.05s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>Your Security Blueprint</h3>
+                        <span class="feature__tag">Strategic security roadmap</span>
+                        <p>We don't just give you a checklist. We align your security posture directly with your business goals, ensuring your platform is secure by design as you scale.</p>
+                    </div>
+                    <div class="feature scroll-reveal" style="--delay: 0.1s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>The Enterprise Deal Closer</h3>
+                        <span class="feature__tag">Vendor security assessments</span>
+                        <p>We don't just give you advice; we do the heavy lifting. We step in to manage the entire vendor assessment process and directly answer the complex security questionnaires your enterprise buyers demand so your sales team can close deals faster.</p>
+                    </div>
+                    <div class="feature scroll-reveal" style="--delay: 0.15s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/></svg></div>
+                        <span class="feature__kicker">What we call it</span>
+                        <h3>Translation for Investors</h3>
+                        <span class="feature__tag">Board and executive reporting</span>
+                        <p>We translate deep technical security metrics into clear business risks and ROI. When it's time for your board meeting or a new funding round, we help you prove your platform is rock solid.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Us -->
-        <section class="section section--light">
+        <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// Why Us</span>
+                    <span class="eyebrow eyebrow--muted">Why Complixen</span>
                     <h2 class="section__title">Designed for growing businesses, not enterprise bloat</h2>
                 </div>
                 <div class="compare scroll-reveal">
                     <div class="compare__row compare__row--head">
                         <span></span>
-                        <span>Traditional CISO / Consulting Firm</span>
+                        <span>Traditional CISO or Consulting Firm</span>
                         <span class="compare__us">Complixen</span>
                     </div>
                     <div class="compare__row">
@@ -238,7 +196,7 @@
                     </div>
                     <div class="compare__row">
                         <span class="compare__point">Remediation support</span>
-                        <span>A 100-page report and a handshake</span>
+                        <span>A long report and a handshake</span>
                         <span class="compare__us">We partner with your devs and validate every fix</span>
                     </div>
                     <div class="compare__row">
@@ -250,48 +208,17 @@
             </div>
         </section>
 
-        <!-- Custom Quote -->
         <section class="section">
             <div class="container">
-                <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// Custom Quote</span>
-                    <h2 class="section__title">Leadership scoped to your exact runway</h2>
-                    <p class="section__subtitle">We believe every company deserves executive-level security guidance, but we don't believe in forcing startups into rigid pricing tiers. Let's discuss your immediate needs and roadmap. From there, we will build a tailored quotation that aligns perfectly with your budget and exact scope of work.</p>
-                </div>
-                <div class="text-center scroll-reveal" style="text-align: center;">
-                    <a href="contact" class="btn btn--primary btn--large">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        &nbsp;Request a Custom Quote
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta section">
-            <div class="container">
-                <div class="cta__content scroll-reveal">
-                    <h2 class="cta__title">Ready to level up your security strategy?</h2>
-                    <p class="cta__description">
-                        Jump on a quick call with our founding team. We'll skip the sales pitch, discuss your immediate security challenges, and show you how a vCISO can unblock your roadmap.
-                    </p>
-                    <div class="cta__actions">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Schedule a Consultation
-                        </a>
-                        <a href="contact" class="btn btn--secondary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                            &nbsp;Request a Custom Quote
-                        </a>
+                <div class="panel scroll-reveal">
+                    <div class="panel__text">
+                        <span class="eyebrow">Ready to level up your security strategy?</span>
+                        <h2 class="panel__title">Leadership scoped to your exact runway</h2>
+                        <p class="panel__desc">We believe every company deserves executive-level security guidance, but we don't believe in forcing startups into rigid pricing tiers. Let's discuss your immediate needs and roadmap. From there, we will build a tailored quotation that aligns perfectly with your budget and exact scope of work.</p>
+                    </div>
+                    <div class="panel__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Consultation</a>
+                        <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
                     </div>
                 </div>
             </div>
@@ -360,6 +287,5 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/service-animations.js"></script>
 </body>
 </html>

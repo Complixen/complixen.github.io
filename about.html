@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/service-detail.css">
-    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="stylesheet" href="styles/pages.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.svg">
@@ -73,114 +72,95 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero -->
-        <section class="service-hero service-hero--solo">
-            <div class="container">
-                <div class="service-hero__content">
-                    <div class="service-hero__breadcrumb scroll-reveal">
-                        <a href="/">Home</a>
-                        <span>/</span>
-                        <span>About</span>
+        <section class="lhero lhero--solo">
+            <div class="lhero__bg" aria-hidden="true"></div>
+            <div class="container lhero__inner">
+                <div class="lhero__content scroll-reveal">
+                    <p class="lhero__crumb"><a href="/">Home</a> <span>/</span> <span>About</span></p>
+                    <h1 class="lhero__title text-balance">Security shouldn't be a luxury <span class="lhero__accent">reserved for the Fortune 500.</span></h1>
+                    <p class="lhero__lede text-balance">We built the security partner we wished we had when we were scaling our own startups. No bloated platforms, no corporate red tape. Just expert-led, modular security designed to help you move fast and close deals.</p>
+                    <div class="lhero__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Talk to the Founders <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                     </div>
-
-                    <h1 class="service-hero__title scroll-reveal">
-                        Security shouldn't be a luxury reserved for the Fortune 500.
-                    </h1>
-
-                    <p class="service-hero__description scroll-reveal">
-                        We built the security partner we wished we had when we were scaling our own startups. No bloated platforms, no corporate red tape. Just expert-led, modular security designed to help you move fast and close deals.
-                    </p>
-
-                    <div class="service-hero__actions scroll-reveal">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Talk to the Founders
-                        </a>
-                    </div>
-
-                    <p class="micro scroll-reveal">Founder to founder. No sales pitch.</p>
+                    <p class="micro">Founder to founder. No sales pitch.</p>
                 </div>
             </div>
         </section>
 
-        <!-- The Problem -->
-        <section class="section section--light">
+        <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// Our Story</span>
+                    <span class="eyebrow eyebrow--muted">Our Story</span>
                     <h2 class="section__title">The industry forgot about startups. So we built a new model.</h2>
                     <p class="section__subtitle">If you are a growing startup, the traditional cybersecurity industry gives you two terrible options:</p>
                 </div>
-                <div class="problem-grid">
-                    <div class="problem-item scroll-reveal" style="--delay: 0.0s">
-                        <span class="problem-item__num">/ 01</span>
+                <div class="feature-grid feature-grid--three">
+                    <div class="feature scroll-reveal" style="--delay: 0.0s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
                         <h3>Option One</h3>
                         <p>Buy a massive, expensive all-in-one platform filled with features you aren't ready for, which takes months to deploy and slows down your engineers.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
-                        <span class="problem-item__num">/ 02</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.05s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
                         <h3>Option Two</h3>
-                        <p>Hire legacy consultants who drop 100-page PDF reports on your desk, offer zero technical help, and charge massive retainer fees.</p>
+                        <p>Hire legacy consultants who drop long PDF reports on your desk, offer zero technical help, and charge massive retainer fees.</p>
                     </div>
                 </div>
                 <p class="statement scroll-reveal">The market didn't need another monolithic tool. It needed surgical, specialized solutions. <em>That is why we built our company on the principle of modularity.</em></p>
             </div>
         </section>
 
-        <!-- Modularity -->
-        <section class="section">
+        <section class="offerings section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// Our Thesis</span>
-                    <h2 class="section__title">Our thesis: modularity over bloat</h2>
-                    <p class="section__subtitle">
-                        We don't believe in forcing you into a single pane of glass that does everything poorly. Instead, we built dedicated, purpose-built platforms and services for the exact bottlenecks startups face.
-                    </p>
+                    <span class="eyebrow eyebrow--muted">Our Thesis</span>
+                    <h2 class="section__title">Modularity over bloat</h2>
+                    <p class="section__subtitle">We don't believe in forcing you into a single pane of glass that does everything poorly. Instead, we built dedicated, purpose-built platforms and services for the exact bottlenecks startups face. You choose the exact tool or expertise you need for your current stage of growth. Nothing more, nothing less.</p>
                 </div>
-                <div class="modlist scroll-reveal">
-                    <a href="devsecops">
-                        <span class="modlist__q">Need to secure your code?</span>
-                        <span class="modlist__a">Use our AppSec platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                <div class="offerings__grid">
+                    <a href="devsecops" class="card scroll-reveal" style="--delay: 0.0s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <h3 class="card__title">Need to secure your code?</h3>
+                        <span class="card__link">Use our AppSec platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
                     </a>
-                    <a href="ptaas">
-                        <span class="modlist__q">Need to pass a vendor pentest?</span>
-                        <span class="modlist__a">Use our PTaaS platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    <a href="ptaas" class="card scroll-reveal" style="--delay: 0.05s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                        <h3 class="card__title">Need to pass a vendor pentest?</h3>
+                        <span class="card__link">Use our PTaaS platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
                     </a>
-                    <a href="security-grc">
-                        <span class="modlist__q">Need to get certified?</span>
-                        <span class="modlist__a">Use our Compliance service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    <a href="security-grc" class="card scroll-reveal" style="--delay: 0.1s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
+                        <h3 class="card__title">Need to get certified?</h3>
+                        <span class="card__link">Use our Compliance service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
                     </a>
-                    <a href="vciso">
-                        <span class="modlist__q">Need executive strategy?</span>
-                        <span class="modlist__a">Partner with our vCISO service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    <a href="vciso" class="card scroll-reveal" style="--delay: 0.15s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                        <h3 class="card__title">Need executive strategy?</h3>
+                        <span class="card__link">Partner with our vCISO service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
                     </a>
                 </div>
-                <p class="statement scroll-reveal">You choose the exact tool or expertise you need for your current stage of growth. <em>Nothing more, nothing less.</em></p>
             </div>
         </section>
 
-        <!-- Core Values -->
-        <section class="section section--light">
+        <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">// How We Operate</span>
-                    <h2 class="section__title">How we operate</h2>
+                    <span class="eyebrow eyebrow--muted">How We Operate</span>
+                    <h2 class="section__title">Our core values</h2>
                 </div>
-                <div class="problem-grid">
-                    <div class="problem-item scroll-reveal" style="--delay: 0s">
-                        <span class="problem-item__num">/ 01</span>
+                <div class="feature-grid feature-grid--three">
+                    <div class="feature scroll-reveal" style="--delay: 0.0s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
                         <h3>Developer Empathy</h3>
                         <p>Security should never break an engineering sprint. We build tools and processes that integrate seamlessly into the workflows your team already uses.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
-                        <span class="problem-item__num">/ 02</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.05s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
                         <h3>Revenue Enablement</h3>
                         <p>We don't do security for the sake of security. We do it to help you pass vendor assessments, survive due diligence, and close enterprise deals.</p>
                     </div>
-                    <div class="problem-item scroll-reveal" style="--delay: 0.2s">
-                        <span class="problem-item__num">/ 03</span>
+                    <div class="feature scroll-reveal" style="--delay: 0.1s">
+                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
                         <h3>We Own the Fix</h3>
                         <p>We are not auditors who just point out your flaws and walk away. From automated AI fixes to hands-on executive guidance, we partner with you to actually solve the problem.</p>
                     </div>
@@ -188,29 +168,17 @@
             </div>
         </section>
 
-
-        <!-- Call to Action -->
-        <section class="cta section">
+        <section class="section">
             <div class="container">
-                <div class="cta__content scroll-reveal">
-                    <h2 class="cta__title">Let's build your security roadmap</h2>
-                    <p class="cta__description">
-                        Skip the sales pitch. Book a call directly with our founding team to discuss your current runway, your next major milestone, and how we can help you get there securely.
-                    </p>
-                    <div class="cta__actions">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Talk to the Founders
-                        </a>
-                        <a href="services" class="btn btn--secondary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                            &nbsp;Explore Our Services
-                        </a>
+                <div class="panel scroll-reveal">
+                    <div class="panel__text">
+                        <span class="eyebrow">Get Started</span>
+                        <h2 class="panel__title">Let's build your security roadmap</h2>
+                        <p class="panel__desc">Skip the sales pitch. Book a call directly with our founding team to discuss your current runway, your next major milestone, and how we can help you get there securely.</p>
+                    </div>
+                    <div class="panel__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Talk to the Founders</a>
+                        <a href="services" class="btn btn--ghost btn--lg">Explore Our Services</a>
                     </div>
                 </div>
             </div>

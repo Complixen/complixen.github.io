@@ -7,12 +7,12 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
-    <title>Cybersecurity Services - Complixen | Advanced Security Solutions</title>
-    <meta name="description" content="Four specialized security solutions for startups and SMBs: DevSecOps platform, expert-led PTaaS, fractional vCISO leadership, and security compliance readiness.">
+    <title>Services | Complixen</title>
+    <meta name="description" content="Four specialized security solutions for startups and SMBs: AppSec Platform, PTaaS, Fractional vCISO, and Security Compliance. Scoped to your exact environment.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/pages.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.svg">
@@ -70,234 +70,71 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <div class="page-header__content scroll-reveal">
-                    <h1 class="page-header__title">Cybersecurity Services</h1>
-                    <p class="page-header__subtitle">
-                        Comprehensive cybersecurity services designed to protect, detect, and respond to evolving cyber threats, helping organizations stay resilient and secure in a connected world.
-                    </p>
-                </div>
-                <div class="page-header__visual">
-                    <div class="cyber-constellation">
-                        <div class="constellation-node" style="--delay: 0s"></div>
-                        <div class="constellation-node" style="--delay: 0.5s"></div>
-                        <div class="constellation-node" style="--delay: 1s"></div>
-                        <div class="constellation-node" style="--delay: 1.5s"></div>
-                        <div class="constellation-connection"></div>
-                        <div class="constellation-connection" style="--rotation: 60deg"></div>
-                        <div class="constellation-connection" style="--rotation: 120deg"></div>
+        <section class="lhero lhero--solo">
+            <div class="lhero__bg" aria-hidden="true"></div>
+            <div class="container lhero__inner">
+                <div class="lhero__content scroll-reveal">
+                    <p class="lhero__crumb"><a href="/">Home</a> <span>/</span> <span>Services</span></p>
+                    <h1 class="lhero__title text-balance">Four ways in. <span class="lhero__accent">One security partner.</span></h1>
+                    <p class="lhero__lede text-balance">Whether you need automated scanning or human-led strategy, select the solution you need to unblock your next milestone. Every engagement is scoped to your exact environment.</p>
+                    <div class="lhero__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                     </div>
+                    <p class="micro">Skip the sales pitch. Talk directly to our founding team.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Services Grid -->
-        <section class="services-grid section">
+        <section class="offerings section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Our Cybersecurity Services</h2>
-                    <p class="section__subtitle">
-                        Advanced cybersecurity solutions tailored to your organization's unique needs and threat landscape
-                    </p>
+                    <span class="eyebrow eyebrow--muted">The Suite</span>
+                    <h2 class="section__title">Choose your path. We handle the rest.</h2>
                 </div>
-                
-                <div class="services__container">
-                    <!-- AppSec Platform -->
-                    <div class="service-card scroll-reveal" style="--delay: 0s" data-service="devsecops">
-                        <div class="service-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">AppSec Platform</h3>
-                        <p class="service-card__description">
-                            Enterprise-grade app security built for startups. Context-aware AI finds real threats, writes the fix, and syncs it to Jira.
-                        </p>
-                        <div class="service-card__features">
-                            <span class="feature-tag">AI Reviews</span>
-                            <span class="feature-tag">SDLC Security</span>
-                            <span class="feature-tag">Live Benchmark</span>
-                            <span class="feature-tag">Jira Ticketing</span>
-                        </div>
-                        <a href="devsecops" class="service-card__link">
-                            Explore the Platform
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7"/>
-                                <path d="M7 7h10v10"/>
-                            </svg>
-                        </a>
-
-                        <!-- Hover Details -->
-                        <div class="service-card__hover-content">
-                            <div class="hover-content__header">
-                                <h4>What You Get</h4>
-                            </div>
-                            <ul class="hover-content__list">
-                                <li>Every release reviewed automatically</li>
-                                <li>Application security across your SDLC</li>
-                                <li>Dependencies watched around the clock</li>
-                                <li>A benchmark you can share</li>
-                                <li>Credit based plans, no surprises</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- PTaaS -->
-                    <div class="service-card scroll-reveal" style="--delay: 0.1s" data-service="ptaas">
-                        <div class="service-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <circle cx="12" cy="12" r="6"/>
-                                <circle cx="12" cy="12" r="2"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">PTaaS</h3>
-                        <p class="service-card__description">
-                            Expert-led penetration testing delivered via a modern platform. Live findings, one-click retesting, and direct access to engineers.
-                        </p>
-                        <div class="service-card__features">
-                            <span class="feature-tag">Expert Pentests</span>
-                            <span class="feature-tag">Live Findings</span>
-                            <span class="feature-tag">Retesting</span>
-                            <span class="feature-tag">Clean Reports</span>
-                        </div>
-                        <a href="ptaas" class="service-card__link">
-                            Learn More
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7"/>
-                                <path d="M7 7h10v10"/>
-                            </svg>
-                        </a>
-
-                        <!-- Hover Details -->
-                        <div class="service-card__hover-content">
-                            <div class="hover-content__header">
-                                <h4>What You Get</h4>
-                            </div>
-                            <ul class="hover-content__list">
-                                <li>Testing starts in days</li>
-                                <li>Findings in real time</li>
-                                <li>Retesting included</li>
-                                <li>Audit ready reports</li>
-                                <li>Direct line to testers</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- vCISO -->
-                    <div class="service-card scroll-reveal" style="--delay: 0.2s" data-service="vciso">
-                        <div class="service-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Fractional vCISO</h3>
-                        <p class="service-card__description">
-                            Strategic security leadership engineered to close enterprise deals, without the burden of a full-time executive hire.
-                        </p>
-                        <div class="service-card__features">
-                            <span class="feature-tag">Strategy & Roadmap</span>
-                            <span class="feature-tag">Risk Management</span>
-                            <span class="feature-tag">Board Reporting</span>
-                            <span class="feature-tag">Compliance Leadership</span>
-                        </div>
-                        <a href="vciso" class="service-card__link">
-                            Learn More
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7"/>
-                                <path d="M7 7h10v10"/>
-                            </svg>
-                        </a>
-
-                        <!-- Hover Details -->
-                        <div class="service-card__hover-content">
-                            <div class="hover-content__header">
-                                <h4>What Your vCISO Owns</h4>
-                            </div>
-                            <ul class="hover-content__list">
-                                <li>Security Strategy & Roadmap</li>
-                                <li>Program Governance</li>
-                                <li>Risk & Board Reporting</li>
-                                <li>ISO 27001, SOC 2 & HIPAA Leadership</li>
-                                <li>Vendor & Third-Party Risk</li>
-                                <li>Incident Readiness</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Security GRC -->
-                    <div class="service-card scroll-reveal" style="--delay: 0.3s" data-service="security-grc">
-                        <div class="service-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Security Compliance</h3>
-                        <p class="service-card__description">
-                            SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials without slowing your engineers. Audit-ready at startup speed.
-                        </p>
-                        <div class="service-card__features">
-                            <span class="feature-tag">Risk Assessment</span>
-                            <span class="feature-tag">Audit Readiness</span>
-                            <span class="feature-tag">Policy Development</span>
-                            <span class="feature-tag">Internal Audits</span>
-                        </div>
-                        <a href="security-grc" class="service-card__link">
-                            Learn More
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7"/>
-                                <path d="M7 7h10v10"/>
-                            </svg>
-                        </a>
-                        
-                        <!-- Hover Details -->
-                        <div class="service-card__hover-content">
-                            <div class="hover-content__header">
-                                <h4>How we help</h4>
-                            </div>
-                            <ul class="hover-content__list">
-                                <li>GRC framework design & implementation</li>
-                                <li>Risk assessments & treatment plans</li>
-                                <li>Policy & procedure development</li>
-                                <li>Internal audits & evidence packages</li>
-                                <li>ISO 27001, SOC 2, PCI-DSS, GDPR, HIPAA prep</li>
-                                <li>Certification issued by accredited bodies, we get you ready</li>
-                            </ul>
-                        </div>
-                    </div>
-
+                <div class="offerings__grid">
+                    <a href="devsecops" class="card scroll-reveal" style="--delay: 0.0s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <span class="feature__kicker">AppSec Platform</span>
+                        <h3 class="card__title">Automated Application Security</h3>
+                        <p class="card__desc">Context-aware AI that scans your code, writes the remediation, and creates the Jira ticket.</p>
+                        <span class="card__link">Explore AppSec <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+                    <a href="ptaas" class="card scroll-reveal" style="--delay: 0.05s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                        <span class="feature__kicker">PTaaS Platform</span>
+                        <h3 class="card__title">Penetration Testing as a Service</h3>
+                        <p class="card__desc">Expert-led manual penetration testing delivered through a transparent, real-time platform with one-click retesting.</p>
+                        <span class="card__link">Explore PTaaS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+                    <a href="security-grc" class="card scroll-reveal" style="--delay: 0.1s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
+                        <span class="feature__kicker">Security Compliance</span>
+                        <h3 class="card__title">Hands-On Audit Readiness</h3>
+                        <p class="card__desc">We map the controls, write the policies, and get you ready for SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials.</p>
+                        <span class="card__link">Explore Compliance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
+                    <a href="vciso" class="card scroll-reveal" style="--delay: 0.15s">
+                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                        <span class="feature__kicker">Fractional vCISO</span>
+                        <h3 class="card__title">Executive Security Leadership</h3>
+                        <p class="card__desc">Pure, human-led security strategy to manage vendor assessments, build your roadmap, and guide your team.</p>
+                        <span class="card__link">Explore vCISO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="cta section section--dark">
+        <section class="section">
             <div class="container">
-                <div class="cta__content scroll-reveal">
-                    <h2 class="cta__title">Ready to Strengthen Your Security Posture?</h2>
-                    <p class="cta__description">
-                        Get a comprehensive security assessment and discover how our advanced cybersecurity services can protect your organization from evolving threats.
-                    </p>
-                    <div class="cta__actions">
-                        <a href="contact" class="btn btn--primary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            &nbsp;Book a Consultation
-                        </a>
-                        <a href="about" class="btn btn--secondary btn--large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                            </svg>
-                            &nbsp;Learn About Our Approach
-                        </a>
+                <div class="panel scroll-reveal">
+                    <div class="panel__text">
+                        <span class="eyebrow">Get Started</span>
+                        <h2 class="panel__title">Not sure which one you need?</h2>
+                        <p class="panel__desc">Jump on a quick call with our founding team. We will listen to your current challenges, assess your environment, and recommend the exact starting point to secure your next phase of growth.</p>
+                    </div>
+                    <div class="panel__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Call</a>
+                        <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
                     </div>
                 </div>
             </div>
@@ -366,6 +203,5 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/services.js"></script>
 </body>
 </html>
