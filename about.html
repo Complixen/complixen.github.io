@@ -7,12 +7,12 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
-    <title>About Us - Complixen | Leading Cybersecurity & Compliance Experts</title>
-    <meta name="description" content="Learn about Complixen's mission, vision, and expert team. Trusted cybersecurity and compliance solutions with certified professionals and proven track record.">
+    <title>About Complixen - Modular Security Built for Startups</title>
+    <meta name="description" content="We built the security partner we wished we had when scaling our own startups. Modular, expert-led security for startups and SMBs. Meet the team.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/landing.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.svg">
@@ -40,15 +40,12 @@
                         <ul class="nav__dropdown">
                             <li><a href="devsecops" class="nav__dropdown-link">DevSecOps Platform</a></li>
                             <li><a href="ptaas" class="nav__dropdown-link">PTaaS</a></li>
-                            <li><a href="vciso" class="nav__dropdown-link">vCISO</a></li>
-                            <li><a href="security-grc" class="nav__dropdown-link">Governance &amp; Compliance</a></li>
-                            <li><a href="incident-response" class="nav__dropdown-link">Incident Response</a></li>
-                            <li><a href="staff-augmentation" class="nav__dropdown-link">Staff Augmentation</a></li>
+                            <li><a href="vciso" class="nav__dropdown-link">Fractional vCISO</a></li>
+                            <li><a href="security-grc" class="nav__dropdown-link">Security Compliance</a></li>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="industries" class="nav__link">Industries</a></li>
                     <li class="nav__item"><a href="about" class="nav__link nav__link--active">About</a></li>
-                    <li class="nav__item"><a href="contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="contact" class="nav__link">Contact us</a></li>
                 </ul>
                 <button class="nav__close" id="nav-close" aria-label="Close menu">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -75,276 +72,171 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Page Header -->
-        <section class="page-header">
+        <!-- Hero -->
+        <section class="service-hero">
             <div class="container">
-                <div class="page-header__content scroll-reveal">
-                    <h1 class="page-header__title">About Complixen</h1>
-                    <p class="page-header__subtitle">
-                        Pioneering the future of cybersecurity with next-level services and a steadfast commitment to protecting your digital frontier.
+                <div class="service-hero__content">
+                    <div class="service-hero__breadcrumb scroll-reveal">
+                        <a href="/">Home</a>
+                        <span>/</span>
+                        <span>About</span>
+                    </div>
+
+                    <h1 class="service-hero__title scroll-reveal">
+                        Security shouldn't be a luxury reserved for the Fortune 500.
+                    </h1>
+
+                    <p class="service-hero__description scroll-reveal">
+                        We built the security partner we wished we had when we were scaling our own startups. No bloated platforms, no corporate red tape. Just expert-led, modular security designed to help you move fast and close deals.
                     </p>
-                </div>
-                <div class="page-header__visual">
-                    <div class="cyber-constellation">
-                        <div class="constellation-node" style="--delay: 0s"></div>
-                        <div class="constellation-node" style="--delay: 0.5s"></div>
-                        <div class="constellation-node" style="--delay: 1s"></div>
-                        <div class="constellation-node" style="--delay: 1.5s"></div>
-                        <div class="constellation-connection"></div>
-                        <div class="constellation-connection" style="--rotation: 60deg"></div>
-                        <div class="constellation-connection" style="--rotation: 120deg"></div>
+
+                    <div class="service-hero__actions scroll-reveal">
+                        <a href="contact" class="btn btn--primary btn--large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            &nbsp;Talk to the Founders
+                        </a>
                     </div>
+
+                    <p class="micro scroll-reveal">Founder to founder. No sales pitch.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Mission & Vision -->
-        <section class="mission-vision section">
-            <div class="container">
-                <div class="mission-vision__grid">
-                    <div class="mission-vision__card scroll-reveal" style="--delay: 0s">
-                        <div class="mission-vision__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="m2 17 10 5 10-5"/>
-                                <path d="m2 12 10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <h2 class="mission-vision__title">Our Mission</h2>
-                        <p class="mission-vision__description">
-                            To provide trusted and effective cybersecurity services that help organizations stay secure, resilient, and confident in a connected world. We are dedicated to protecting data, systems, and people with integrity and care.
-                        </p>
-                    </div>
-                    
-                    <div class="mission-vision__card scroll-reveal" style="--delay: 0.2s">
-                        <div class="mission-vision__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </div>
-                        <h2 class="mission-vision__title">Our Vision</h2>
-                        <p class="mission-vision__description">
-                            To be a global leader in cybersecurity services, creating a safer digital future where businesses and communities can grow and innovate without compromise.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-
-        <!-- Certifications & Partnerships -->
-        <section class="certifications section section--dark">
+        <!-- The Problem -->
+        <section class="section section--light">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Certifications & Partnerships</h2>
+                    <h2 class="section__title">The industry forgot about startups. So we built a new model.</h2>
+                    <p class="section__subtitle">If you are a growing startup, the traditional cybersecurity industry gives you two terrible options:</p>
+                </div>
+                <div class="problem-grid">
+                    <div class="problem-item scroll-reveal" style="--delay: 0.0s">
+                        <span class="problem-item__num">/ 01</span>
+                        <h3>Option One</h3>
+                        <p>Buy a massive, expensive all-in-one platform filled with features you aren't ready for, which takes months to deploy and slows down your engineers.</p>
+                    </div>
+                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
+                        <span class="problem-item__num">/ 02</span>
+                        <h3>Option Two</h3>
+                        <p>Hire legacy consultants who drop 100-page PDF reports on your desk, offer zero technical help, and charge massive retainer fees.</p>
+                    </div>
+                </div>
+                <p class="statement scroll-reveal">The market didn't need another monolithic tool. It needed surgical, specialized solutions. <em>That is why we built our company on the principle of modularity.</em></p>
+            </div>
+        </section>
+
+        <!-- Modularity -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header scroll-reveal">
+                    <h2 class="section__title">Our thesis: modularity over bloat</h2>
                     <p class="section__subtitle">
-                        Industry-leading certifications and strategic alliances that validate our excellence
+                        We don't believe in forcing you into a single pane of glass that does everything poorly. Instead, we built dedicated, purpose-built platforms and services for the exact bottlenecks startups face.
                     </p>
                 </div>
-                
-                <div class="certifications__content">
-                    <div class="certifications__section scroll-reveal" style="--delay: 0s">
-                        <h3 class="certifications__subtitle">Security Certifications</h3>
-                        <div class="certifications__grid">
-                            <div class="certification-card">
-                                <div class="certification-card__icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                        <path d="m9 12 2 2 4-4"/>
-                                    </svg>
-                                </div>
-                                <h4 class="certification-card__title">ISO 27001</h4>
-                                <p class="certification-card__description">Information Security Management System</p>
-                            </div>
-                            
-                            <div class="certification-card">
-                                <div class="certification-card__icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                        <polyline points="14,2 14,8 20,8"/>
-                                        <line x1="16" y1="13" x2="8" y2="13"/>
-                                        <line x1="16" y1="17" x2="8" y2="17"/>
-                                    </svg>
-                                </div>
-                                <h4 class="certification-card__title">SOC 2 Type II</h4>
-                                <p class="certification-card__description">Service Organization Control Compliance</p>
-                            </div>
-                            
-                            <div class="certification-card">
-                                <div class="certification-card__icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-                                    </svg>
-                                </div>
-                                <h4 class="certification-card__title">FedRAMP</h4>
-                                <p class="certification-card__description">Federal Risk Authorization Program</p>
-                            </div>
-                            
-                            <div class="certification-card">
-                                <div class="certification-card__icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <path d="M8 12l2 2 4-4"/>
-                                    </svg>
-                                </div>
-                                <h4 class="certification-card__title">Quantum Ready</h4>
-                                <p class="certification-card__description">Post-Quantum Cryptography Certified</p>
-                            </div>
-                        </div>
+                <div class="modlist scroll-reveal">
+                    <a href="devsecops">
+                        <span class="modlist__q">Need to secure your code?</span>
+                        <span class="modlist__a">Use our AppSec platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="ptaas">
+                        <span class="modlist__q">Need to pass a vendor pentest?</span>
+                        <span class="modlist__a">Use our PTaaS platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="security-grc">
+                        <span class="modlist__q">Need to get certified?</span>
+                        <span class="modlist__a">Use our Compliance service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    </a>
+                    <a href="vciso">
+                        <span class="modlist__q">Need executive strategy?</span>
+                        <span class="modlist__a">Partner with our vCISO service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+                    </a>
+                </div>
+                <p class="statement scroll-reveal">You choose the exact tool or expertise you need for your current stage of growth. <em>Nothing more, nothing less.</em></p>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="section__header scroll-reveal">
+                    <h2 class="section__title">How we operate</h2>
+                </div>
+                <div class="problem-grid">
+                    <div class="problem-item scroll-reveal" style="--delay: 0s">
+                        <span class="problem-item__num">/ 01</span>
+                        <h3>Developer Empathy</h3>
+                        <p>Security should never break an engineering sprint. We build tools and processes that integrate seamlessly into the workflows your team already uses.</p>
                     </div>
-                    
-                    <div class="certifications__section scroll-reveal" style="--delay: 0.2s">
-                        <h3 class="certifications__subtitle">Strategic Partnerships</h3>
-                        <div class="partners__grid">
-                            <div class="partner-logo">
-                                <div class="partner-placeholder">Microsoft</div>
-                            </div>
-                            <div class="partner-logo">
-                                <div class="partner-placeholder">AWS</div>
-                            </div>
-                            <div class="partner-logo">
-                                <div class="partner-placeholder">Google Cloud</div>
-                            </div>
-                            <div class="partner-logo">
-                                <div class="partner-placeholder">IBM</div>
-                            </div>
-                            <div class="partner-logo">
-                                <div class="partner-placeholder">CrowdStrike</div>
-                            </div>
-                            <div class="partner-logo">
-                                <div class="partner-placeholder">Palo Alto</div>
-                            </div>
-                        </div>
+                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
+                        <span class="problem-item__num">/ 02</span>
+                        <h3>Revenue Enablement</h3>
+                        <p>We don't do security for the sake of security. We do it to help you pass vendor assessments, survive due diligence, and close enterprise deals.</p>
+                    </div>
+                    <div class="problem-item scroll-reveal" style="--delay: 0.2s">
+                        <span class="problem-item__num">/ 03</span>
+                        <h3>We Own the Fix</h3>
+                        <p>We are not auditors who just point out your flaws and walk away. From automated AI fixes to hands-on executive guidance, we partner with you to actually solve the problem.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Company Values -->
-        <section class="values section">
+        <!-- Team -->
+        <section class="section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Our Core Values</h2>
+                    <h2 class="section__title">Built by founders, for founders</h2>
                     <p class="section__subtitle">
-                        The fundamental principles that drive our innovation and guide our relationships
+                        We are a team of veteran security engineers, former CISOs, and startup operators who have been in the trenches.
                     </p>
                 </div>
-                
-                <div class="values__grid">
-                    <div class="value-card scroll-reveal" style="--delay: 0s">
-                        <div class="value-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-card__title">Trust & Integrity</h3>
-                        <p class="value-card__description">
-                            Building lasting partnerships through transparency, ethical practices, and unwavering 
-                            commitment to our clients' security and success.
-                        </p>
+                <div class="team-grid">
+                    <div class="member scroll-reveal" style="--delay: 0s">
+                        <div class="member__avatar">SA</div>
+                        <h3>Founder Name</h3>
+                        <p class="member__role">Co-Founder &amp; CEO</p>
+                        <p>Placeholder bio. Two sentences on their security background and what they focus on at Complixen.</p>
                     </div>
-                    
-                    <div class="value-card scroll-reveal" style="--delay: 0.1s">
-                        <div class="value-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-card__title">Innovation</h3>
-                        <p class="value-card__description">
-                            Pioneering next-generation security technologies and methodologies to stay ahead 
-                            of evolving threats and industry challenges.
-                        </p>
+                    <div class="member scroll-reveal" style="--delay: 0.1s">
+                        <div class="member__avatar member__avatar--alt">SB</div>
+                        <h3>Founder Name</h3>
+                        <p class="member__role">Co-Founder &amp; CTO</p>
+                        <p>Placeholder bio. Two sentences on their engineering background and what they build at Complixen.</p>
                     </div>
-                    
-                    <div class="value-card scroll-reveal" style="--delay: 0.2s">
-                        <div class="value-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-card__title">Excellence</h3>
-                        <p class="value-card__description">
-                            Delivering superior results that exceed expectations through meticulous attention 
-                            to detail and continuous improvement.
-                        </p>
-                    </div>
-                    
-                    <div class="value-card scroll-reveal" style="--delay: 0.3s">
-                        <div class="value-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-card__title">Collaboration</h3>
-                        <p class="value-card__description">
-                            Working as true partners with our clients, fostering open communication and 
-                            shared responsibility for security outcomes.
-                        </p>
-                    </div>
-                    
-                    <div class="value-card scroll-reveal" style="--delay: 0.4s">
-                        <div class="value-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="m2 17 10 5 10-5"/>
-                                <path d="m2 12 10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-card__title">Continuous Learning</h3>
-                        <p class="value-card__description">
-                            Investing in our team's growth and staying current with emerging threats, 
-                            technologies, and industry best practices.
-                        </p>
-                    </div>
-                    
-                    <div class="value-card scroll-reveal" style="--delay: 0.5s">
-                        <div class="value-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-card__title">Accountability</h3>
-                        <p class="value-card__description">
-                            Taking full ownership of our commitments and deliverables, ensuring measurable 
-                            results and transparent communication.
-                        </p>
+                    <div class="member scroll-reveal" style="--delay: 0.2s">
+                        <div class="member__avatar">SC</div>
+                        <h3>Founder Name</h3>
+                        <p class="member__role">Head of Security</p>
+                        <p>Placeholder bio. Two sentences on their offensive security background and client work.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="cta section section--light">
+        <section class="cta section">
             <div class="container">
                 <div class="cta__content scroll-reveal">
-                    <h2 class="cta__title">Ready to Secure Your Digital Future?</h2>
+                    <h2 class="cta__title">Let's build your security roadmap</h2>
                     <p class="cta__description">
-                        Join over 1,000 organizations worldwide that trust Complixen to protect their most 
-                        valuable digital assets. Let's discuss how our quantum-ready solutions can secure your business.
+                        Skip the sales pitch. Book a call directly with our founding team to discuss your current runway, your next major milestone, and how we can help you get there securely.
                     </p>
                     <div class="cta__actions">
                         <a href="contact" class="btn btn--primary btn--large">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                             </svg>
-                            &nbspGet Started Today
+                            &nbsp;Talk to the Founders
                         </a>
-                        <a href="industries" class="btn btn--secondary btn--large">
+                        <a href="services" class="btn btn--secondary btn--large">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
                             </svg>
-                            &nbspSee Who We Serve
+                            &nbsp;Explore Our Services
                         </a>
                     </div>
                 </div>
@@ -376,17 +268,14 @@
                         <ul class="footer__list">
                             <li><a href="devsecops" class="footer__link">DevSecOps Platform</a></li>
                             <li><a href="ptaas" class="footer__link">PTaaS</a></li>
-                            <li><a href="vciso" class="footer__link">vCISO</a></li>
-                            <li><a href="incident-response" class="footer__link">Incident Response</a></li>
-                            <li><a href="security-grc" class="footer__link">Governance &amp; Compliance</a></li>
-                            <li><a href="staff-augmentation" class="footer__link">Staff Augmentation</a></li>
+                            <li><a href="vciso" class="footer__link">Fractional vCISO</a></li>
+                            <li><a href="security-grc" class="footer__link">Security Compliance</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
                         <h3 class="footer__column-title">Company</h3>
                         <ul class="footer__list">
                             <li><a href="about" class="footer__link">About</a></li>
-                            <li><a href="industries" class="footer__link">Industries</a></li>
                             <li><a href="services" class="footer__link">Services</a></li>
                             <li><a href="contact" class="footer__link">Contact</a></li>
                         </ul>

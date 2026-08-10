@@ -7,13 +7,14 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
-    <title>Complixen DevSecOps - Security Platform for Startups and SMBs</title>
-    <meta name="description" content="Complixen DevSecOps reviews every release, watches your dependencies, and gives you a clear security benchmark. Built for startups and growing businesses. Talk to sales.">
+    <title>DevSecOps Platform - Enterprise-Grade App Security for Startups | Complixen</title>
+    <meta name="description" content="Enterprise-grade application security built for startups. Context-aware AI finds real threats, writes the fix, and syncs to Jira. Book a 15-minute demo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/service-detail.css">
     <link rel="stylesheet" href="styles/platform.css">
+    <link rel="stylesheet" href="styles/landing.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.svg">
@@ -39,15 +40,12 @@
                         <ul class="nav__dropdown">
                             <li><a href="devsecops" class="nav__dropdown-link">DevSecOps Platform</a></li>
                             <li><a href="ptaas" class="nav__dropdown-link">PTaaS</a></li>
-                            <li><a href="vciso" class="nav__dropdown-link">vCISO</a></li>
-                            <li><a href="security-grc" class="nav__dropdown-link">Governance &amp; Compliance</a></li>
-                            <li><a href="incident-response" class="nav__dropdown-link">Incident Response</a></li>
-                            <li><a href="staff-augmentation" class="nav__dropdown-link">Staff Augmentation</a></li>
+                            <li><a href="vciso" class="nav__dropdown-link">Fractional vCISO</a></li>
+                            <li><a href="security-grc" class="nav__dropdown-link">Security Compliance</a></li>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="industries" class="nav__link">Industries</a></li>
                     <li class="nav__item"><a href="about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="contact" class="nav__link">Contact us</a></li>
                 </ul>
                 <button class="nav__close" id="nav-close" aria-label="Close menu">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -74,26 +72,24 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Platform Hero -->
+        <!-- Hero -->
         <section class="service-hero">
             <div class="container">
                 <div class="service-hero__content">
                     <div class="service-hero__breadcrumb scroll-reveal">
                         <a href="/">Home</a>
                         <span>/</span>
+                        <a href="services">Services</a>
+                        <span>/</span>
                         <span>DevSecOps Platform</span>
                     </div>
 
                     <h1 class="service-hero__title scroll-reveal">
-                        Complixen DevSecOps
+                        Enterprise-Grade App Security. Built for Startups.
                     </h1>
 
-                    <p class="service-hero__subtitle scroll-reveal">
-                        Security on autopilot for teams that ship.
-                    </p>
-
                     <p class="service-hero__description scroll-reveal">
-                        One platform that reviews every release, watches your dependencies, and scores your security in plain numbers. Built for founders and business leaders who want answers, not alerts.
+                        Protect your code, web apps, and customer data without the massive enterprise price tags. Our context-aware AI finds real threats, writes the code to fix them, and syncs directly to Jira, so your team can focus on building.
                     </p>
 
                     <div class="service-hero__actions scroll-reveal">
@@ -101,7 +97,7 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                             </svg>
-                            &nbsp;Contact Sales
+                            &nbsp;Book a 15-Minute Demo
                         </a>
                         <a href="#pricing" class="btn btn--secondary btn--large">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -111,6 +107,8 @@
                             &nbsp;See Pricing
                         </a>
                     </div>
+
+                    <p class="micro scroll-reveal">No slide decks. Just a live look at the platform in action.</p>
                 </div>
 
                 <div class="service-hero__visual">
@@ -152,171 +150,160 @@
             </div>
         </section>
 
-        <!-- Integrations strip -->
-        <section class="integrations" aria-label="Works with your stack">
+        <!-- The Problem -->
+        <section class="section section--light">
             <div class="container">
-                <p class="integrations__label scroll-reveal">Works with the tools your team already uses</p>
-                <div class="integrations__row scroll-reveal">
-                    <span class="integrations__chip">GitHub</span>
-                    <span class="integrations__chip">GitLab</span>
-                    <span class="integrations__chip">Bitbucket</span>
-                    <span class="integrations__chip">Jenkins</span>
-                    <span class="integrations__chip">Jira</span>
-                    <span class="integrations__chip">Slack</span>
+                <div class="section__header scroll-reveal">
+                    <h2 class="section__title">The security industry forgot about startups. We didn't.</h2>
+                    <p class="section__subtitle">If you run a startup or SMB, you know you need to secure your platform. But current tools create three massive roadblocks:</p>
+                </div>
+                <div class="problem-grid">
+                    <div class="problem-item scroll-reveal" style="--delay: 0.0s">
+                        <span class="problem-item__num">/ 01</span>
+                        <h3>The Cost</h3>
+                        <p>Enterprise tools routinely start at $20,000+ a year, before you have even scanned a single line of code.</p>
+                    </div>
+                    <div class="problem-item scroll-reveal" style="--delay: 0.1s">
+                        <span class="problem-item__num">/ 02</span>
+                        <h3>The Noise</h3>
+                        <p>They dump thousands of useless alerts and false alarms on your developers.</p>
+                    </div>
+                    <div class="problem-item scroll-reveal" style="--delay: 0.2s">
+                        <span class="problem-item__num">/ 03</span>
+                        <h3>The Friction</h3>
+                        <p>They force your team to learn complex new dashboards instead of working where they already are.</p>
+                    </div>
+                </div>
+                <p class="statement scroll-reveal">You don't need another alert dashboard. <em>You need an automated security partner.</em></p>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header scroll-reveal">
+                    <h2 class="section__title">Everything you need to lock down your product</h2>
+                    <p class="section__subtitle">The security engine that watches your code, your dependencies, and your live application.</p>
+                </div>
+                <div class="frows">
+                    <article class="frow scroll-reveal">
+                        <span class="frow__num">/ 01</span>
+                        <div class="frow__name">
+                            <span class="frow__label">What we call it</span>
+                            <h3>Your AI Security Code Reviewer</h3>
+                            <p class="frow__tech">AI code scanning · SAST and AI remediation</p>
+                        </div>
+                        <p class="frow__body">We scan your custom code as it's written to find vulnerabilities before they go live. And we don't just point out the problem. Our AI generates the exact code needed to fix the weakness instantly.</p>
+                    </article>
+                    <article class="frow scroll-reveal">
+                        <span class="frow__num">/ 02</span>
+                        <div class="frow__name">
+                            <span class="frow__label">What we call it</span>
+                            <h3>Third-Party Ingredient Checker</h3>
+                            <p class="frow__tech">Dependency and SBOM tracking · SCA</p>
+                        </div>
+                        <p class="frow__body">Over 70% of software is built using open-source code. We scan every external piece of code you use and give you a complete Software Bill of Materials to prove to your enterprise customers that your software is clean.</p>
+                    </article>
+                    <article class="frow scroll-reveal">
+                        <span class="frow__num">/ 03</span>
+                        <div class="frow__name">
+                            <span class="frow__label">What we call it</span>
+                            <h3>Live Website Hacker Simulation</h3>
+                            <p class="frow__tech">Web application scanning · DAST</p>
+                        </div>
+                        <p class="frow__body">We safely simulate real-world attacks on your live web application. We find the unlocked doors in your platform before the bad guys do.</p>
+                    </article>
+                    <article class="frow scroll-reveal">
+                        <span class="frow__num">/ 04</span>
+                        <div class="frow__name">
+                            <span class="frow__label">What we call it</span>
+                            <h3>Accidental Password Leak Prevention</h3>
+                            <p class="frow__tech">Secret scanning</p>
+                        </div>
+                        <p class="frow__body">We catch exposed API keys, database passwords, and cloud credentials in your code before they get published, preventing devastating data breaches.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- What It Does -->
-        <section class="service-offerings section">
+        <!-- Features -->
+        <section class="section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Security you can actually read</h2>
-                    <p class="section__subtitle">
-                        No dashboards full of noise. Just what happened, what matters, and what to do next.
-                    </p>
+                    <h2 class="section__title">Work smarter, secure your platform faster</h2>
+                    <p class="section__subtitle">The intelligence layer that filters the noise and delivers fixes where your team already works.</p>
                 </div>
-
-                <div class="offerings-grid">
-                    <div class="offering-item scroll-reveal" style="--delay: 0s">
-                        <div class="offering-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="m9 12 2 2 4-4"/>
-                            </svg>
+                <div class="frows">
+                    <article class="frow scroll-reveal">
+                        <span class="frow__num">/ 05</span>
+                        <div class="frow__name">
+                            <span class="frow__label">What we call it</span>
+                            <h3>The Platform Security Brain</h3>
+                            <p class="frow__tech">Context-aware intelligence</p>
                         </div>
-                        <h3 class="offering-item__title">Every release reviewed</h3>
-                        <p class="offering-item__description">
-                            AI checks each code change before it ships. You only hear about what matters.
-                        </p>
-                    </div>
-
-                    <div class="offering-item scroll-reveal" style="--delay: 0.1s">
-                        <div class="offering-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="m2 17 10 5 10-5"/>
-                                <path d="m2 12 10 5 10-5"/>
-                            </svg>
+                        <p class="frow__body">Most scanners cry wolf and generate hundreds of false alarms. Our proprietary Brain cross-maps intelligence specific to your unique architecture. It connects the dots across your entire platform to filter out the noise and only flag the threats that actually matter.</p>
+                    </article>
+                    <article class="frow scroll-reveal">
+                        <span class="frow__num">/ 06</span>
+                        <div class="frow__name">
+                            <span class="frow__label">What we call it</span>
+                            <h3>Zero-Friction Developer Ticketing</h3>
+                            <p class="frow__tech">Automated Jira workflows and fix validation</p>
                         </div>
-                        <h3 class="offering-item__title">Application security across your SDLC</h3>
-                        <p class="offering-item__description">
-                            Security is built into every step of your development lifecycle, from design to deployment.
-                        </p>
-                    </div>
-
-                    <div class="offering-item scroll-reveal" style="--delay: 0.2s">
-                        <div class="offering-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                                <line x1="12" y1="22.08" x2="12" y2="12"/>
-                            </svg>
-                        </div>
-                        <h3 class="offering-item__title">Dependencies watched around the clock</h3>
-                        <p class="offering-item__description">
-                            Know the moment any component in your product turns risky.
-                        </p>
-                    </div>
-
-                    <div class="offering-item scroll-reveal" style="--delay: 0.3s">
-                        <div class="offering-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 20V10"/>
-                                <path d="M18 20V4"/>
-                                <path d="M6 20v-6"/>
-                            </svg>
-                        </div>
-                        <h3 class="offering-item__title">A benchmark you can share</h3>
-                        <p class="offering-item__description">
-                            One clear score that shows customers and investors exactly where you stand.
-                        </p>
-                    </div>
-
-                    <div class="offering-item scroll-reveal" style="--delay: 0.4s">
-                        <div class="offering-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="16" rx="2"/>
-                                <path d="m7 9.5 1.5 1.5L11 8.5"/>
-                                <path d="M13 10h4"/>
-                                <path d="m7 15.5 1.5 1.5L11 14.5"/>
-                                <path d="M13 16h4"/>
-                            </svg>
-                        </div>
-                        <h3 class="offering-item__title">Fixes become tickets</h3>
-                        <p class="offering-item__description">
-                            Findings route to the right person in Jira with clear next steps. No triage meetings.
-                        </p>
-                    </div>
-
-                    <div class="offering-item scroll-reveal" style="--delay: 0.5s">
-                        <div class="offering-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <path d="m9 15 2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <h3 class="offering-item__title">Compliance readiness, live</h3>
-                        <p class="offering-item__description">
-                            See how close you are to ISO 27001 and SOC 2 at any moment.
-                        </p>
-                    </div>
+                        <p class="frow__body">Don't force your devs to learn a new tool. When we find a critical issue, we automatically create a Jira ticket with the AI-suggested fix included. Once your developer commits the fix, we automatically validate it and close the ticket for you.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- How It Works -->
-        <section id="how-it-works" class="methodology section section--light">
+        <!-- Why Us -->
+        <section class="section section--light">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Up and running in an afternoon</h2>
-                    <p class="section__subtitle">
-                        Three steps. No installs. No security degree required.
-                    </p>
+                    <h2 class="section__title">Designed for growing businesses, not Fortune 500 red tape</h2>
                 </div>
-
-                <div class="methodology-steps">
-                    <div class="methodology-step scroll-reveal" style="--delay: 0s">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3 class="step-title">Connect</h3>
-                            <p class="step-description">
-                                Link your GitHub or GitLab and you are live in minutes.
-                            </p>
-                        </div>
+                <div class="compare scroll-reveal">
+                    <div class="compare__row compare__row--head">
+                        <span></span>
+                        <span>Enterprise Giants</span>
+                        <span class="compare__us">Complixen</span>
                     </div>
-
-                    <div class="methodology-step scroll-reveal" style="--delay: 0.2s">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3 class="step-title">The platform works</h3>
-                            <p class="step-description">
-                                Every release and dependency gets checked automatically. Each check uses credits from your plan.
-                            </p>
-                        </div>
+                    <div class="compare__row">
+                        <span class="compare__point">Target audience</span>
+                        <span>Fortune 500 security teams with dedicated staff</span>
+                        <span class="compare__us">Startups and SMBs, from day one</span>
                     </div>
-
-                    <div class="methodology-step scroll-reveal" style="--delay: 0.4s">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3 class="step-title">You watch the score</h3>
-                            <p class="step-description">
-                                Your benchmark updates live and your team gets the fix list. That is it.
-                            </p>
-                        </div>
+                    <div class="compare__row">
+                        <span class="compare__point">False positives</span>
+                        <span>Thousands of raw alerts dumped on your developers</span>
+                        <span class="compare__us">The Brain filters the noise and flags only real threats</span>
+                    </div>
+                    <div class="compare__row">
+                        <span class="compare__point">Fixing issues</span>
+                        <span>Here is a report. Good luck.</span>
+                        <span class="compare__us">AI writes the fix and syncs it straight to Jira</span>
+                    </div>
+                    <div class="compare__row">
+                        <span class="compare__point">Pricing</span>
+                        <span>Opaque quotes that start at enterprise budgets</span>
+                        <span class="compare__us">Transparent pricing that scales with your stage</span>
+                    </div>
+                    <div class="compare__row">
+                        <span class="compare__point">The language</span>
+                        <span>Jargon only security veterans understand</span>
+                        <span class="compare__us">Plain English your whole team can act on</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Pricing -->
-        <section id="pricing" class="pricing section">
+        <section id="pricing" class="pricing section section--light">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <h2 class="section__title">Simple, credit-based pricing</h2>
+                    <h2 class="section__title">Security shouldn't drain your runway</h2>
                     <p class="section__subtitle">
-                        Every check draws from your monthly credit pool. No per-seat math. No surprise invoices.
+                        Every company deserves bank-grade security, regardless of their funding round. Our straightforward, credit-based pricing scales with you as you grow. No hidden fees and no paying for features you don't need.
                     </p>
                 </div>
 
@@ -326,10 +313,10 @@
                         <p class="pricing-card__credits">500 credits<span> / month</span></p>
                         <p class="pricing-card__desc">For early stage teams shipping their first product.</p>
                         <ul class="pricing-card__features">
-                            <li>Release reviews</li>
-                            <li>Dependency watching</li>
+                            <li>AI code scanning and fixes</li>
+                            <li>Dependency and SBOM tracking</li>
+                            <li>Secret scanning</li>
                             <li>Up to 5 repositories</li>
-                            <li>Email support</li>
                         </ul>
                         <div class="pricing-card__cta">
                             <a href="contact" class="btn btn--secondary btn--large">Contact Sales</a>
@@ -343,10 +330,10 @@
                         <p class="pricing-card__desc">For scaling startups with real customers to protect.</p>
                         <ul class="pricing-card__features">
                             <li>Everything in Starter</li>
-                            <li>Security across your full SDLC</li>
-                            <li>Jira ticketing and analytics</li>
+                            <li>Web application scanning</li>
+                            <li>The Brain noise filtering</li>
+                            <li>Jira workflows and fix validation</li>
                             <li>Up to 25 repositories</li>
-                            <li>Priority support</li>
                         </ul>
                         <div class="pricing-card__cta">
                             <a href="contact" class="btn btn--primary btn--large">Contact Sales</a>
@@ -356,10 +343,9 @@
                     <div class="pricing-card scroll-reveal" style="--delay: 0.2s">
                         <h3 class="pricing-card__tier">Scale</h3>
                         <p class="pricing-card__credits">Custom credit pool</p>
-                        <p class="pricing-card__desc">For companies with compliance deadlines.</p>
+                        <p class="pricing-card__desc">For companies with enterprise customers to answer to.</p>
                         <ul class="pricing-card__features">
                             <li>Everything in Growth</li>
-                            <li>Live compliance benchmark</li>
                             <li>Role based access and SSO</li>
                             <li>Unlimited repositories</li>
                             <li>Dedicated onboarding</li>
@@ -378,23 +364,23 @@
         <section class="cta section">
             <div class="container">
                 <div class="cta__content scroll-reveal">
-                    <h2 class="cta__title">See your security benchmark</h2>
+                    <h2 class="cta__title">Ready to see how we secure your startup?</h2>
                     <p class="cta__description">
-                        Book a walkthrough. We will connect a sandbox repository and show you your first score in under an hour.
+                        Jump on a quick call with our founding team. We'll skip the sales pitch, show you exactly how the platform works, and answer any technical questions you have.
                     </p>
                     <div class="cta__actions">
                         <a href="contact" class="btn btn--primary btn--large">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                             </svg>
-                            &nbsp;Contact Sales
+                            &nbsp;Schedule a Walkthrough
                         </a>
-                        <a href="services" class="btn btn--secondary btn--large">
+                        <a href="#pricing" class="btn btn--secondary btn--large">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14"/>
                                 <path d="m12 5 7 7-7 7"/>
                             </svg>
-                            &nbsp;Explore Our Services
+                            &nbsp;View Pricing
                         </a>
                     </div>
                 </div>
@@ -426,17 +412,14 @@
                         <ul class="footer__list">
                             <li><a href="devsecops" class="footer__link">DevSecOps Platform</a></li>
                             <li><a href="ptaas" class="footer__link">PTaaS</a></li>
-                            <li><a href="vciso" class="footer__link">vCISO</a></li>
-                            <li><a href="incident-response" class="footer__link">Incident Response</a></li>
-                            <li><a href="security-grc" class="footer__link">Governance &amp; Compliance</a></li>
-                            <li><a href="staff-augmentation" class="footer__link">Staff Augmentation</a></li>
+                            <li><a href="vciso" class="footer__link">Fractional vCISO</a></li>
+                            <li><a href="security-grc" class="footer__link">Security Compliance</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
                         <h3 class="footer__column-title">Company</h3>
                         <ul class="footer__list">
                             <li><a href="about" class="footer__link">About</a></li>
-                            <li><a href="industries" class="footer__link">Industries</a></li>
                             <li><a href="services" class="footer__link">Services</a></li>
                             <li><a href="contact" class="footer__link">Contact</a></li>
                         </ul>
