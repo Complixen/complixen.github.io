@@ -1157,6 +1157,258 @@
 }
 
 /* ==========================================================================
+   Compliance page: framework halo, margin notes, audit checklist, old/new
+   ========================================================================== */
+
+/* Framework halo hero visual */
+.halo {
+  position: relative;
+  width: min(440px, 100%);
+  aspect-ratio: 1 / 0.92;
+  display: grid;
+  place-items: center;
+}
+.halo__rings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.halo__rings ellipse {
+  fill: none;
+  stroke: var(--border-strong);
+  opacity: 0.7;
+}
+.halo__core {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  border-radius: 28px;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  box-shadow: 0 0 44px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+.halo__core svg {
+  width: 44px;
+  height: 44px;
+}
+.halo__chip {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  padding: 0.45rem 0.95rem;
+  white-space: nowrap;
+  animation: haloFloat 6s var(--ease) infinite;
+  animation-delay: var(--d, 0s);
+}
+@keyframes haloFloat {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-50%, calc(-50% - 7px)); }
+}
+
+/* Margin notes (problem) */
+.notes {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 3.25rem);
+}
+.note {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+}
+.note__num {
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  opacity: 0.28;
+  text-align: right;
+}
+.note h3 {
+  font-size: 1.1875rem;
+  margin-bottom: var(--space-2);
+}
+.note p {
+  font-size: 0.9688rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Audit checklist (solution) */
+.checks {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.25rem, 5vw, 3.25rem);
+}
+.check {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+}
+.check__box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in oklab, var(--accent) 40%, transparent);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  transition: box-shadow var(--t-med);
+}
+.check:hover .check__box {
+  box-shadow: 0 0 24px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+.check__box svg {
+  width: 22px;
+  height: 22px;
+}
+.check__kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: var(--space-2);
+}
+.check h3 {
+  font-size: 1.3125rem;
+  margin-bottom: var(--space-3);
+}
+.check p {
+  font-size: 0.9688rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+/* Old way / our way comparison */
+.oldnew {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  max-width: 940px;
+  margin: 0 auto;
+}
+.oldnew__col > h3 {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-subtle);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-4);
+}
+.oldnew__col--new > h3 {
+  color: var(--accent);
+  border-bottom-color: color-mix(in oklab, var(--accent) 40%, var(--border));
+}
+.oldnew__col li {
+  padding: var(--space-4) 0;
+}
+.oldnew__col li + li {
+  border-top: 1px solid var(--border);
+}
+.oldnew__point {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 0.3rem;
+}
+.oldnew__col--old li p {
+  font-size: 0.9063rem;
+  color: var(--text-subtle);
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in oklab, var(--danger) 55%, transparent);
+  text-decoration-thickness: 1px;
+}
+.oldnew__col--new li p {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9063rem;
+  color: var(--text);
+}
+.oldnew__col--new li p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* Credentials finale */
+.credo {
+  text-align: center;
+}
+.credo__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-8);
+}
+.credo__chips i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  padding: 0.45rem 1rem;
+}
+.credo__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.credo__title {
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+}
+.credo__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: var(--space-8);
+}
+.credo__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* ==========================================================================
    PTaaS page: live feed hero, gap notes, capability quadrant, diff compare
    ========================================================================== */
 
@@ -2155,6 +2407,20 @@
   }
   .quad {
     grid-template-columns: 1fr;
+  }
+  .oldnew {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .note {
+    grid-template-columns: 56px 1fr;
+  }
+  .note__num {
+    font-size: 2rem;
+  }
+  .halo {
+    max-width: 330px;
+    margin: 0 auto;
   }
   .quad__cell {
     padding: var(--space-8) 0 !important;

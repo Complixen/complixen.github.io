@@ -83,22 +83,19 @@
                     <p class="micro">No automated templates. Just expert guidance to get you certified.</p>
                 </div>
                 <div class="lhero__visual scroll-reveal-right" aria-hidden="true">
-                    <div class="orb">
-                        <svg class="orb__rings" viewBox="0 0 400 400">
-                            <defs>
-                                <linearGradient id="ringGradP" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.9"/>
-                                    <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.2"/>
-                                </linearGradient>
-                            </defs>
-                            <circle cx="200" cy="200" r="80" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.6"/>
-                            <circle cx="200" cy="200" r="130" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.4" stroke-dasharray="4 8"/>
-                            <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ringGradP)" stroke-width="1" opacity="0.25"/>
+                    <div class="halo">
+                        <svg class="halo__rings" viewBox="0 0 440 400">
+                            <ellipse cx="220" cy="200" rx="150" ry="110"/>
+                            <ellipse cx="220" cy="200" rx="205" ry="160" stroke-dasharray="4 8"/>
                         </svg>
-                        <svg class="orb__center" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
-                        <span class="orb__dot orb__dot--1"></span>
-                        <span class="orb__dot orb__dot--2"></span>
-                        <span class="orb__dot orb__dot--3"></span>
+                        <div class="halo__core">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <span class="halo__chip" style="--x: 26%; --y: 15%; --d: 0s">SOC 2</span>
+                        <span class="halo__chip" style="--x: 78%; --y: 24%; --d: 1.2s">ISO 27001</span>
+                        <span class="halo__chip" style="--x: 90%; --y: 62%; --d: 2.4s">HIPAA</span>
+                        <span class="halo__chip" style="--x: 18%; --y: 68%; --d: 3.6s">GDPR</span>
+                        <span class="halo__chip" style="--x: 55%; --y: 92%; --d: 4.8s">Cyber Essentials</span>
                     </div>
                 </div>
             </div>
@@ -111,21 +108,27 @@
                     <h2 class="section__title">Enterprise buyers demand compliance. Startups can't afford the distraction.</h2>
                     <p class="section__subtitle">If you want to move upmarket, certifications like SOC 2 and ISO 27001 are non-negotiable. But traditional compliance paths create three massive roadblocks for growing companies:</p>
                 </div>
-                <div class="feature-grid feature-grid--three">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-                        <h3>The Revenue Blocker</h3>
-                        <p>Enterprise procurement teams will not sign a contract until you can prove your compliance posture, stalling your most lucrative deals.</p>
+                <div class="notes">
+                    <div class="note scroll-reveal" style="--delay: 0s">
+                        <span class="note__num" aria-hidden="true">01</span>
+                        <div>
+                            <h3>The Revenue Blocker</h3>
+                            <p>Enterprise procurement teams will not sign a contract until you can prove your compliance posture, stalling your most lucrative deals.</p>
+                        </div>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-                        <h3>The Engineering Drain</h3>
-                        <p>Founders and CTOs waste countless hours deciphering legal jargon and writing policies instead of building features.</p>
+                    <div class="note scroll-reveal" style="--delay: 0.05s">
+                        <span class="note__num" aria-hidden="true">02</span>
+                        <div>
+                            <h3>The Engineering Drain</h3>
+                            <p>Founders and CTOs waste countless hours deciphering legal jargon and writing policies instead of building features.</p>
+                        </div>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-                        <h3>The Template Trap</h3>
-                        <p>Traditional consultants hand you a folder of generic policy templates and walk away, leaving you to figure out how to actually implement the technical controls.</p>
+                    <div class="note scroll-reveal" style="--delay: 0.1s">
+                        <span class="note__num" aria-hidden="true">03</span>
+                        <div>
+                            <h3>The Template Trap</h3>
+                            <p>Traditional consultants hand you a folder of generic policy templates and walk away, leaving you to figure out how to actually implement the technical controls.</p>
+                        </div>
                     </div>
                 </div>
                 <p class="statement scroll-reveal">You don't need a checklist. <em>You need a partner who builds the compliance program with you.</em></p>
@@ -139,34 +142,38 @@
                     <h2 class="section__title">End-to-end compliance readiness, built for modern workflows</h2>
                     <p class="section__subtitle">From the first gap analysis to the day your certificate arrives.</p>
                 </div>
-                <div class="feature-grid">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
-                        <h3>Build Once, Comply Many</h3>
-                        <span class="feature__tag">Multi-framework mapping</span>
-                        <p>Whether you need SOC 2, ISO 27001, HIPAA, GDPR, or Cyber Essentials, we map the overlapping requirements. We implement unified controls so you don't waste time doing duplicate work for different audits.</p>
+                <div class="checks">
+                    <div class="check scroll-reveal" style="--delay: 0s">
+                        <div class="check__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+                        <div>
+                            <span class="check__kicker">What we call it</span>
+                            <h3>Build Once, Comply Many</h3>
+                            <p>Whether you need SOC 2, ISO 27001, HIPAA, GDPR, or Cyber Essentials, we map the overlapping requirements. We implement unified controls so you don't waste time doing duplicate work for different audits.</p>
+                        </div>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
-                        <h3>The Audit Accelerator</h3>
-                        <span class="feature__tag">Hands-on program building</span>
-                        <p>We don't just tell you what to do. We write the policies, design the processes, and help you implement the technical controls tailored specifically to your startup's actual environment and architecture.</p>
+                    <div class="check scroll-reveal" style="--delay: 0.05s">
+                        <div class="check__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <div>
+                            <span class="check__kicker">What we call it</span>
+                            <h3>The Audit Accelerator</h3>
+                            <p>We don't just tell you what to do. We write the policies, design the processes, and help you implement the technical controls tailored specifically to your startup's actual environment and architecture.</p>
+                        </div>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
-                        <h3>Zero-Friction Controls</h3>
-                        <span class="feature__tag">Developer-friendly implementation</span>
-                        <p>Compliance shouldn't ruin your agile culture. We design security controls that integrate naturally into your existing developer workflows, like GitHub, Jira, and AWS, instead of forcing corporate red tape on your team.</p>
+                    <div class="check scroll-reveal" style="--delay: 0.05s">
+                        <div class="check__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <div>
+                            <span class="check__kicker">What we call it</span>
+                            <h3>Zero-Friction Controls</h3>
+                            <p>Compliance shouldn't ruin your agile culture. We design security controls that integrate naturally into your existing developer workflows, like GitHub, Jira, and AWS, instead of forcing corporate red tape on your team.</p>
+                        </div>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.15s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
-                        <h3>Your Expert Guide</h3>
-                        <span class="feature__tag">Active audit defense</span>
-                        <p>We don't abandon you when the auditor shows up. We stand by your side during the actual audit, answering technical questions and providing the necessary evidence to ensure a smooth, successful certification.</p>
+                    <div class="check scroll-reveal" style="--delay: 0.05s">
+                        <div class="check__box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                        <div>
+                            <span class="check__kicker">What we call it</span>
+                            <h3>Your Expert Guide</h3>
+                            <p>We don't abandon you when the auditor shows up. We stand by your side during the actual audit, answering technical questions and providing the necessary evidence to ensure a smooth, successful certification.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,47 +185,42 @@
                     <span class="eyebrow eyebrow--muted">Why Complixen</span>
                     <h2 class="section__title">Stop paying for generic templates and empty advice</h2>
                 </div>
-                <div class="compare scroll-reveal">
-                    <div class="compare__row compare__row--head">
-                        <span></span>
-                        <span>Traditional Compliance Consultants</span>
-                        <span class="compare__us">Complixen</span>
+                <div class="oldnew scroll-reveal">
+                    <div class="oldnew__col oldnew__col--old">
+                        <h3>The traditional way</h3>
+                        <ul>
+                            <li><span class="oldnew__point">Approach</span><p>A folder of generic templates</p></li>
+                            <li><span class="oldnew__point">Engineering impact</span><p>Corporate red tape forced on your team</p></li>
+                            <li><span class="oldnew__point">Frameworks</span><p>Each certification is a separate project</p></li>
+                            <li><span class="oldnew__point">Audit support</span><p>Gone before the auditor arrives</p></li>
+                        </ul>
                     </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Approach</span>
-                        <span>A folder of generic templates</span>
-                        <span class="compare__us">Hands-on building of your actual program</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Engineering impact</span>
-                        <span>Corporate red tape forced on your team</span>
-                        <span class="compare__us">Controls that fit GitHub, Jira, and AWS workflows</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Frameworks</span>
-                        <span>Each certification is a separate project</span>
-                        <span class="compare__us">Unified controls across SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Audit support</span>
-                        <span>Gone before the auditor arrives</span>
-                        <span class="compare__us">By your side through the entire audit</span>
+                    <div class="oldnew__col oldnew__col--new">
+                        <h3>The Complixen way</h3>
+                        <ul>
+                            <li><span class="oldnew__point">Approach</span><p>Hands-on building of your actual program</p></li>
+                            <li><span class="oldnew__point">Engineering impact</span><p>Controls that fit GitHub, Jira, and AWS workflows</p></li>
+                            <li><span class="oldnew__point">Frameworks</span><p>Unified controls across SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials</p></li>
+                            <li><span class="oldnew__point">Audit support</span><p>By your side through the entire audit</p></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section credo">
             <div class="container">
-                <div class="panel scroll-reveal">
-                    <div class="panel__text">
-                        <span class="eyebrow">Ready to get certified and close bigger deals?</span>
-                        <h2 class="panel__title">Compliance roadmaps scoped to your exact architecture</h2>
-                        <p class="panel__desc">We believe every startup deserves a streamlined path to certification, but we don't believe in rigid pricing tiers. Let's discuss your current infrastructure, target frameworks, and timeline. From there, we will build a tailored quotation that aligns perfectly with your runway and scope of work.</p>
+                <div class="scroll-reveal">
+                    <div class="credo__chips" aria-hidden="true">
+                        <i>SOC 2</i><i>ISO 27001</i><i>HIPAA</i><i>GDPR</i><i>Cyber Essentials</i>
                     </div>
-                    <div class="panel__actions">
-                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Strategy Call</a>
-                        <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
+                    <div class="credo__inner">
+                        <h2 class="credo__title">Ready to get certified and close bigger deals?</h2>
+                        <p class="credo__desc">Let's discuss your current infrastructure, target frameworks, and timeline. We will build a tailored quotation that aligns perfectly with your runway and scope of work, then map out exactly what it takes to get your startup audit-ready.</p>
+                        <div class="credo__actions">
+                            <a href="contact" class="btn btn--accent btn--lg">Schedule a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                            <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
+                        </div>
                     </div>
                 </div>
             </div>
