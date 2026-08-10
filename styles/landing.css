@@ -1,8 +1,7 @@
 /* ==========================================================================
-   Complixen — landing page sections (2026 content refresh)
-   Editorial components for service pages: numbered problems, feature rows,
-   comparison table, micro copy, about-page lists. Modern token vocabulary
-   from main.css only; theme-aware via var() tokens.
+   Complixen — landing page sections (2026 content refresh, structured tiles)
+   Tile-based components for service pages: problem tiles, feature tiles,
+   comparison table, about-page lists. Modern token vocabulary from main.css.
    ========================================================================== */
 
 /* Solo hero (no visual): single column, comfortable measure */
@@ -23,28 +22,53 @@
   color: var(--text-subtle);
 }
 
-/* ---------- Numbered problem blocks ---------- */
+/* Shared number chip */
+.numchip {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--r-pill);
+  padding: 0.3rem 0.75rem;
+}
+
+/* ---------- Problem tiles ---------- */
 .problem-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-8);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
   margin-top: var(--space-12);
 }
 .problem-item {
-  border-top: 1px solid var(--border-strong);
-  padding-top: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-8);
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+}
+.problem-item:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 .problem-item__num {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.12em;
   color: var(--accent);
-  margin-bottom: var(--space-3);
+  background: var(--accent-soft);
+  border-radius: var(--r-pill);
+  padding: 0.3rem 0.75rem;
+  margin-bottom: var(--space-4);
 }
 .problem-item h3 {
   font-size: 1.25rem;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 .problem-item p {
   color: var(--text-muted);
@@ -55,7 +79,7 @@
   font-size: clamp(1.375rem, 2.6vw, 1.875rem);
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.3;
+  line-height: 1.35;
   color: var(--text);
   max-width: 34ch;
   margin: var(--space-16) auto 0;
@@ -66,24 +90,41 @@
   color: var(--accent);
 }
 
-/* ---------- Editorial feature rows ---------- */
+/* ---------- Feature tiles (long horizontal cards) ---------- */
 .frows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
   margin-top: var(--space-12);
-  border-bottom: 1px solid var(--border);
 }
 .frow {
   display: grid;
-  grid-template-columns: 80px 1.05fr 1.35fr;
+  grid-template-columns: 92px 1.05fr 1.35fr;
   gap: var(--space-8);
-  padding: var(--space-8) 0;
-  border-top: 1px solid var(--border);
+  align-items: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-8);
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+}
+.frow:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 .frow__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
-  color: var(--text-subtle);
-  padding-top: 4px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--r-md);
+  padding: 0.55rem 0;
+  width: 64px;
 }
 .frow__label {
   display: block;
@@ -91,7 +132,7 @@
   font-size: 0.6875rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text-subtle);
   margin-bottom: var(--space-2);
 }
 .frow__name h3 {
@@ -102,15 +143,21 @@
   color: var(--accent);
 }
 .frow__tech {
-  margin-top: var(--space-2);
-  font-size: 0.75rem;
+  display: inline-block;
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
   color: var(--text-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: 0.25rem 0.75rem;
 }
 .frow__body {
   color: var(--text-muted);
   font-size: 0.9375rem;
   line-height: 1.7;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
 /* ---------- Comparison table ---------- */
@@ -120,6 +167,7 @@
   border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--surface);
+  box-shadow: var(--shadow-sm);
 }
 .compare__row {
   display: grid;
@@ -148,33 +196,54 @@
   color: var(--text) !important;
   font-weight: 500;
 }
+.compare__row:not(.compare__row--head) > span:nth-child(2)::before {
+  content: "✕";
+  display: inline-block;
+  margin-right: 0.625rem;
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
 .compare__us {
   background: var(--accent-soft);
   color: var(--text) !important;
+}
+.compare__row:not(.compare__row--head) .compare__us::before {
+  content: "✓";
+  display: inline-block;
+  margin-right: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 .compare__row--head .compare__us {
   color: var(--accent) !important;
 }
 
-/* ---------- About page: modular list, values, team ---------- */
+/* ---------- About page: modular list, values ---------- */
 .modlist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
   margin-top: var(--space-12);
-  border-bottom: 1px solid var(--border);
 }
 .modlist a {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: var(--space-6);
-  padding: var(--space-6) var(--space-1);
-  border-top: 1px solid var(--border);
-  transition: padding var(--t-med);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-6) var(--space-8);
+  transition: border-color var(--t-med), transform var(--t-med), box-shadow var(--t-med);
 }
 .modlist a:hover {
-  padding-left: var(--space-4);
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 .modlist__q {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -191,62 +260,31 @@
 .modlist__a svg {
   width: 16px;
   height: 16px;
+  transition: transform var(--t-fast);
 }
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-8);
-  margin-top: var(--space-12);
-}
-.member {
-  border-top: 1px solid var(--border-strong);
-  padding-top: var(--space-6);
-}
-.member__avatar {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--bg);
-  background: var(--accent);
-  margin-bottom: var(--space-4);
-}
-.member__avatar--alt {
-  background: var(--violet);
-}
-.member h3 {
-  font-size: 1.125rem;
-}
-.member__role {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: var(--space-2) 0 var(--space-3);
-}
-.member p {
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  line-height: 1.65;
+.modlist a:hover .modlist__a svg {
+  transform: translateX(4px);
 }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .frow {
     grid-template-columns: 1fr;
-    gap: var(--space-3);
-    padding: var(--space-6) 0;
+    gap: var(--space-4);
+    padding: var(--space-6);
   }
-  .frow__num { padding-top: 0; }
-  .compare__row { grid-template-columns: 1fr; }
-  .compare__row--head { display: none; }
-  .compare__row > span { padding: var(--space-3) var(--space-4); }
+  .problem-item {
+    padding: var(--space-6);
+  }
+  .compare__row {
+    grid-template-columns: 1fr;
+  }
+  .compare__row--head {
+    display: none;
+  }
+  .compare__row > span {
+    padding: var(--space-3) var(--space-4);
+  }
   .compare__point {
     background: var(--surface-2);
     font-family: var(--font-mono);
@@ -254,6 +292,9 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
   }
-  .compare__row > span:nth-child(2)::before { content: "Them — "; color: var(--text-subtle); }
-  .compare__us::before { content: "Us — "; color: var(--accent); }
+  .modlist a {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-6);
+  }
 }
