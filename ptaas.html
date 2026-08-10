@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/platform.css">
     <link rel="stylesheet" href="styles/pages.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
@@ -84,30 +83,45 @@
                     <p class="micro">No automated fluff. Just experienced security engineers and a modern platform.</p>
                 </div>
                 <div class="lhero__visual scroll-reveal-right" aria-hidden="true">
-                    <div class="ptaas-visual" aria-hidden="true">
-                        <div class="ptaas-visual__head">
-                            <span class="ptaas-visual__title">Web App Pentest</span>
-                            <span class="ptaas-visual__status">Testing in progress</span>
+                    <div class="feed">
+                        <div class="feed__head">
+                            <span class="feed__title">Web App Pentest</span>
+                            <span class="feed__live">Live</span>
                         </div>
-                        <div class="ptaas-visual__progress"><span style="--fill: 64%"></span></div>
-                        <div class="ptaas-visual__rows">
-                            <div class="ptaas-visual__row">
-                                <span class="ptaas-visual__sev ptaas-visual__sev--high">Critical</span>
-                                <span class="ptaas-visual__name">Login bypass</span>
-                                <span class="ptaas-visual__state">Fix submitted</span>
+                        <div class="feed__items">
+                            <div class="feed__item" style="--d: 0.2s">
+                                <span class="feed__time">14:02</span>
+                                <span class="feed__dot feed__dot--hi"></span>
+                                <div>
+                                    <strong>Critical finding verified</strong>
+                                    <span>Authorization bypass in session handling</span>
+                                </div>
                             </div>
-                            <div class="ptaas-visual__row">
-                                <span class="ptaas-visual__sev ptaas-visual__sev--med">Medium</span>
-                                <span class="ptaas-visual__name">Weak session policy</span>
-                                <span class="ptaas-visual__state">Open</span>
+                            <div class="feed__item" style="--d: 0.6s">
+                                <span class="feed__time">14:18</span>
+                                <span class="feed__dot feed__dot--acc"></span>
+                                <div>
+                                    <strong>Engineer comment</strong>
+                                    <span>Reproduction steps and fix guidance attached</span>
+                                </div>
                             </div>
-                            <div class="ptaas-visual__row">
-                                <span class="ptaas-visual__sev ptaas-visual__sev--low">Low</span>
-                                <span class="ptaas-visual__name">Verbose error messages</span>
-                                <span class="ptaas-visual__state ptaas-visual__state--done">Retest passed</span>
+                            <div class="feed__item" style="--d: 1s">
+                                <span class="feed__time">16:40</span>
+                                <span class="feed__dot feed__dot--acc"></span>
+                                <div>
+                                    <strong>Fix submitted by your team</strong>
+                                    <span>Retest requested with one click</span>
+                                </div>
+                            </div>
+                            <div class="feed__item" style="--d: 1.4s">
+                                <span class="feed__time">17:05</span>
+                                <span class="feed__dot feed__dot--ok"></span>
+                                <div>
+                                    <strong>Retest passed</strong>
+                                    <span>Finding closed and synced to Jira</span>
+                                </div>
                             </div>
                         </div>
-                        <p class="ptaas-visual__foot">Findings appear as testers work</p>
                     </div>
                 </div>
             </div>
@@ -118,21 +132,21 @@
                 <div class="section__header scroll-reveal">
                     <span class="eyebrow eyebrow--muted">The Problem</span>
                     <h2 class="section__title">Automated scanners aren't enough. Legacy pentesting is a black box.</h2>
-                    <p class="section__subtitle">If you are scaling a startup, you need to prove your security posture to enterprise buyers. But current solutions leave you stuck between two flawed options:</p>
+                    <p class="section__subtitle">If you are scaling a startup, you need to prove your security posture to enterprise buyers. But current solutions leave you stuck between flawed options:</p>
                 </div>
-                <div class="feature-grid feature-grid--three">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+                <div class="gaps">
+                    <div class="gap scroll-reveal" style="--delay: 0s">
+                        <span class="gap__label">Flawed option 01</span>
                         <h3>The Scanner Gap</h3>
                         <p>Many firms sell pentests that are strictly automated vulnerability scans. They completely miss business logic flaws, authorization bypasses, and complex attack chains.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
+                    <div class="gap scroll-reveal" style="--delay: 0.05s">
+                        <span class="gap__label">Flawed option 02</span>
                         <h3>The Black-Box Bottleneck</h3>
                         <p>Traditional manual pentesting firms disappear for weeks, giving you zero visibility into their testing progress or findings until the very end.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                    <div class="gap scroll-reveal" style="--delay: 0.1s">
+                        <span class="gap__label">Flawed option 03</span>
                         <h3>The Static PDF Problem</h3>
                         <p>When the manual test is finally done, you receive a static report that your developers hate, which becomes outdated the moment you push a new code update.</p>
                     </div>
@@ -148,33 +162,29 @@
                     <h2 class="section__title">Real-world security expertise, managed in one centralized tool</h2>
                     <p class="section__subtitle">Human-led testing with the visibility and workflow of a modern platform.</p>
                 </div>
-                <div class="feature-grid">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                <div class="quad">
+                    <div class="quad__cell scroll-reveal">
+                        <div class="quad__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                        <span class="quad__kicker">What we call it</span>
                         <h3>Beyond the Automated Scan</h3>
-                        <span class="feature__tag">Expert-led manual testing</span>
                         <p>While scanners find simple bugs, our experienced security engineers manually simulate advanced attacks. We find the complex business logic flaws and chained vulnerabilities that could actually compromise your platform.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                    <div class="quad__cell scroll-reveal">
+                        <div class="quad__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                        <span class="quad__kicker">What we call it</span>
                         <h3>The PTaaS Dashboard</h3>
-                        <span class="feature__tag">Real-time platform visibility</span>
                         <p>Say goodbye to waiting weeks for a PDF. Our dedicated PTaaS platform gives you live visibility into the pentest as it happens. Watch verified findings roll in, track remediation status, and sync everything directly to Jira.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                    <div class="quad__cell scroll-reveal">
+                        <div class="quad__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg></div>
+                        <span class="quad__kicker">What we call it</span>
                         <h3>One-Click Fix Validation</h3>
-                        <span class="feature__tag">On-demand platform retesting</span>
                         <p>When your team pushes a patch, you shouldn't have to pay for another full pentest. Simply request a retest directly through the platform, and our engineers will manually validate your remediations so you can close the loop instantly.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.15s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                    <div class="quad__cell scroll-reveal">
+                        <div class="quad__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                        <span class="quad__kicker">What we call it</span>
                         <h3>In-Platform Collaboration</h3>
-                        <span class="feature__tag">Direct access to engineers</span>
                         <p>No account managers blocking the way. Your developers can communicate directly with the security engineers testing your app right inside the platform or via Slack, ensuring fast answers and collaborative fixes.</p>
                     </div>
                 </div>
@@ -187,48 +197,42 @@
                     <span class="eyebrow eyebrow--muted">Why Complixen</span>
                     <h2 class="section__title">Stop paying for opaque processes and static PDFs</h2>
                 </div>
-                <div class="compare scroll-reveal">
-                    <div class="compare__row compare__row--head">
-                        <span></span>
-                        <span>Legacy Pentest Firm</span>
-                        <span class="compare__us">Complixen</span>
+                <div class="diff scroll-reveal">
+                    <div class="diff__row">
+                        <span class="diff__point">Testing depth</span>
+                        <p class="diff__minus">Automated scans dressed up as pentests</p>
+                        <p class="diff__plus">Manual, expert-led testing that finds logic flaws</p>
                     </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Testing depth</span>
-                        <span>Automated scans dressed up as pentests</span>
-                        <span class="compare__us">Manual, expert-led testing that finds logic flaws</span>
+                    <div class="diff__row">
+                        <span class="diff__point">Delivery method</span>
+                        <p class="diff__minus">A static PDF, weeks later</p>
+                        <p class="diff__plus">Real-time platform delivery with Jira integration</p>
                     </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Delivery method</span>
-                        <span>A static PDF, weeks later</span>
-                        <span class="compare__us">Real-time platform delivery with Jira integration</span>
+                    <div class="diff__row">
+                        <span class="diff__point">Retesting</span>
+                        <p class="diff__minus">Pay again for a second engagement</p>
+                        <p class="diff__plus">One-click retesting, included</p>
                     </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Retesting</span>
-                        <span>Pay again for a second engagement</span>
-                        <span class="compare__us">One-click retesting, included</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Visibility</span>
-                        <span>A black box until the final report</span>
-                        <span class="compare__us">Live findings as testing happens</span>
+                    <div class="diff__row">
+                        <span class="diff__point">Visibility</span>
+                        <p class="diff__minus">A black box until the final report</p>
+                        <p class="diff__plus">Live findings as testing happens</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="quiet">
             <div class="container">
-                <div class="panel scroll-reveal">
-                    <div class="panel__text">
-                        <span class="eyebrow">Ready to see how your application holds up?</span>
-                        <h2 class="panel__title">Comprehensive penetration testing, scoped to your exact platform</h2>
-                        <p class="panel__desc">We believe every startup deserves expert-led penetration testing powered by modern tooling, but we don't believe in rigid pricing tiers. Let's discuss your application's size, complexity, and technology stack. From there, we will build a tailored PTaaS quotation that aligns perfectly with your runway and scope of work.</p>
-                    </div>
-                    <div class="panel__actions">
-                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Scoping Call</a>
+                <div class="quiet__inner scroll-reveal">
+                    <span class="quiet__rule" aria-hidden="true" style="display: block;"></span>
+                    <h2 class="quiet__title">Ready to see how your application holds up?</h2>
+                    <p class="quiet__desc">Let's discuss your application's size, complexity, and technology stack. We will build a tailored PTaaS quotation that aligns with your runway and scope of work, then show you a live look at the platform in action.</p>
+                    <div class="quiet__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Scoping Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                         <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
                     </div>
+                    <p class="micro">No automated fluff. Just experienced security engineers.</p>
                 </div>
             </div>
         </section>
