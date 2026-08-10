@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/platform.css">
     <link rel="stylesheet" href="styles/pages.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
@@ -84,39 +83,34 @@
                     <p class="micro">No slide decks. Just a live look at the platform in action.</p>
                 </div>
                 <div class="lhero__visual scroll-reveal-right" aria-hidden="true">
-                    <div class="benchmark" aria-hidden="true">
-                        <div class="benchmark__head">
-                            <span class="benchmark__title">Security Benchmark</span>
-                            <span class="benchmark__tag">Live</span>
+                    <div class="stackviz">
+                        <div class="stackviz__editor">
+                            <div class="vis__bar">
+                                <span class="vis__dot"></span><span class="vis__dot"></span><span class="vis__dot"></span>
+                                <span class="vis__name">checkout.ts</span>
+                                <span class="vis__tag vis__tag--accent">Scanning</span>
+                            </div>
+                            <div class="vis__line"><span class="vis__ln">12</span><span class="vis__seg" style="--w: 74%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">13</span><span class="vis__seg" style="--w: 52%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">14</span><span class="vis__seg vis__seg--hit" style="--w: 82%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">15</span><span class="vis__seg vis__seg--fix" style="--w: 70%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">16</span><span class="vis__seg" style="--w: 44%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">17</span><span class="vis__seg" style="--w: 60%"></span></div>
                         </div>
-                        <div class="benchmark__score">
-                            <svg viewBox="0 0 120 120">
-                                <circle class="benchmark__ring-track" cx="60" cy="60" r="52"/>
-                                <circle class="benchmark__ring-fill" cx="60" cy="60" r="52"/>
-                            </svg>
-                            <div class="benchmark__grade">
-                                <strong>A+</strong>
-                                <span>Secure to ship</span>
+                        <svg class="stackviz__link" viewBox="0 0 90 60" fill="none">
+                            <path d="M6 6 C 40 10, 60 26, 82 52" stroke-width="1.6"/>
+                        </svg>
+                        <div class="stackviz__ticket">
+                            <div class="stackviz__row">
+                                <span class="stackviz__ticket-key">JIRA · SEC-142</span>
                             </div>
-                        </div>
-                        <div class="benchmark__rows">
-                            <div class="benchmark__row">
-                                <span class="benchmark__row-label">Code security</span>
-                                <span class="benchmark__bar" style="--fill: 96%"></span>
-                                <em>Strong</em>
-                            </div>
-                            <div class="benchmark__row">
-                                <span class="benchmark__row-label">Dependencies</span>
-                                <span class="benchmark__bar" style="--fill: 92%"></span>
-                                <em>Clean</em>
-                            </div>
-                            <div class="benchmark__row">
-                                <span class="benchmark__row-label">Secrets</span>
-                                <span class="benchmark__bar" style="--fill: 100%"></span>
-                                <em>Sealed</em>
+                            <h4>Sanitize user input in checkout flow</h4>
+                            <div class="stackviz__chiprow">
+                                <span class="stackviz__chip stackviz__chip--crit">Critical</span>
+                                <span class="stackviz__chip stackviz__chip--auto">Auto-created</span>
+                                <span class="stackviz__chip stackviz__chip--fix">Fix attached</span>
                             </div>
                         </div>
-                        <p class="benchmark__foot">Updated on every release</p>
                     </div>
                 </div>
             </div>
@@ -129,21 +123,27 @@
                     <h2 class="section__title">The security industry forgot about growing businesses. We didn't.</h2>
                     <p class="section__subtitle">If you run a startup or SMB, you know you need to secure your platform. But current tools create three massive roadblocks:</p>
                 </div>
-                <div class="feature-grid feature-grid--three">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
-                        <h3>The Enterprise Cost</h3>
-                        <p>Legacy security tools demand massive annual enterprise contracts that drain your runway and budget.</p>
+                <div class="walls scroll-reveal">
+                    <div class="wall">
+                        <div class="wall__side">
+                            <span class="wall__label">Roadblock 01</span>
+                            <span class="wall__word">The Enterprise Cost</span>
+                        </div>
+                        <p class="wall__desc">Legacy security tools demand massive annual enterprise contracts that drain your runway and budget.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
-                        <h3>The Noise</h3>
-                        <p>They dump thousands of useless alerts and false alarms on your developers.</p>
+                    <div class="wall">
+                        <div class="wall__side">
+                            <span class="wall__label">Roadblock 02</span>
+                            <span class="wall__word">The Noise</span>
+                        </div>
+                        <p class="wall__desc">They dump thousands of useless alerts and false alarms on your developers.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
-                        <h3>The Friction</h3>
-                        <p>They force your team to learn complex new dashboards instead of working where they already are.</p>
+                    <div class="wall">
+                        <div class="wall__side">
+                            <span class="wall__label">Roadblock 03</span>
+                            <span class="wall__word">The Friction</span>
+                        </div>
+                        <p class="wall__desc">They force your team to learn complex new dashboards instead of working where they already are.</p>
                     </div>
                 </div>
                 <p class="statement scroll-reveal">You don't need another alert dashboard. <em>You need a purpose-built security partner.</em></p>
@@ -153,38 +153,54 @@
         <section class="section">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">The Security Engine</span>
+                    <span class="eyebrow eyebrow--muted">The Platform</span>
                     <h2 class="section__title">Everything you need to lock down your product</h2>
-                    <p class="section__subtitle">The engine that watches your code, your dependencies, and your live application.</p>
+                    <p class="section__subtitle">One pipeline from the moment code is written to the moment the fix is verified.</p>
                 </div>
-                <div class="feature-grid">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                <div class="pipe">
+                    <div class="pipe__stage scroll-reveal"><span>Stage 1 · The Security Engine</span></div>
+                    <div class="pipe__item scroll-reveal" style="--delay: 0s">
+                        <div class="pipe__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <span class="pipe__kicker">What we call it</span>
                         <h3>Your In-House AI Security Engineer</h3>
-                        <span class="feature__tag">Native AI code scanning, SAST and AI remediation</span>
+                        <span class="pipe__tag">Native AI code scanning · SAST and AI remediation</span>
                         <p>We scan your custom code as it's written to find vulnerabilities before they go live. And we don't just point out the problem. Our proprietary, indigenous AI engine generates the exact code needed to fix the weakness instantly, keeping your data strictly within our secure ecosystem.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                    <div class="pipe__item scroll-reveal" style="--delay: 0.05s">
+                        <div class="pipe__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                        <span class="pipe__kicker">What we call it</span>
                         <h3>Third-Party Ingredient Checker</h3>
-                        <span class="feature__tag">Dependency and SBOM tracking, SCA</span>
+                        <span class="pipe__tag">Dependency and SBOM tracking · SCA</span>
                         <p>Most modern software relies heavily on open-source code. We scan every external piece of code you use and give you a complete Software Bill of Materials to prove to your enterprise buyers that your software is clean.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                    <div class="pipe__item scroll-reveal" style="--delay: 0.05s">
+                        <div class="pipe__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                        <span class="pipe__kicker">What we call it</span>
                         <h3>Live Website Hacker Simulation</h3>
-                        <span class="feature__tag">Web application scanning, DAST</span>
+                        <span class="pipe__tag">Web application scanning · DAST</span>
                         <p>We safely simulate real-world attacks on your live web application. We find the unlocked doors in your platform before the bad guys do.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.15s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
+                    <div class="pipe__item scroll-reveal" style="--delay: 0.05s">
+                        <div class="pipe__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
+                        <span class="pipe__kicker">What we call it</span>
                         <h3>Accidental Password Leak Prevention</h3>
-                        <span class="feature__tag">Secret scanning</span>
+                        <span class="pipe__tag">Secret scanning</span>
                         <p>We catch exposed API keys, database passwords, and cloud credentials in your code before they get published, preventing devastating data breaches.</p>
+                    </div>
+                    <div class="pipe__stage scroll-reveal"><span>Stage 2 · Intelligence and Workflow</span></div>
+                    <div class="pipe__item pipe__item--violet scroll-reveal" style="--delay: 0s">
+                        <div class="pipe__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+                        <span class="pipe__kicker">What we call it</span>
+                        <h3>The Proprietary Security Brain</h3>
+                        <span class="pipe__tag">Context-aware intelligence</span>
+                        <p>Most scanners cry wolf and generate hundreds of false alarms. Our native Brain cross-maps intelligence specific to your unique architecture. It connects the dots across your entire platform to filter out the noise and only flag the threats that actually matter.</p>
+                    </div>
+                    <div class="pipe__item pipe__item--violet scroll-reveal" style="--delay: 0.05s">
+                        <div class="pipe__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9.5 1.5 1.5L11 8.5"/><path d="M13 10h4"/><path d="m7 15.5 1.5 1.5L11 14.5"/><path d="M13 16h4"/></svg></div>
+                        <span class="pipe__kicker">What we call it</span>
+                        <h3>Zero-Friction Developer Ticketing</h3>
+                        <span class="pipe__tag">Automated Jira workflows and fix validation</span>
+                        <p>Don't force your devs to learn a new tool. When our native AI finds a critical issue, it automatically creates a Jira ticket with the suggested fix included. Once your developer commits the fix, we automatically validate it and close the ticket for you.</p>
                     </div>
                 </div>
             </div>
@@ -193,80 +209,44 @@
         <section class="section section--muted">
             <div class="container">
                 <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">Intelligence and Workflow</span>
-                    <h2 class="section__title">Work smarter, secure your platform faster</h2>
-                    <p class="section__subtitle">The intelligence layer that filters the noise and delivers fixes where your team already works.</p>
-                </div>
-                <div class="feature-grid">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
-                        <h3>The Proprietary Security Brain</h3>
-                        <span class="feature__tag">Context-aware intelligence</span>
-                        <p>Most scanners cry wolf and generate hundreds of false alarms. Our native Brain cross-maps intelligence specific to your unique architecture. It connects the dots across your entire platform to filter out the noise and only flag the threats that actually matter.</p>
-                    </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9.5 1.5 1.5L11 8.5"/><path d="M13 10h4"/><path d="m7 15.5 1.5 1.5L11 14.5"/><path d="M13 16h4"/></svg></div>
-                        <span class="feature__kicker">What we call it</span>
-                        <h3>Zero-Friction Developer Ticketing</h3>
-                        <span class="feature__tag">Automated Jira workflows and fix validation</span>
-                        <p>Don't force your devs to learn a new tool. When our native AI finds a critical issue, it automatically creates a Jira ticket with the suggested fix included. Once your developer commits the fix, we automatically validate it and close the ticket for you.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section__header scroll-reveal">
                     <span class="eyebrow eyebrow--muted">Why Complixen</span>
                     <h2 class="section__title">Designed for agile teams, not Fortune 500 red tape</h2>
                 </div>
-                <div class="compare scroll-reveal">
-                    <div class="compare__row compare__row--head">
-                        <span></span>
-                        <span>Enterprise Giants</span>
-                        <span class="compare__us">Complixen</span>
+                <div class="versus scroll-reveal">
+                    <div class="versus__col versus__col--them">
+                        <span class="versus__label">Enterprise Giants</span>
+                        <ul class="versus__list">
+                            <li><span><span class="versus__point">Target audience</span>Fortune 500 security teams with dedicated staff</span></li>
+                            <li><span><span class="versus__point">The technology</span>Legacy scanners bolted together through acquisitions</span></li>
+                            <li><span><span class="versus__point">False positives</span>Thousands of raw alerts dumped on your developers</span></li>
+                            <li><span><span class="versus__point">Fixing issues</span>Here is a report. Good luck.</span></li>
+                            <li><span><span class="versus__point">Pricing model</span>Rigid annual enterprise contracts</span></li>
+                        </ul>
                     </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Target audience</span>
-                        <span>Fortune 500 security teams with dedicated staff</span>
-                        <span class="compare__us">Startups and SMBs, from day one</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">The technology</span>
-                        <span>Legacy scanners bolted together through acquisitions</span>
-                        <span class="compare__us">Proprietary AI built entirely in-house for cybersecurity, and your code never leaves our secure ecosystem</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">False positives</span>
-                        <span>Thousands of raw alerts dumped on your developers</span>
-                        <span class="compare__us">The Brain filters the noise and flags only real threats</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Fixing issues</span>
-                        <span>Here is a report. Good luck.</span>
-                        <span class="compare__us">AI writes the fix and syncs it straight to Jira</span>
-                    </div>
-                    <div class="compare__row">
-                        <span class="compare__point">Pricing model</span>
-                        <span>Rigid annual enterprise contracts</span>
-                        <span class="compare__us">Custom-tailored quotations based on your actual scope</span>
+                    <div class="versus__badge" aria-hidden="true">VS</div>
+                    <div class="versus__col versus__col--us">
+                        <span class="versus__label">Complixen</span>
+                        <ul class="versus__list">
+                            <li><span><span class="versus__point">Target audience</span>Startups and SMBs, from day one</span></li>
+                            <li><span><span class="versus__point">The technology</span>Proprietary AI built entirely in-house, and your code never leaves our secure ecosystem</span></li>
+                            <li><span><span class="versus__point">False positives</span>The Brain filters the noise and flags only real threats</span></li>
+                            <li><span><span class="versus__point">Fixing issues</span>AI writes the fix and syncs it straight to Jira</span></li>
+                            <li><span><span class="versus__point">Pricing model</span>Custom-tailored quotations based on your actual scope</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="finale">
+            <div class="finale__bg" aria-hidden="true"></div>
             <div class="container">
-                <div class="panel scroll-reveal">
-                    <div class="panel__text">
-                        <span class="eyebrow">Ready to see our proprietary AI in action?</span>
-                        <h2 class="panel__title">Security scoped to your exact environment</h2>
-                        <p class="panel__desc">We believe every growing company deserves bank-grade application security, but we don't believe in forcing you into rigid enterprise contracts. Let's discuss your codebase, application footprint, and growth stage. From there, we will build a tailored quotation that aligns perfectly with your runway and scope of work.</p>
-                    </div>
-                    <div class="panel__actions">
-                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Walkthrough</a>
+                <div class="finale__inner scroll-reveal">
+                    <span class="eyebrow">Ready when you are</span>
+                    <h2 class="finale__title">Ready to see our proprietary AI in action?</h2>
+                    <p class="finale__desc">Jump on a quick call with our founding team. We'll skip the sales pitch, show you exactly how our native platform works, and answer any technical questions you have. Every engagement starts with a tailored quotation that aligns with your runway and scope of work.</p>
+                    <div class="finale__actions">
+                        <a href="contact" class="btn btn--accent btn--lg">Schedule a Walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
                         <a href="contact" class="btn btn--ghost btn--lg">Request a Custom Quote</a>
                     </div>
                 </div>
