@@ -119,26 +119,29 @@
 
         <section class="section section--muted">
             <div class="container">
-                <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">The Breaking Point</span>
-                    <h2 class="section__title">Stop letting security stall your growth</h2>
-                    <p class="section__subtitle">Enterprise buyers demand rigorous security, but traditional security vendors slow down your engineers and drain your budget. We fix that by bridging the gap between automated tools and expert guidance.</p>
-                </div>
-                <div class="feature-grid feature-grid--three">
-                    <div class="feature scroll-reveal" style="--delay: 0.0s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-                        <h3>Unblock Revenue</h3>
-                        <p>Pass vendor assessments and close larger contracts.</p>
+                <div class="bp">
+                    <div class="bp__head scroll-reveal">
+                        <span class="eyebrow eyebrow--muted">The Breaking Point</span>
+                        <h2 class="section__title" style="text-align: left;">Stop letting security stall your growth</h2>
+                        <p class="section__subtitle" style="text-align: left;">Enterprise buyers demand rigorous security, but traditional security vendors slow down your engineers and drain your budget. We fix that by bridging the gap between automated tools and expert guidance.</p>
                     </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.05s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
-                        <h3>Protect Budgets</h3>
-                        <p>Modular solutions mean you never pay for bloated, unnecessary features.</p>
-                    </div>
-                    <div class="feature scroll-reveal" style="--delay: 0.1s">
-                        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                        <h3>Preserve Agility</h3>
-                        <p>Our tools and experts integrate directly into your Jira and Slack workflows.</p>
+                    <div class="bp__list scroll-reveal">
+                        <div class="bp__item">
+                            <span class="bp__num">01</span>
+                            <h3>Unblock Revenue</h3>
+                            <p>Pass vendor assessments and close larger contracts.</p>
+                        </div>
+                        <div class="bp__item">
+                            <span class="bp__num">02</span>
+                            <h3>Protect Budgets</h3>
+                            <p>Modular solutions mean you never pay for bloated, unnecessary features.</p>
+                        </div>
+                        <div class="bp__item">
+                            <span class="bp__num">03</span>
+                            <h3>Preserve Agility</h3>
+                            <p>Our tools and experts integrate directly into your Jira and Slack workflows.</p>
+                        </div>
+                        <p class="bp__closer">Security that works for your business, <em>not against it.</em></p>
                     </div>
                 </div>
             </div>
@@ -151,34 +154,79 @@
                     <h2 class="section__title">Choose your path. We handle the rest.</h2>
                     <p class="section__subtitle">Whether you need automated scanning or human-led strategy, select the solution you need to unblock your next milestone.</p>
                 </div>
-                <div class="offerings__grid">
-                    <a href="devsecops" class="card scroll-reveal" style="--delay: 0.0s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                        <span class="feature__kicker">AppSec Platform</span>
-                        <h3 class="card__title">Automated Application Security</h3>
-                        <p class="card__desc">Context-aware AI that scans your code, writes the remediation, and creates the Jira ticket.</p>
-                        <span class="card__link">Explore AppSec <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                <div class="suite">
+                    <a href="devsecops" class="suite-card scroll-reveal" style="--delay: 0s">
+                        <div>
+                            <span class="suite-card__kicker">AppSec Platform</span>
+                            <h3>Automated Application Security</h3>
+                            <p class="suite-card__desc">Context-aware AI that scans your code, writes the remediation, and creates the Jira ticket.</p>
+                            <span class="card__link">Explore AppSec <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                        </div>
+                        <div class="suite-card__visual" aria-hidden="true">
+                            <div class="mini mini--code">
+                                <span class="mini__line" style="--w: 88%"></span>
+                                <span class="mini__line" style="--w: 62%"></span>
+                                <span class="mini__line mini__line--hit" style="--w: 76%"></span>
+                                <span class="mini__line" style="--w: 54%"></span>
+                                <span class="mini__chip">Fix ready</span>
+                            </div>
+                        </div>
                     </a>
-                    <a href="ptaas" class="card scroll-reveal" style="--delay: 0.05s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-                        <span class="feature__kicker">PTaaS Platform</span>
-                        <h3 class="card__title">Penetration Testing as a Service</h3>
-                        <p class="card__desc">Expert-led manual penetration testing delivered through a transparent, real-time platform with one-click retesting.</p>
-                        <span class="card__link">Explore PTaaS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    <a href="ptaas" class="suite-card scroll-reveal" style="--delay: 0.05s">
+                        <div>
+                            <span class="suite-card__kicker">PTaaS Platform</span>
+                            <h3>Penetration Testing as a Service</h3>
+                            <p class="suite-card__desc">Expert-led manual penetration testing delivered through a transparent, real-time platform with one-click retesting.</p>
+                            <span class="card__link">Explore PTaaS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                        </div>
+                        <div class="suite-card__visual" aria-hidden="true">
+                            <div class="mini">
+                                <span class="mini__bar"><i style="--fill: 64%"></i></span>
+                                <span class="mini__row"><b class="mini__pip mini__pip--hi"></b><span class="mini__track" style="--w: 82%"></span></span>
+                                <span class="mini__row"><b class="mini__pip mini__pip--md"></b><span class="mini__track" style="--w: 58%"></span></span>
+                                <span class="mini__row"><b class="mini__pip mini__pip--lo"></b><span class="mini__track" style="--w: 70%"></span></span>
+                            </div>
+                        </div>
                     </a>
-                    <a href="security-grc" class="card scroll-reveal" style="--delay: 0.1s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
-                        <span class="feature__kicker">Security Compliance</span>
-                        <h3 class="card__title">Hands-On Audit Readiness</h3>
-                        <p class="card__desc">We map the controls, write the policies, and get you ready for SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials.</p>
-                        <span class="card__link">Explore Compliance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    <a href="security-grc" class="suite-card scroll-reveal" style="--delay: 0.1s">
+                        <div>
+                            <span class="suite-card__kicker">Security Compliance</span>
+                            <h3>Hands-On Audit Readiness</h3>
+                            <p class="suite-card__desc">We map the controls, write the policies, and get you ready for SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials.</p>
+                            <span class="card__link">Explore Compliance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                        </div>
+                        <div class="suite-card__visual" aria-hidden="true">
+                            <div class="mini mini--ring">
+                                <span class="mini__ring">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                                </span>
+                                <span class="mini__chips"><i>SOC 2</i><i>ISO 27001</i><i>HIPAA</i></span>
+                            </div>
+                        </div>
                     </a>
-                    <a href="vciso" class="card scroll-reveal" style="--delay: 0.15s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-                        <span class="feature__kicker">Fractional vCISO</span>
-                        <h3 class="card__title">Executive Security Leadership</h3>
-                        <p class="card__desc">Pure, human-led security strategy to manage vendor assessments, build your roadmap, and guide your team.</p>
-                        <span class="card__link">Explore vCISO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                    <a href="vciso" class="suite-card scroll-reveal" style="--delay: 0.15s">
+                        <div>
+                            <span class="suite-card__kicker">Fractional vCISO</span>
+                            <h3>Executive Security Leadership</h3>
+                            <p class="suite-card__desc">Pure, human-led security strategy to manage vendor assessments, build your roadmap, and guide your team.</p>
+                            <span class="card__link">Explore vCISO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+                        </div>
+                        <div class="suite-card__visual" aria-hidden="true">
+                            <div class="mini mini--net">
+                                <svg viewBox="0 0 128 108" fill="none">
+                                    <line x1="64" y1="54" x2="20" y2="18" style="stroke: var(--border-strong);"/>
+                                    <line x1="64" y1="54" x2="108" y2="24" style="stroke: var(--border-strong);"/>
+                                    <line x1="64" y1="54" x2="34" y2="92" style="stroke: var(--border-strong);"/>
+                                    <line x1="64" y1="54" x2="102" y2="86" style="stroke: var(--border-strong);"/>
+                                    <circle cx="20" cy="18" r="5" style="fill: var(--accent);" opacity="0.85"/>
+                                    <circle cx="108" cy="24" r="5" style="fill: var(--violet);" opacity="0.85"/>
+                                    <circle cx="34" cy="92" r="5" style="fill: var(--accent);" opacity="0.6"/>
+                                    <circle cx="102" cy="86" r="5" style="fill: var(--violet);" opacity="0.6"/>
+                                    <circle cx="64" cy="54" r="17" style="fill: var(--accent-soft); stroke: var(--accent);" stroke-width="1.5"/>
+                                    <path d="M64 48a4 4 0 1 1 0 8a4 4 0 0 1 0-8zM56 64c0-4 4-6 8-6s8 2 8 6" style="stroke: var(--accent);" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -190,19 +238,19 @@
                     <span class="eyebrow eyebrow--muted">How It Works</span>
                     <h2 class="section__title">Security on your terms</h2>
                 </div>
-                <div class="steps">
-                    <div class="step scroll-reveal" style="--delay: 0s">
-                        <span class="step__num">Step 01</span>
+                <div class="flow">
+                    <div class="flow-step scroll-reveal" style="--delay: 0s">
+                        <div class="flow-step__node">01</div>
                         <h3>Assess</h3>
                         <p>We analyze your tech stack, business goals, and enterprise buyer requirements to identify your immediate gaps.</p>
                     </div>
-                    <div class="step scroll-reveal" style="--delay: 0.05s">
-                        <span class="step__num">Step 02</span>
+                    <div class="flow-step scroll-reveal" style="--delay: 0.05s">
+                        <div class="flow-step__node">02</div>
                         <h3>Select</h3>
                         <p>You choose the specific platform or service required to unblock your current roadmap. No forced bundles.</p>
                     </div>
-                    <div class="step scroll-reveal" style="--delay: 0.1s">
-                        <span class="step__num">Step 03</span>
+                    <div class="flow-step scroll-reveal" style="--delay: 0.1s">
+                        <div class="flow-step__node">03</div>
                         <h3>Deploy and Scale</h3>
                         <p>We integrate into your workflows and start securing your platform. As your business grows, our suite scales with you.</p>
                     </div>
