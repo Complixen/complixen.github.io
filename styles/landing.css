@@ -5,6 +5,17 @@
    from main.css only; theme-aware via var() tokens.
    ========================================================================== */
 
+/* Solo hero (no visual): single column, comfortable measure */
+.service-hero--solo > .container {
+  grid-template-columns: 1fr;
+}
+.service-hero--solo .service-hero__title {
+  max-width: 22ch;
+}
+.service-hero--solo .service-hero__description {
+  max-width: 62ch;
+}
+
 /* Micro copy under hero buttons */
 .micro {
   margin-top: var(--space-3);
