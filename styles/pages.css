@@ -765,6 +765,352 @@
   height: 108px;
 }
 
+/* ---------- Services page: anchor pills + service showcases ---------- */
+.pillrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.625rem;
+}
+.pillrow a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  padding: 0.5rem 1.125rem;
+  transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast);
+}
+.pillrow a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.55;
+  transition: opacity var(--t-fast);
+}
+.pillrow a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.pillrow a:hover::before {
+  opacity: 1;
+}
+
+.show {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: center;
+}
+.show > * {
+  min-width: 0;
+}
+.show--flip .show__content {
+  order: 2;
+}
+.show__index {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.show__index::after {
+  content: "";
+  flex: 0 0 72px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.show__num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+.show__kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: var(--space-3);
+}
+.show__title {
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+}
+.show__desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 52ch;
+  margin-bottom: var(--space-6);
+}
+.show__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+.show__points li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 0.9375rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+.show__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.16em;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--accent-soft);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300d4ff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+.show__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.show__visual {
+  display: flex;
+  justify-content: center;
+}
+
+/* Showcase visuals */
+.vis {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+.vis::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(22rem 16rem at 88% 112%, rgba(0, 212, 255, 0.08), transparent 60%);
+}
+.vis__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--space-2);
+}
+.vis__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+}
+.vis__name {
+  margin-left: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+}
+.vis__tag {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--success);
+  border: 1px solid color-mix(in oklab, var(--success) 40%, transparent);
+  border-radius: var(--r-pill);
+  padding: 0.2rem 0.625rem;
+  white-space: nowrap;
+}
+.vis__tag::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--success);
+}
+.vis__tag--accent {
+  color: var(--accent);
+  border-color: color-mix(in oklab, var(--accent) 40%, transparent);
+}
+.vis__tag--accent::before {
+  background: var(--accent);
+}
+
+/* code editor visual */
+.vis--code {
+  font-family: var(--font-mono);
+}
+.vis__line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.vis__ln {
+  flex: 0 0 18px;
+  font-size: 0.625rem;
+  color: var(--text-subtle);
+  text-align: right;
+}
+.vis__seg {
+  height: 9px;
+  width: var(--w, 60%);
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+}
+.vis__seg--hit {
+  background: linear-gradient(90deg, var(--danger) 0 30%, color-mix(in oklab, var(--danger) 18%, var(--surface-2)) 30%);
+}
+.vis__seg--fix {
+  background: linear-gradient(90deg, var(--success) 0 42%, color-mix(in oklab, var(--success) 18%, var(--surface-2)) 42%);
+}
+.vis--code::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: miniScan 3.6s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* pentest board visual */
+.vis__prog {
+  position: relative;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+.vis__prog i {
+  position: absolute;
+  inset: 0;
+  width: var(--fill, 60%);
+  border-radius: inherit;
+  background: var(--accent);
+}
+.vis__find {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+}
+.vis__sev {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.5938rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--r-pill);
+  padding: 0.2rem 0.5rem;
+}
+.vis__sev--hi { color: var(--danger); background: color-mix(in oklab, var(--danger) 14%, transparent); }
+.vis__sev--md { color: var(--warning); background: color-mix(in oklab, var(--warning) 16%, transparent); }
+.vis__sev--lo { color: var(--text-muted); background: var(--surface-2); }
+.vis__find-name {
+  min-width: 0;
+  font-size: 0.8125rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vis__find-state {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  color: var(--text-subtle);
+}
+.vis__find-state--done {
+  color: var(--success);
+}
+
+/* compliance visual */
+.vis--comp {
+  align-items: center;
+  gap: var(--space-4);
+}
+.vis__ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) 0 76%, var(--border) 76% 100%);
+  display: grid;
+  place-items: center;
+}
+.vis__ring::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.vis__ring svg {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  color: var(--accent);
+}
+.vis__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.vis__chips i {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.6563rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: 0.3rem 0.75rem;
+  white-space: nowrap;
+}
+
+/* vciso constellation visual */
+.vis--net {
+  align-items: center;
+  gap: var(--space-4);
+}
+.vis--net svg {
+  width: 200px;
+  height: 160px;
+}
+
 /* ---------- Process rail (how it works) ---------- */
 .flow {
   position: relative;
@@ -908,6 +1254,16 @@
   .suite-card {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+  .show {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .show--flip .show__content {
+    order: 0;
+  }
+  .show__visual {
+    justify-content: flex-start;
   }
   .suite-card__visual {
     justify-content: flex-start;

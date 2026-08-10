@@ -77,49 +77,178 @@
                     <p class="lhero__crumb"><a href="/">Home</a> <span>/</span> <span>Services</span></p>
                     <h1 class="lhero__title text-balance">Four ways in. <span class="lhero__accent">One security partner.</span></h1>
                     <p class="lhero__lede text-balance">Whether you need automated scanning or human-led strategy, select the solution you need to unblock your next milestone. Every engagement is scoped to your exact environment.</p>
-                    <div class="lhero__actions">
-                        <a href="contact" class="btn btn--accent btn--lg">Book a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    <div class="pillrow scroll-reveal">
+                        <a href="#appsec">AppSec Platform</a>
+                        <a href="#ptaas">PTaaS</a>
+                        <a href="#compliance">Security Compliance</a>
+                        <a href="#vciso">Fractional vCISO</a>
                     </div>
-                    <p class="micro">Skip the sales pitch. Talk directly to our founding team.</p>
                 </div>
             </div>
         </section>
 
-        <section class="offerings section">
+        <section id="appsec" class="section">
             <div class="container">
-                <div class="section__header scroll-reveal">
-                    <span class="eyebrow eyebrow--muted">The Suite</span>
-                    <h2 class="section__title">Choose your path. We handle the rest.</h2>
+                <div class="show">
+                    <div class="show__content scroll-reveal">
+                        <div class="show__index"><span class="show__num">01</span></div>
+                        <span class="show__kicker">AppSec Platform</span>
+                        <h2 class="show__title">Automated Application Security</h2>
+                        <p class="show__desc">Context-aware AI that scans your code, writes the remediation, and creates the Jira ticket. Built for teams that ship fast and can't afford alert fatigue.</p>
+                        <ul class="show__points">
+                            <li>AI writes the fix, not just the finding</li>
+                            <li>Complete SBOM to satisfy enterprise buyers</li>
+                            <li>The Brain filters out false alarms</li>
+                            <li>Fixes land in Jira automatically</li>
+                        </ul>
+                        <div class="show__actions">
+                            <a href="devsecops" class="btn btn--accent">Explore AppSec <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                            <a href="contact" class="btn btn--ghost">Request a Quote</a>
+                        </div>
+                    </div>
+                    <div class="show__visual scroll-reveal" aria-hidden="true">
+                        <div class="vis vis--code">
+                            <div class="vis__bar">
+                                <span class="vis__dot"></span><span class="vis__dot"></span><span class="vis__dot"></span>
+                                <span class="vis__name">checkout.ts</span>
+                                <span class="vis__tag vis__tag--accent">Scanning</span>
+                            </div>
+                            <div class="vis__line"><span class="vis__ln">12</span><span class="vis__seg" style="--w: 78%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">13</span><span class="vis__seg" style="--w: 56%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">14</span><span class="vis__seg vis__seg--hit" style="--w: 84%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">15</span><span class="vis__seg vis__seg--fix" style="--w: 72%"></span></div>
+                            <div class="vis__line"><span class="vis__ln">16</span><span class="vis__seg" style="--w: 48%"></span></div>
+                            <div class="vis__bar" style="margin: 0.5rem 0 0;">
+                                <span class="vis__name">Vulnerability found on line 14. AI fix committed on line 15.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="offerings__grid">
-                    <a href="devsecops" class="card scroll-reveal" style="--delay: 0.0s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                        <span class="feature__kicker">AppSec Platform</span>
-                        <h3 class="card__title">Automated Application Security</h3>
-                        <p class="card__desc">Context-aware AI that scans your code, writes the remediation, and creates the Jira ticket.</p>
-                        <span class="card__link">Explore AppSec <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-                    </a>
-                    <a href="ptaas" class="card scroll-reveal" style="--delay: 0.05s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-                        <span class="feature__kicker">PTaaS Platform</span>
-                        <h3 class="card__title">Penetration Testing as a Service</h3>
-                        <p class="card__desc">Expert-led manual penetration testing delivered through a transparent, real-time platform with one-click retesting.</p>
-                        <span class="card__link">Explore PTaaS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-                    </a>
-                    <a href="security-grc" class="card scroll-reveal" style="--delay: 0.1s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
-                        <span class="feature__kicker">Security Compliance</span>
-                        <h3 class="card__title">Hands-On Audit Readiness</h3>
-                        <p class="card__desc">We map the controls, write the policies, and get you ready for SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials.</p>
-                        <span class="card__link">Explore Compliance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-                    </a>
-                    <a href="vciso" class="card scroll-reveal" style="--delay: 0.15s">
-                        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-                        <span class="feature__kicker">Fractional vCISO</span>
-                        <h3 class="card__title">Executive Security Leadership</h3>
-                        <p class="card__desc">Pure, human-led security strategy to manage vendor assessments, build your roadmap, and guide your team.</p>
-                        <span class="card__link">Explore vCISO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-                    </a>
+            </div>
+        </section>
+
+        <section id="ptaas" class="section section--muted">
+            <div class="container">
+                <div class="show show--flip">
+                    <div class="show__content scroll-reveal">
+                        <div class="show__index"><span class="show__num">02</span></div>
+                        <span class="show__kicker">PTaaS Platform</span>
+                        <h2 class="show__title">Penetration Testing as a Service</h2>
+                        <p class="show__desc">Expert-led manual penetration testing delivered through a transparent, real-time platform. No black boxes and no waiting weeks for a static PDF.</p>
+                        <ul class="show__points">
+                            <li>Manual, expert-led testing that finds logic flaws</li>
+                            <li>Live findings as testing happens</li>
+                            <li>One-click retesting included</li>
+                            <li>Direct line to the engineers testing your app</li>
+                        </ul>
+                        <div class="show__actions">
+                            <a href="ptaas" class="btn btn--accent">Explore PTaaS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                            <a href="contact" class="btn btn--ghost">Request a Quote</a>
+                        </div>
+                    </div>
+                    <div class="show__visual scroll-reveal" aria-hidden="true">
+                        <div class="vis">
+                            <div class="vis__bar">
+                                <span class="vis__name" style="margin-left: 0; font-size: 0.8125rem; color: var(--text); font-weight: 600;">Web App Pentest</span>
+                                <span class="vis__tag">Live</span>
+                            </div>
+                            <div class="vis__prog"><i style="--fill: 64%"></i></div>
+                            <div class="vis__find">
+                                <span class="vis__sev vis__sev--hi">Critical</span>
+                                <span class="vis__find-name">Authorization bypass</span>
+                                <span class="vis__find-state">Fix submitted</span>
+                            </div>
+                            <div class="vis__find">
+                                <span class="vis__sev vis__sev--md">Medium</span>
+                                <span class="vis__find-name">Weak session policy</span>
+                                <span class="vis__find-state">Open</span>
+                            </div>
+                            <div class="vis__find">
+                                <span class="vis__sev vis__sev--lo">Low</span>
+                                <span class="vis__find-name">Verbose error messages</span>
+                                <span class="vis__find-state vis__find-state--done">Retest passed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="section">
+            <div class="container">
+                <div class="show">
+                    <div class="show__content scroll-reveal">
+                        <div class="show__index"><span class="show__num">03</span></div>
+                        <span class="show__kicker">Security Compliance</span>
+                        <h2 class="show__title">Hands-On Audit Readiness</h2>
+                        <p class="show__desc">We map the controls, write the policies, and get you ready for the certifications your enterprise buyers demand, without slowing your engineers down.</p>
+                        <ul class="show__points">
+                            <li>SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials</li>
+                            <li>Unified controls, no duplicate audit work</li>
+                            <li>Controls that fit GitHub, Jira, and AWS workflows</li>
+                            <li>By your side through the entire audit</li>
+                        </ul>
+                        <div class="show__actions">
+                            <a href="security-grc" class="btn btn--accent">Explore Compliance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                            <a href="contact" class="btn btn--ghost">Request a Quote</a>
+                        </div>
+                    </div>
+                    <div class="show__visual scroll-reveal" aria-hidden="true">
+                        <div class="vis vis--comp">
+                            <div class="vis__bar" style="align-self: stretch;">
+                                <span class="vis__name" style="margin-left: 0; font-size: 0.8125rem; color: var(--text); font-weight: 600;">Compliance Program</span>
+                                <span class="vis__tag">Audit ready</span>
+                            </div>
+                            <span class="vis__ring">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                            </span>
+                            <span class="vis__chips"><i>SOC 2</i><i>ISO 27001</i><i>HIPAA</i><i>GDPR</i><i>Cyber Essentials</i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vciso" class="section section--muted">
+            <div class="container">
+                <div class="show show--flip">
+                    <div class="show__content scroll-reveal">
+                        <div class="show__index"><span class="show__num">04</span></div>
+                        <span class="show__kicker">Fractional vCISO</span>
+                        <h2 class="show__title">Executive Security Leadership</h2>
+                        <p class="show__desc">Pure, human-led security strategy to manage vendor assessments, build your roadmap, and guide your team. Executive expertise without the executive payroll.</p>
+                        <ul class="show__points">
+                            <li>Strategic roadmap aligned to your business goals</li>
+                            <li>Vendor questionnaires handled for your sales team</li>
+                            <li>Guided remediation with your engineers</li>
+                            <li>Board-ready reporting for investors</li>
+                        </ul>
+                        <div class="show__actions">
+                            <a href="vciso" class="btn btn--accent">Explore vCISO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                            <a href="contact" class="btn btn--ghost">Request a Quote</a>
+                        </div>
+                    </div>
+                    <div class="show__visual scroll-reveal" aria-hidden="true">
+                        <div class="vis vis--net">
+                            <div class="vis__bar" style="align-self: stretch;">
+                                <span class="vis__name" style="margin-left: 0; font-size: 0.8125rem; color: var(--text); font-weight: 600;">Security Leadership</span>
+                                <span class="vis__tag vis__tag--accent">Engaged</span>
+                            </div>
+                            <svg viewBox="0 0 200 160" fill="none">
+                                <line x1="100" y1="80" x2="34" y2="26" style="stroke: var(--border-strong);"/>
+                                <line x1="100" y1="80" x2="170" y2="34" style="stroke: var(--border-strong);"/>
+                                <line x1="100" y1="80" x2="42" y2="136" style="stroke: var(--border-strong);"/>
+                                <line x1="100" y1="80" x2="164" y2="130" style="stroke: var(--border-strong);"/>
+                                <circle cx="34" cy="26" r="7" style="fill: var(--accent);" opacity="0.85"/>
+                                <circle cx="170" cy="34" r="7" style="fill: var(--violet);" opacity="0.85"/>
+                                <circle cx="42" cy="136" r="7" style="fill: var(--accent);" opacity="0.55"/>
+                                <circle cx="164" cy="130" r="7" style="fill: var(--violet);" opacity="0.55"/>
+                                <circle cx="100" cy="80" r="24" style="fill: var(--accent-soft); stroke: var(--accent);" stroke-width="1.5"/>
+                                <path d="M100 71a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zM89 95c0-6 5.5-8.5 11-8.5s11 2.5 11 8.5" style="stroke: var(--accent);" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                            </svg>
+                            <span class="vis__chips"><i>Strategy</i><i>Vendor reviews</i><i>Board reporting</i></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
