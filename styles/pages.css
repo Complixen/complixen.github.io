@@ -661,6 +661,7 @@
 }
 .mini__chip {
   align-self: flex-start;
+  white-space: nowrap;
   margin-top: 0.25rem;
   font-family: var(--font-mono);
   font-size: 0.625rem;
@@ -903,6 +904,19 @@
 @media (max-width: 768px) {
   .lhero {
     padding: 7rem 0 3rem;
+  }
+  .suite-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .suite-card__visual {
+    justify-content: flex-start;
+  }
+  .mini {
+    max-width: 260px;
+  }
+  .bp__closer {
+    padding: var(--space-4) var(--space-6);
   }
 }
 @media (prefers-reduced-motion: reduce) {
