@@ -1157,6 +1157,80 @@
 }
 
 /* ==========================================================================
+   404 page
+   ========================================================================== */
+.nf {
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 0 6rem;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+}
+.nf__inner {
+  position: relative;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.nf__code {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  padding: 0.45rem 1rem;
+  margin-bottom: var(--space-6);
+}
+.nf__code::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--danger);
+  animation: feedPulse 2.4s ease-in-out infinite;
+}
+.nf__num {
+  font-size: clamp(5.5rem, 18vw, 9rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: var(--space-4);
+}
+.nf__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+}
+.nf__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: var(--space-8);
+}
+.nf__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: var(--space-12);
+}
+.nf .pillrow {
+  justify-content: center;
+}
+
+/* ==========================================================================
    Legal page (privacy policy)
    ========================================================================== */
 .legal {
