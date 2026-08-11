@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>Security Compliance | SOC 2, ISO 27001, HIPAA & GDPR Readiness | Complixen</title>
     <meta name="description" content="Achieve SOC 2, ISO 27001, HIPAA, GDPR, and Cyber Essentials without slowing your engineering team. Audit ready at startup speed. Book a strategy call.">
     <link rel="preconnect" href="https://fonts.googleapis.com">

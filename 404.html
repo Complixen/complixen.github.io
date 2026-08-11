@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>Page Not Found | Complixen</title>
     <meta name="description" content="The page you are looking for does not exist. Head back to the Complixen homepage or explore our security services.">
     <link rel="preconnect" href="https://fonts.googleapis.com">

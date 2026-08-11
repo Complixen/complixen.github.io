@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>Contact Us | Complixen</title>
     <meta name="description" content="Get in touch with the Complixen team. Custom quotations, strategy sessions, and technical questions answered by founders and senior engineers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">

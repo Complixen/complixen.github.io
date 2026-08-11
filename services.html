@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>Services | Complixen</title>
     <meta name="description" content="Four specialized security solutions for startups and SMBs: AppSec Platform, PTaaS, Fractional vCISO, and Security Compliance. Scoped to your exact environment.">
     <link rel="preconnect" href="https://fonts.googleapis.com">

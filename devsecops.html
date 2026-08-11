@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>AppSec Platform | Enterprise Grade App Security for Startups | Complixen</title>
     <meta name="description" content="Enterprise grade application security with zero enterprise bloat. Our proprietary, natively built AI finds real threats, writes the fix, and syncs to Jira. Book a 15-minute demo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">

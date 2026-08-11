@@ -19,6 +19,9 @@
         // Set theme before paint to avoid flash
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <link rel="canonical" href="https://complixen.com/">
     <script type="application/ld+json">
     {

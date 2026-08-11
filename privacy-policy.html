@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>Privacy Policy | Complixen</title>
     <meta name="description" content="How Complixen collects, uses, and protects your information. Written in plain English.">
     <link rel="preconnect" href="https://fonts.googleapis.com">

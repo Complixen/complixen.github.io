@@ -7,6 +7,9 @@
     <script>
         (function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
     </script>
+    <script>
+        (function(){var p=location.pathname;if(/\.html$/.test(p)){location.replace(p.replace(/(?:index)?\.html$/,"")+location.search+location.hash);}})();
+    </script>
     <title>About Complixen | Modular Security Built for Startups</title>
     <meta name="description" content="We built the security partner we wished we had when scaling our own startups. Modular, expert led security for startups and SMBs. Meet the team.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
