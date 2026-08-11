@@ -1157,6 +1157,315 @@
 }
 
 /* ==========================================================================
+   Themed section label (bold gradient, replaces muted eyebrow)
+   ========================================================================== */
+.seclabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--accent), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: var(--space-4);
+}
+.section__header .seclabel {
+  position: relative;
+}
+.section__header .seclabel::before,
+.section__header .seclabel::after {
+  content: "";
+  width: 26px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--violet));
+}
+.section__header--left .seclabel::after,
+.lhero .seclabel::after {
+  display: none;
+}
+
+/* ==========================================================================
+   vCISO page: leadership bench, board agenda, executive briefs, spine
+   ========================================================================== */
+
+/* Leadership bench hero visual */
+.bench {
+  width: min(430px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bench__org {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  padding: 0.5rem 1.25rem;
+}
+.bench__stem {
+  width: 1px;
+  height: 28px;
+  background: var(--border-strong);
+}
+.bench__seats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.875rem;
+  width: 100%;
+  padding-top: 28px;
+}
+.bench__seats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16.66%;
+  right: 16.66%;
+  height: 1px;
+  background: var(--border-strong);
+}
+.bench__seat {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+.bench__seat::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 1px;
+  height: 28px;
+  background: var(--border-strong);
+}
+.bench__role {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+.bench__status {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.5938rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+.bench__seat--v {
+  border-color: color-mix(in oklab, var(--accent) 50%, var(--border));
+  background: var(--accent-soft);
+  box-shadow: 0 0 30px color-mix(in oklab, var(--accent) 16%, transparent);
+}
+.bench__seat--v .bench__role {
+  color: var(--accent);
+}
+.bench__seat--v .bench__status {
+  color: var(--text-muted);
+}
+.bench__caption {
+  margin-top: var(--space-6);
+  font-size: 0.8125rem;
+  color: var(--text-subtle);
+  text-align: center;
+}
+
+/* Board agenda (problem) */
+.agenda {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: var(--space-2);
+}
+.agenda::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--violet));
+  opacity: 0.85;
+}
+.agenda__row {
+  display: grid;
+  grid-template-columns: minmax(170px, 230px) 1fr;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  padding: clamp(1.5rem, 3vw, 2rem) var(--space-1);
+  border-bottom: 1px solid var(--border);
+}
+.agenda__no {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+.agenda__row h3 {
+  font-size: 1.1875rem;
+  line-height: 1.3;
+}
+.agenda__row p {
+  font-size: 0.9688rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  align-self: center;
+}
+
+/* Executive briefs (solution) */
+.briefs {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.brief {
+  display: grid;
+  grid-template-columns: 64px 0.85fr 1.15fr;
+  gap: clamp(1.25rem, 3.5vw, 2.75rem);
+  align-items: start;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem) 0;
+}
+.brief + .brief {
+  border-top: 1px solid var(--border);
+}
+.brief__mono {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  transition: border-color var(--t-med), background var(--t-med);
+}
+.brief:hover .brief__mono {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.brief__kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: var(--space-2);
+}
+.brief h3 {
+  font-size: 1.3125rem;
+  line-height: 1.25;
+}
+.brief > p {
+  font-size: 0.9688rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  padding-top: 4px;
+}
+
+/* Spine mirror comparison */
+.spine {
+  max-width: 920px;
+  margin: 0 auto;
+}
+.spine__row {
+  padding: var(--space-6) 0;
+}
+.spine__row + .spine__row {
+  border-top: 1px solid var(--border);
+}
+.spine__pt {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.6563rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: var(--space-4);
+}
+.spine__pair {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: center;
+}
+.spine__them {
+  text-align: right;
+  font-size: 0.9063rem;
+  line-height: 1.55;
+  color: var(--text-subtle);
+}
+.spine__bar {
+  width: 2px;
+  height: 100%;
+  min-height: 34px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--violet));
+  opacity: 0.6;
+}
+.spine__us {
+  text-align: left;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+/* Boardroom invite finale */
+.invite {
+  padding: var(--section-y) 0;
+  text-align: center;
+}
+.invite__rule {
+  width: 132px;
+  height: 7px;
+  margin: 0 auto var(--space-8);
+  border-block: 1px solid var(--border-strong);
+}
+.invite__inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.invite__title {
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+}
+.invite__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: var(--space-8);
+}
+.invite__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* ==========================================================================
    Compliance page: framework halo, margin notes, audit checklist, old/new
    ========================================================================== */
 
@@ -2411,6 +2720,37 @@
   .oldnew {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .agenda__row {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+  .brief {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+  .brief__mono {
+    width: 48px;
+    height: 48px;
+    font-size: 0.625rem;
+  }
+  .spine__pair {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+  .spine__them {
+    text-align: left;
+    text-decoration: line-through;
+    text-decoration-color: color-mix(in oklab, var(--danger) 45%, transparent);
+  }
+  .spine__bar {
+    display: none;
+  }
+  .bench__seats {
+    gap: 0.5rem;
+  }
+  .bench__seat {
+    padding: var(--space-4) var(--space-2);
   }
   .note {
     grid-template-columns: 56px 1fr;
