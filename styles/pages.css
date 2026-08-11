@@ -1157,6 +1157,126 @@
 }
 
 /* ==========================================================================
+   Legal page (privacy policy)
+   ========================================================================== */
+.legal {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+.legal__toc {
+  position: sticky;
+  top: 96px;
+}
+.legal__toc-title {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-3);
+}
+.legal__toc a {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  padding: 0.3rem 0;
+  transition: color var(--t-fast);
+}
+.legal__toc a:hover {
+  color: var(--accent);
+}
+.legal__body {
+  max-width: 720px;
+  min-width: 0;
+}
+.legal__body section + section {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border);
+}
+.legal__body h2 {
+  font-size: 1.375rem;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+.legal__body h2 span {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-right: var(--space-3);
+}
+.legal__body h3 {
+  font-size: 1.0313rem;
+  margin: var(--space-6) 0 var(--space-3);
+}
+.legal__body p {
+  font-size: 0.9688rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+.legal__body ul {
+  margin: 0 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.legal__body li {
+  position: relative;
+  padding-left: 1.375rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+.legal__body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.65;
+}
+.legal__body a {
+  color: var(--accent);
+}
+.legal__updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  padding: 0.45rem 1rem;
+}
+.legal__updated::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+@media (max-width: 900px) {
+  .legal {
+    grid-template-columns: 1fr;
+  }
+  .legal__toc {
+    position: static;
+  }
+}
+
+/* ==========================================================================
    Simple footer
    ========================================================================== */
 .footer--simple {
