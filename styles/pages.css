@@ -1157,6 +1157,67 @@
 }
 
 /* ==========================================================================
+   Simple footer
+   ========================================================================== */
+.footer--simple {
+  padding: var(--space-12) 0 var(--space-8);
+}
+.sfoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+.sfoot__logo img {
+  height: 30px;
+  width: auto;
+}
+.sfoot__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-8);
+}
+.sfoot__links a {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+}
+.sfoot__links a:hover {
+  color: var(--text);
+}
+.sfoot__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
+  color: var(--text-subtle);
+}
+.sfoot__legal {
+  display: flex;
+  gap: var(--space-6);
+}
+.sfoot__legal a {
+  color: var(--text-subtle);
+  transition: color var(--t-fast);
+}
+.sfoot__legal a:hover {
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .sfoot,
+  .sfoot__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
    Themed section label (bold gradient, replaces muted eyebrow)
    ========================================================================== */
 .seclabel {
